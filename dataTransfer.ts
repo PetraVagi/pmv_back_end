@@ -8,3 +8,11 @@ export async function getDataFromDB(query: string, values: any[] = [], returnFir
 		console.log(err.stack);
 	}
 }
+
+export async function insertDataToDB(query: string, values: any[]) {
+	try {
+		return await pool.query(query, values);
+	} catch (err) {
+		console.log(err.stack);
+	}
+}

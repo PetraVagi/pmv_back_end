@@ -1,21 +1,12 @@
+import { WordWithScores } from "./interfaces";
 import express from "express";
 import { authentication } from "./authentication";
-import { getDataFromDB } from "./dataTransfer";
+import { getDataFromDB, insertDataToDB } from "./dataTransfer";
 const app = express();
 const port = 9000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.get("/", (req, res) => {
-	res.send({ info: "Node.js, Express, and Postgres API" });
-});
-
-app.post("/:id", (req, res) => {
-	console.log(req.params.id);
-	console.log(req.body);
-	res.send({ info: "Post method" });
-});
 
 app.get("/users", async (req, res) => {
 	const data = await getDataFromDB("SELECT * FROM USERS", []);
@@ -36,6 +27,54 @@ app.get("/my-words/:id", async (req, res) => {
 		numberOfDisplayedRows,
 	]);
 	res.status(200).send({ activeWords, deletedWords });
+});
+
+app.post("/my-words", async (req, res) => {
+	const {
+		ownerId,
+		english,
+		hungarian,
+		exampleSentences,
+		notes,
+		type,
+		favourite,
+		deletionDate,
+		memoryLevel,
+		actualScore,
+		finalScore,
+	}: WordWithScores = req.body;
+
+	const response = await insertDataToDB(
+		`INSERT INTO words(
+		"ownerId", 
+		english, 
+		hungarian, 
+		"exampleSentences", 
+		notes, 
+		type, 
+		favourite, 
+		"deletionDate", 
+		"memoryLevel", 
+		"actualScore", 
+		"finalScore")
+		VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *`,
+		[
+			ownerId,
+			english,
+			JSON.stringify(hungarian),
+			JSON.stringify(exampleSentences),
+			notes,
+			type,
+			favourite,
+			deletionDate,
+			memoryLevel,
+			actualScore,
+			finalScore,
+		],
+	);
+
+	const savedWord = response.rows[0];
+	res.status(200).send(savedWord);
 });
 
 app.listen(port, () => {
