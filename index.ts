@@ -18,8 +18,14 @@ app.post("/:id", (req, res) => {
 });
 
 app.get("/users", async (req, res) => {
-	const data = await getDataFromDB("SELECT * FROM USERS");
+	const data = await getDataFromDB("SELECT * FROM USERS", []);
 	res.status(200).send(data);
+});
+
+/* MY WORDS APIs */
+
+app.get("/my-words", async (req, res) => {
+	const data = await getDataFromDB("SELECT * FROM words WHERE onwer_id = $1", []); //Here we need to use the user_id
 });
 
 app.listen(port, () => {
