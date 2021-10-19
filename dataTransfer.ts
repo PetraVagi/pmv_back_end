@@ -1,13 +1,10 @@
 import { pool } from "./dbConnection";
 
-export function getDataFromDB(query: string, returnFirstRow?: boolean) {
-	const result = pool.query(query, (error, result) => {
-		if (error) {
-			throw error;
-		}
+export async function getDataFromDB(query: string, returnFirstRow?: boolean) {
+	try {
+		const result = await pool.query(query, []);
 		return returnFirstRow ? result.rows[0] : result.rows;
-	});
-	pool.end();
-	console.log("result", result);
-	return result;
+	} catch (err) {
+		console.log(err.stack);
+	}
 }

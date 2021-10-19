@@ -17,10 +17,10 @@ app.post("/:id", (req, res) => {
 	res.send({ info: "Post method" });
 });
 
-app.get("/users", (req, res) => {
-	const data = getDataFromDB("SELECT * FROM USERS");
+app.get("/users", async (req, res) => {
+	const data = await getDataFromDB("SELECT * FROM USERS");
 	console.log("data", data);
-	// res.status(200).send(data);
+	res.status(200).send(data);
 });
 
 app.listen(port, () => {
