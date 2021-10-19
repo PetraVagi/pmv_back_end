@@ -19,7 +19,6 @@ app.post("/:id", (req, res) => {
 
 app.get("/users", async (req, res) => {
 	const data = await getDataFromDB("SELECT * FROM USERS");
-	console.log("data", data);
 	res.status(200).send(data);
 });
 
