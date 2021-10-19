@@ -24,8 +24,11 @@ app.get("/users", async (req, res) => {
 
 /* MY WORDS APIs */
 
-app.get("/my-words", async (req, res) => {
-	const data = await getDataFromDB("SELECT * FROM words WHERE onwer_id = $1", []); //Here we need to use the user_id
+app.get("/my-words/:id", async (req, res) => {
+	const userID = req.params.id;
+	const { numberOfDisplayedRows } = req.query;
+	const data = await getDataFromDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL LIMIT $2', [userID, numberOfDisplayedRows]);
+	res.status(200).send(data);
 });
 
 app.listen(port, () => {
