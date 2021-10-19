@@ -1,5 +1,6 @@
 import express from "express";
-import { getUsers } from "./queries";
+import { authentication } from "./authentication";
+import { getDataFromDB } from "./dataTransfer";
 const app = express();
 const port = 9000;
 
@@ -16,7 +17,11 @@ app.post("/:id", (req, res) => {
 	res.send({ info: "Post method" });
 });
 
-app.get("/users", getUsers);
+app.get("/users", (req, res) => {
+	const data = getDataFromDB("SELECT * FROM USERS");
+	console.log("data", data);
+	// res.status(200).send(data);
+});
 
 app.listen(port, () => {
 	console.log(`App running on port ${port}.`);
