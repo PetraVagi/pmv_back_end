@@ -27,8 +27,15 @@ app.get("/users", async (req, res) => {
 app.get("/my-words/:id", async (req, res) => {
 	const userID = req.params.id;
 	const { numberOfDisplayedRows } = req.query;
-	const data = await getDataFromDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL LIMIT $2', [userID, numberOfDisplayedRows]);
-	res.status(200).send(data);
+	const activeWords = await getDataFromDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL LIMIT $2', [
+		userID,
+		numberOfDisplayedRows,
+	]);
+	const deletedWords = await getDataFromDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NOT NULL LIMIT $2', [
+		userID,
+		numberOfDisplayedRows,
+	]);
+	res.status(200).send({ activeWords, deletedWords });
 });
 
 app.listen(port, () => {
