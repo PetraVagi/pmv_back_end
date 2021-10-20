@@ -9,10 +9,11 @@ export async function getDataFromDB(query: string, values: any[] = [], returnFir
 	}
 }
 
-export async function insertDataToDB(query: string, values: any[]) {
+export async function executeQueryOnDB(query: string, values: any[]) {
 	try {
 		return await pool.query(query, values);
 	} catch (err) {
-		console.log(err.stack);
+		const { name, message, stack, detail, table } = err;
+		return { error: name, message, stack, detail, table };
 	}
 }

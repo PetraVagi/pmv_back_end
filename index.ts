@@ -1,7 +1,7 @@
 import { WordWithScores } from "./interfaces";
 import express from "express";
 import { authentication } from "./authentication";
-import { getDataFromDB, insertDataToDB } from "./dataTransfer";
+import { executeQueryOnDB, getDataFromDB } from "./dataTransfer";
 const app = express();
 const port = 9000;
 
@@ -30,7 +30,6 @@ app.get("/my-words/:id", async (req, res) => {
 });
 
 app.post("/my-words", async (req, res) => {
-	/* TODO: Error handling is missing */
 	/* TODO: Data validation is missing */
 	/* TODO: Authentication is missing */
 	const {
@@ -47,7 +46,7 @@ app.post("/my-words", async (req, res) => {
 		finalScore,
 	}: WordWithScores = req.body;
 
-	const response = await insertDataToDB(
+	const response = await executeQueryOnDB(
 		`INSERT INTO words(
 		"ownerId", 
 		english, 
@@ -75,9 +74,13 @@ app.post("/my-words", async (req, res) => {
 			finalScore,
 		],
 	);
-
-	const savedWord = response.rows[0];
-	res.status(200).send(savedWord);
+	if (response.error) {
+		console.log(response);
+		res.status(409).json(response);
+	} else {
+		const savedWord = response.rows[0];
+		res.status(201).send(savedWord);
+	}
 });
 
 app.put("/my-words", async (req, res) => {
@@ -96,7 +99,7 @@ app.put("/my-words", async (req, res) => {
 		id,
 	}: WordWithScores = req.body;
 
-	const response = await insertDataToDB(
+	const response = await executeQueryOnDB(
 		`UPDATE words
 		SET 
 		"ownerId" = $1, 
