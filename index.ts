@@ -53,7 +53,7 @@ app.get("/lets-play", async (req, res) => {
 
 	// calculate the final words array, where the words are alternately in the list
 	// this is only important, because in the first version we are playing on the same computer
-	// later you only need to se your opponent's words
+	// later you only need to see your opponent's words
 	const words = [];
 	for (let i = 0; i < firstPlayerWords.length; i++) {
 		words.push(firstPlayerWords[i]);
