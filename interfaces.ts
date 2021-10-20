@@ -53,8 +53,10 @@ export interface KnowledgeLevel {
 	point: number;
 }
 
+export type ProgressColorType = "progressBlue" | "progressRed" | "progressGreen";
+
 export interface TagColor extends KnowledgeLevel {
-	color: string;
+	color: ProgressColorType;
 }
 
 export interface GameStatistics {

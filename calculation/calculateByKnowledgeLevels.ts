@@ -3,7 +3,7 @@ import get from "lodash/get";
 import sortBy from "lodash/sortBy";
 
 // Interfaces
-import { Word, KnowledgeLevel, LanguageType, TagColor } from "../interfaces";
+import { Word, KnowledgeLevel, LanguageType, TagColor, ProgressColorType } from "../interfaces";
 
 function calculateKnowledgeLevels(word: Word) {
 	const knowledgeLevels: KnowledgeLevel[] = [];
@@ -57,7 +57,7 @@ export function getColorsByKnowledge(word: Word): TagColor[] {
 	const strongestKnowledge = get(sortedLevels, [sortedLevels.length - 1, "point"], 0);
 
 	return sortedLevels.map((level: KnowledgeLevel) => {
-		let color = "progressBlue";
+		let color: ProgressColorType = "progressBlue";
 		if (level.point === weakestKnowledge) color = "progressRed";
 		if (level.point === strongestKnowledge) color = "progressGreen";
 		return { ...level, color };
