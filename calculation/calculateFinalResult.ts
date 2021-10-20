@@ -13,7 +13,7 @@ function calculateScoresToSave(word: WordWithScores, gameStatistics: GameStatist
 	const scoreNow = englishScore + hungarianScore;
 	const actualScore = word.actualScore + scoreNow;
 
-	return { actualScore, memoryLevel: round((actualScore / word.finalScore) * 100, 2) };
+	return { actualScore, memoryLevel: round((actualScore / word.finalScore) * 100, 0) };
 }
 
 function calculateStatisticsToSave(word: WordWithScores, gameStatistics: GameStatistics): WordStatistics {

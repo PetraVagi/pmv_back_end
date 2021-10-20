@@ -44,8 +44,8 @@ VALUES (
 		true,
 		null,
 		0,
-		40,
 		0,
+		40,
 		'{
 			"english": 0,
 			"hungarian": [0, 0, 0]
@@ -77,7 +77,7 @@ VALUES (
 		'word',
 		true,
 		null,
-		26.66,
+		27,
 		8,
 		30,
 		'{
