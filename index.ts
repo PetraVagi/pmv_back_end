@@ -1,25 +1,22 @@
 import express from "express";
-import { authentication } from "./authentication";
-import { getDataFromDB } from "./dataTransfer";
 
 // Utils
 import get from "lodash/get";
+
+// Authentication
+import { authentication } from "./authentication";
+
+// DB
+import { getDataFromDB } from "./dataTransfer";
+
+// Calculations
+import { calculateWordToAsk, getColorsByKnowledge } from "./calculation/calculateByKnowledgeLevels";
 
 const app = express();
 const port = 9000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.get("/", (req, res) => {
-	res.send({ info: "Node.js, Express, and Postgres API" });
-});
-
-app.post("/:id", (req, res) => {
-	console.log(req.params.id);
-	console.log(req.body);
-	res.send({ info: "Post method" });
-});
 
 app.get("/users", async (req, res) => {
 	const data = await getDataFromDB("SELECT * FROM USERS", []);
@@ -35,7 +32,7 @@ app.get("/my-words", async (req, res) => {
 /* LET'S PLAY APIs */
 
 app.get("/lets-play", async (req, res) => {
-	const numberOfWords = 10;
+	const numberOfWords = 2;
 
 	const playerIdStrings: string[] = get(req, "query.players", []);
 	const playerIds: number[] = playerIdStrings.map((playerId: string) => parseInt(playerId));
@@ -53,12 +50,12 @@ app.get("/lets-play", async (req, res) => {
 	}
 
 	// calculate the final words array, where the words are alternately in the list
-	// this is only important, because in the first version we are playing on the same computer
-	// later you only need to see your opponent's words
 	const words = [];
 	for (let i = 0; i < firstPlayerWords.length; i++) {
-		words.push(firstPlayerWords[i]);
-		words.push(secondPlayerWords[i]);
+		const firstPlayerWord = firstPlayerWords[i];
+		const secondPlayerWord = secondPlayerWords[i];
+		words.push({ ...firstPlayerWord, ...calculateWordToAsk(firstPlayerWord), tagColors: getColorsByKnowledge(firstPlayerWord) });
+		words.push({ ...secondPlayerWord, ...calculateWordToAsk(secondPlayerWord), tagColors: getColorsByKnowledge(secondPlayerWord) });
 	}
 
 	// TODO later calculate from the statistics table (users_and_grammatical_structures)
