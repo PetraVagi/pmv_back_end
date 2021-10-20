@@ -11,6 +11,7 @@ import { getDataFromDB } from "./dataTransfer";
 
 // Calculations
 import { calculateWordToAsk, getColorsByKnowledge } from "./calculation/calculateByKnowledgeLevels";
+import { calculateDataToSave } from "./calculation/calculateFinalResult";
 
 const app = express();
 const port = 9000;
@@ -63,6 +64,20 @@ app.get("/lets-play", async (req, res) => {
 
 	const data = { owners, words, grammaticalStructures };
 	res.status(200).send(data);
+});
+
+app.put("/lets-play/:id", async (req, res) => {
+	console.log(req.body);
+	const { word, gameStatistics } = req.body;
+
+	const wordToSave = calculateDataToSave(word, gameStatistics);
+	console.log(wordToSave);
+	/*  TODO 
+		1) save to database (it would be better, if we didn't need the whole word, just the modified columns)
+		2) save the grammatical knowledge (correctGrammar in state) to some grammatical statistics table
+ 		*/
+
+	res.status(200).send({ siker: "yeesss" });
 });
 
 app.listen(port, () => {
