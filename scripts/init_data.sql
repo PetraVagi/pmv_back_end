@@ -271,7 +271,8 @@ VALUES (
 		'Present Perfect',
 		'Befejezett múlt',
 		'have/has + ige 3. alakja',
-		null,
+		'SINCE... = ...óta (valamilyen időponttól kezdődően): since May, since last week, since they moved, since then, since they got married (!! Ha az időhatározót mellékmondattal fejezzük ki (pl. Nagyon boldogok, amióta összeházasodtak), akkor a mellékmondatban a „since” után Simple Past-ot, a főmondatban Present Perfect-et kell használni. !!)
+		FOR... = ...-e, -ja (valemennyi ideje): for two weeks, for ten minutes, for four years, for three months, for ages',
 		'["He has done.", "He has not (hasn''t) done.", "Has he done?"]',
 		'[
             {
@@ -320,4 +321,159 @@ VALUES (
 				"example": "He has known his girlfriend for six years."
 			}
         ]'
+	),
+	(
+		'Past Simple versus Present Perfect',
+		'Időhatározók, amelyeknek különböző igeidőkben más jelentése van',
+		'',
+		null,
+		'[]',
+		'[
+            {
+                "description": "This morning, this afternoon, this summer, this spring, this winter, this autumn. Present Perfect: Olyan időszakban történt múltbeli esemény közlésére, amely időszak a közlés pillanatában még nem zárult le. Past Simple: Olyan időszakban történt múltbeli esemény közlésére, amely időszak a közlés pillanatában már lezárult.",
+                "example": "I have eaten an apple this morning. - Ma délelőtt már ettem egy almát (még délelőtt van). ; I ate an apple this morning. - Ma délelőtt ettem egy almát (a közlés pillanata már nem délelőtt van)."
+            }, 
+			{
+                "description": "For..., How long...? Present Perfect: Ha a „for...” és a „How long...?” olyan időszakra utal, amely még nem zárult le. (Ezeket  a mondatokat jelen időben fordítjuk magyarra. Past Simple: Ha a „for...” és a „How long?” olyan időszakra utal, amely már lezárult.",
+                "example": "They have been friends for seven years. - Hét éve barátok. ; They were friends for seven years. - Hét évig voltak barátok."
+            }, {
+				"description": "A „last”-os (last night, last week, last month, last year etc.) időhatározókkal mindig Simple Past-ot használunk. DE az in the last five years, in the last few month for the last five years typusú időhatározókkal mindig Present Perfect-et használunk!", 
+				"example": "I went home last night. I have worked a lot in the last few days."
+			}
+		]'
+	),
+	(
+		'Present Perfect Continuous',
+		'Befejezett folyamatos jelen',
+		'have/has + been + ige + -ing',
+		'A Present Perfect Continuous-nak formailag ugyan van tagadó alakja, de ezt ritkábban használják. Helyette gyakrabban fordul elő a Present Perfect tagadó alakja.',
+		'["He has been doing", "He has not (hasn''t) been doing", "Has he been doing?"]',
+		'[
+            {
+                "description": "Olyan cselekvés kifejezésére, amely a múlt egy adott pillanatában elkezdódött, a jelenben is tart, sőt valószínűleg a jövőben is tartani fog. Jellemző időhatározók: SINCE..., FOR..., HOW LONG...? SINCE WHEN...? (ld. a Present Perfect-et)",
+                "example": "She has been going to that school for five years. They have been going out together since last week."
+            }, 
+			{
+                "description": "Olyan esetben, ha a cselekvés hosszan tart, (elkezdtük, de még mindig nem fejeztük be) és ezt hangsúlyozni is szeretnénk. Jellemző időhatározók: ALL THIS WEEK, ALL DAY LONG, ALL NIGHT LONG, ALL THIS YEAR",
+                "example": "I have been trying to reach him all this week. I have been seeing the doctor all this year. It has been raining all day long."
+            }, {
+				"description": "Olyan cselekvés kifejezésére, amely a beszéd pillanatáig folyamatosan zajlott, és a jelenben szemmel látható eredménye vagy következménye van.", 
+				"example": "Why are your hands dirty? I have been working in the garden."
+			}
+		]'
+	),
+	(
+		'Past Perfect',
+		'Befejezett múlt',
+		'had + ige 3. alakja',
+		null,
+		'["He had worked.", "He had not (hadn''t) worked.", "Had he worked?"]',
+		'[
+            {
+                "description": "Olyan cselekvés kifejezésére, amely egy másik megadott múltbeli cselekvést megelőzően ment végbe. Jellemző kötőszók: before — mielőtt, after - miután, when — amikor, by the time — amire, amikorra",
+                "example": "Before he left for England, he had sold his house. By the time he understood it, everybody had left."
+            }, 
+			{
+                "description": "Olyan cselekvés kifejezésére, amely egy megadott múltbeli cselekvést megelóző időpontban kezdődött, és folyamatosan tartott a megadott múltbeli cselekvésig, sőt még talán tovább is. Ez a szabály csak azokra az igékre érvényes, amelyeknek nincsen folyamatos alakjuk. Más esetben ld. a Past Perfect Continuous-t.",
+                "example": "When their child was born, they had been married for two years."
+            }
+		]'
+	),
+	(
+		'Past Perfect Continuous',
+		'Befejezett folyamatos múlt',
+		'had been + ige + ing',
+		'A Past Perfect Continuous tagadó alakja helyett gyakrabban használjuk a Past Perfect tagadó alakját.',
+		'["He had been working.", "He had not (hadn''t) been working.", "Had he been working?"]',
+		'[
+            {
+                "description": "Olyan cselekvés kifejezésére, amely egy megadott múltbeli cselekvést megelőző időpontban kezdődött, és folyamatosan tartott a megadott múltbeli cselekvésig, sőt még talán tovább is. Olyan igékkel, amelyeknek nincsen folyamatos alakjuk, Past Perfect-et használunk. Ld. a Past Perfect-et. Jellemző kötőszók: by the time, when.",
+                "example": "By the time the lecture finished, he had been sleeping for half an hour."
+            }, 
+			{
+                "description": "Olyan cselekvés kifejezésére, amely egy múltbeli cselekvésig folyamatosan zajlott, és annak szemmel látható eredménye, vagy következménye volt.",
+                "example": "His hair was wet, because he had been walking in the rain."
+            }
+		]'
+	),
+	(
+		'Future simple',
+		'Egyszerű jövő',
+		'will + ige',
+		null,
+		'["He will work.", "He will not (won''t) work.", "Will he work?"]',
+		'[
+            {
+                "description": "Olyan esetben használjuk, ha a beszéd pillanatában döntjük el, hogy mit fogunk csinálni. Spontán elhatározásról van szó.",
+                "example": "I''ll go upstairs and get the keys."
+            }, 
+			{
+                "description": "Ha segitséget nyújtunk valamiben, vagy felajánlunk valamit.",
+                "example": "I don''t know how to use this camera. I''ll show you."
+            }, 
+			{
+                "description": "Ha valamivel egyetértésben cselekszünk.",
+                "example": "Can I have my notebook back? Of course. I''ll give it back to you tomorrow."
+            }, {
+                "description": "Ha valamit megígérünk.",
+                "example": "I''ll learn it. I promise."
+            }, {
+                "description": "Ha valakit udvariasan megkérünk valamire.",
+                "example": "Will you close the window, please?"
+            }, 
+			{
+                "description": "A következő kifejezések után (Ezek általában bizonytalanságot fejeznek ki): I hope, I don''t hope, I expect, I don''t expect, I think, I don''t think, I''m sure, I''m not sure, I wonder, I suppose, I guess, I bet, perhaps, probably.",
+                "example": "I hope I will pass the exam. Perhaps he will bring the cassette back."
+            },
+			{
+                "description": "A jövőre vonatkozó feltételes mondatok főmondatában.",
+                "example": "You will pass the exam if you learn hard."
+            },
+			{
+                "description": " A „will” E.sz./l. és T.sz./l. személyű alakja a „shall”. Ezt azonban ma már többnyire csak akkor használjuk, amikor tanácsot kérünk valakitól, illetve kikérjük mások véleményét arra vonatkozóan, hogy mit tegyünk.",
+                "example": "Shall I close the door? What shall we do tonight? Where shall we meet?"
+            }
+		]'
+	),
+	(
+		'Future Continuous',
+		'Folyamatos jövő',
+		'will be + ige + ing',
+		null,
+		'["He will be working.", "He will not (won''t) be working.", "Will he be working?"]',
+		'[
+            {
+                "description": "Olyan cselekvés kifejezésére, amely a jövő egy adott pillanatában folyamatban lesz. Jellemző időhatározók: at this time tomorrow, this time next year, this time next month, at 5 0''clock.",
+                "example": "(At) this time tomorrow I will be doing my homework."
+            }, 
+			{
+                "description": "Olyan cselekvés kifejezésére, amely a jövő egy adott időintervallumában folyamatosan zajlani fog. Jellemző időhatározók: from 3 to 4, from Monday to Friday, from morning till night.",
+                "example": "I will be studying hard from morning till night."
+            }, 
+			{
+                "description": "Olyan cselekvés kifejezésére, amely a jövőben hosszan tartani fog, és ezt hangsúlyozni is szeretnénk. Gyakori határozók: all day tomorrow — holnap egész nap, all next week — jövő héten végig, all next year — jövőre egész évben.",
+                "example": "I will be working hard all next month."
+            }
+		]'
+	),
+	(
+		'To be going to do',
+		'Jövő idős szerkezetek',
+		'to be going to + ige',
+		null,
+		'["He is going to work.", "He is not (isn''t) going to work.", "Is he going to work?"]',
+		'[
+            {
+                "description": "Ezt a szerkezetet jövőbeli terv vagy erős szándék kifejezésére használjuk.",
+                "example": "I am going to travel abroad."
+            },
+			{
+                "description": "Olyan jövőbeli cselekvés kifejezésére, amelyről biztosan tudni, hogy be fog következni, mert ennek szemmel látható jelei vannak.",
+                "example": "Look how big Eve''s belly is. She''s going to have a baby."
+            },
+			{
+                "description": "Múlt idejű alakja a „was /were going to”. Jelentése: Úgy volt, hogy...",
+                "example": "On Saturday we were going to play tennis but it was raining."
+            }
+		]'
 	);
