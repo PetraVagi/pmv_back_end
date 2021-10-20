@@ -1,4 +1,3 @@
-import { WordWithScores } from "./interfaces";
 import express from "express";
 
 // Utils
@@ -13,6 +12,9 @@ import { executeQueryOnDB, getDataFromDB } from "./dataTransfer";
 // Calculations
 import { calculateWordToAsk, getColorsByKnowledge } from "./calculation/calculateByKnowledgeLevels";
 import { calculateDataToSave } from "./calculation/calculateFinalResult";
+
+// Interfaces
+import { GameStatistics, WordWithScores } from "./interfaces";
 
 const app = express();
 const port = 9000;
@@ -203,11 +205,15 @@ app.get("/lets-play", async (req, res) => {
 });
 
 app.put("/lets-play/:id", async (req, res) => {
-	const { word, gameStatistics } = req.body;
+	const {
+		word,
+		gameStatistics,
+		grammaticalStructure,
+	}: { word: WordWithScores; gameStatistics: GameStatistics; grammaticalStructure: { id: number; known: boolean } } = req.body;
 
+	// Update word scores
 	const { actualScore, memoryLevel, statistics, deletionDate } = calculateDataToSave(word, gameStatistics);
-
-	const response = await executeQueryOnDB(
+	const wordsResponse = await executeQueryOnDB(
 		`UPDATE words
 		SET 
 		"memoryLevel" = $1, 
@@ -220,16 +226,57 @@ app.put("/lets-play/:id", async (req, res) => {
 		true,
 	);
 
-	if (response.error) {
-		console.log(response);
-		res.status(409).json(response);
-	} else {
-		res.status(200).send(response);
+	if (wordsResponse.error) {
+		console.log(wordsResponse);
+		res.status(409).json(wordsResponse);
+		return;
 	}
 
-	/*  TODO 
-		2) save the grammatical knowledge (correctGrammar in state) to some grammatical statistics table
- 		*/
+	// Checked saved grammatical statistics
+	const previousGrammaticalLevel = await executeQueryOnDB(
+		`SELECT * FROM users_and_grammatical_structures WHERE "userId" = $1 and "grammaticalStructureId" = $2`,
+		[word.ownerId, grammaticalStructure.id],
+		true,
+	);
+
+	// If the grammatical statistics doesn't exist, insert into the DB
+	if (previousGrammaticalLevel === undefined) {
+		const response = await executeQueryOnDB(
+			`INSERT INTO users_and_grammatical_structures(
+            "userId", "grammaticalStructureId", asked, known)
+            VALUES ($1, $2, $3, $4)
+		    RETURNING *`,
+			[word.ownerId, grammaticalStructure.id, 1, grammaticalStructure.known ? 1 : 0],
+			true,
+		);
+		if (response.error) {
+			console.log(response);
+			res.status(409).json(response);
+			return;
+		}
+	} else {
+		// If the grammatical statistics exists, update the DB record
+		const response = await executeQueryOnDB(
+			`UPDATE users_and_grammatical_structures
+		        SET asked = $3, known = $4
+		        WHERE "userId" = $1 AND "grammaticalStructureId" = $2
+		        RETURNING *`,
+			[
+				word.ownerId,
+				grammaticalStructure.id,
+				previousGrammaticalLevel.asked + 1,
+				previousGrammaticalLevel.known + (grammaticalStructure.known ? 1 : 0),
+			],
+			true,
+		);
+		if (response.error) {
+			console.log(response);
+			res.status(409).json(response);
+			return;
+		}
+	}
+
+	res.status(200).send(wordsResponse);
 });
 
 app.listen(port, () => {
