@@ -131,8 +131,13 @@ app.put("/my-words", async (req, res) => {
 		],
 	);
 
-	const savedWord = response.rows[0];
-	res.status(200).send(savedWord);
+	if (response.error) {
+		console.log(response);
+		res.status(409).json(response);
+	} else {
+		const savedWord = response.rows[0];
+		res.status(200).send(savedWord);
+	}
 });
 
 app.listen(port, () => {

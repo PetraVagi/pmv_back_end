@@ -1,5 +1,7 @@
 import { pool } from "./dbConnection";
 
+/* REFACTOR: We have to merge these two functions to a one */
+
 export async function getDataFromDB(query: string, values: any[] = [], returnFirstRow?: boolean) {
 	try {
 		const result = await pool.query(query, values);
