@@ -26,6 +26,7 @@ app.get("/my-words/:id", async (req, res) => {
 		userID,
 		numberOfDisplayedRows,
 	]);
+	/* TODO: Error handling is missing */
 	res.status(200).send({ activeWords, deletedWords });
 });
 
@@ -130,6 +131,19 @@ app.put("/my-words", async (req, res) => {
 			id,
 		],
 	);
+
+	if (response.error) {
+		console.log(response);
+		res.status(409).json(response);
+	} else {
+		const savedWord = response.rows[0];
+		res.status(200).send(savedWord);
+	}
+});
+
+app.delete("/my-words", async (req, res) => {
+	const { id } = req.body;
+	const response = await executeQueryOnDB(`DELETE FROM words WHERE id = $1 RETURNING *`, [id]);
 
 	if (response.error) {
 		console.log(response);
