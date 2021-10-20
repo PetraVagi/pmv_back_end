@@ -30,6 +30,9 @@ app.get("/my-words/:id", async (req, res) => {
 });
 
 app.post("/my-words", async (req, res) => {
+	/* TODO: Error handling is missing */
+	/* TODO: Data validation is missing */
+	/* TODO: Authentication is missing */
 	const {
 		ownerId,
 		english,
@@ -70,6 +73,58 @@ app.post("/my-words", async (req, res) => {
 			memoryLevel,
 			actualScore,
 			finalScore,
+		],
+	);
+
+	const savedWord = response.rows[0];
+	res.status(200).send(savedWord);
+});
+
+app.put("/my-words", async (req, res) => {
+	const {
+		ownerId,
+		english,
+		hungarian,
+		exampleSentences,
+		notes,
+		type,
+		favourite,
+		deletionDate,
+		memoryLevel,
+		actualScore,
+		finalScore,
+		id,
+	}: WordWithScores = req.body;
+
+	const response = await insertDataToDB(
+		`UPDATE words
+		SET 
+		"ownerId" = $1, 
+		english = $2, 
+		hungarian = $3, 
+		"exampleSentences" = $4, 
+		notes = $5, 
+		type = $6, 
+		favourite = $7, 
+		"deletionDate" = $8, 
+		"memoryLevel" = $9, 
+		"actualScore" = $10, 
+		"finalScore" = $11
+		WHERE id = $12
+		RETURNING *`,
+		[
+			ownerId,
+			english,
+			JSON.stringify(hungarian),
+			JSON.stringify(exampleSentences),
+			notes,
+			type,
+			favourite,
+			deletionDate,
+			memoryLevel,
+			actualScore,
+			finalScore,
+			id,
 		],
 	);
 
