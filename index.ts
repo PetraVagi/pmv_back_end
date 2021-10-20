@@ -35,7 +35,7 @@ app.get("/my-words", async (req, res) => {
 /* LET'S PLAY APIs */
 
 app.get("/lets-play", async (req, res) => {
-	const numberOfWords = 2;
+	const numberOfWords = 10;
 
 	const playerIdStrings: string[] = get(req, "query.players", []);
 	const playerIds: number[] = playerIdStrings.map((playerId: string) => parseInt(playerId));
@@ -47,8 +47,9 @@ app.get("/lets-play", async (req, res) => {
 	const firstPlayerWords = await getDataFromDB(wordsSelectQuery, [playerIds[0]]);
 	const secondPlayerWords = await getDataFromDB(wordsSelectQuery, [playerIds[1]]);
 
-	if (firstPlayerWords.length < numberOfWords || secondPlayerWords < numberOfWords) {
-		res.status(200).send({ error: `Both players should have at least ${numberOfWords} words!` });
+	if (firstPlayerWords.length < numberOfWords || secondPlayerWords.length < numberOfWords) {
+		res.status(200).send({ error: `Both players should have at least ${numberOfWords} words for the game!` });
+		return;
 	}
 
 	// calculate the final words array, where the words are alternately in the list
