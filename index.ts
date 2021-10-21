@@ -40,13 +40,11 @@ app.get("/my-words/:id", async (req, res) => {
 		'SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NOT NULL ORDER BY english ASC LIMIT $2',
 		[userID, numberOfDisplayedRows],
 	);
-	/* TODO: Error handling is missing */
+	/* Attila TODO: Error handling is missing */
 	res.status(200).send({ activeWords, deletedWords });
 });
 
 app.post("/my-words", async (req, res) => {
-	/* TODO: Data validation is missing */
-	/* TODO: Authentication is missing */
 	const {
 		ownerId,
 		english,
@@ -183,7 +181,6 @@ app.get("/lets-play", async (req, res) => {
 
 	const owners = await executeQueryOnDB("SELECT id, name, gender FROM users WHERE id IN ($1, $2)", [...playerIds]);
 
-	// TODO later use more complex logic for the selection
 	const wordsSelectQuery = 'SELECT * FROM words WHERE favourite = true AND "ownerId" = $1 ORDER BY id LIMIT $2';
 	const firstPlayerWords = await executeQueryOnDB(wordsSelectQuery, [playerIds[0], numberOfWords]);
 	const secondPlayerWords = await executeQueryOnDB(wordsSelectQuery, [playerIds[1], numberOfWords]);
@@ -202,7 +199,6 @@ app.get("/lets-play", async (req, res) => {
 		words.push({ ...secondPlayerWord, ...calculateWordToAsk(secondPlayerWord), tagColors: getColorsByKnowledge(secondPlayerWord) });
 	}
 
-	// TODO later calculate from the statistics table (users_and_grammatical_structures)
 	const grammaticalStructures = await executeQueryOnDB("SELECT * FROM grammatical_structures ORDER BY random() LIMIT $1", [numberOfWords * 2]);
 
 	const data = { owners, words, grammaticalStructures };

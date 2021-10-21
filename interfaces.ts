@@ -63,5 +63,3 @@ export interface GameStatistics {
 	english: boolean;
 	hungarian: boolean[];
 }
-
-/* TODO: A shared repo for interfaces would be a better solution than the current double administration of these interfaces */
