@@ -176,15 +176,15 @@ app.get("/lets-play", async (req, res) => {
 	const playerIdStrings: string[] = get(req, "query.players", []);
 	const playerIds: number[] = playerIdStrings.map((playerId: string) => parseInt(playerId));
 
-	const owners = await getDataFromDB(`SELECT id, name, gender FROM users WHERE id IN ($1, $2)`, [...playerIds]);
+	const owners = await getDataFromDB("SELECT id, name, gender FROM users WHERE id IN ($1, $2)", [...playerIds]);
 
 	// TODO later use more complex logic for the selection
-	const wordsSelectQuery = `SELECT * FROM words WHERE favourite = true AND "ownerId" = $1 ORDER BY id LIMIT ${numberOfWords}`;
-	const firstPlayerWords = await getDataFromDB(wordsSelectQuery, [playerIds[0]]);
-	const secondPlayerWords = await getDataFromDB(wordsSelectQuery, [playerIds[1]]);
+	const wordsSelectQuery = 'SELECT * FROM words WHERE favourite = true AND "ownerId" = $1 ORDER BY id LIMIT $2';
+	const firstPlayerWords = await getDataFromDB(wordsSelectQuery, [playerIds[0], numberOfWords]);
+	const secondPlayerWords = await getDataFromDB(wordsSelectQuery, [playerIds[1], numberOfWords]);
 
 	if (firstPlayerWords.length < numberOfWords || secondPlayerWords.length < numberOfWords) {
-		res.status(200).send({ error: `Both players should have at least ${numberOfWords} words for the game!` });
+		res.status(409).json({ error: `Both players should have at least ${numberOfWords} words for the game!` });
 		return;
 	}
 
@@ -198,13 +198,13 @@ app.get("/lets-play", async (req, res) => {
 	}
 
 	// TODO later calculate from the statistics table (users_and_grammatical_structures)
-	const grammaticalStructures = await getDataFromDB(`SELECT * FROM grammatical_structures ORDER BY random() LIMIT ${numberOfWords * 2}`);
+	const grammaticalStructures = await getDataFromDB("SELECT * FROM grammatical_structures ORDER BY random() LIMIT $1", [numberOfWords * 2]);
 
 	const data = { owners, words, grammaticalStructures };
 	res.status(200).send(data);
 });
 
-app.put("/lets-play/:id", async (req, res) => {
+app.put("/lets-play/:wordId", async (req, res) => {
 	const {
 		word,
 		gameStatistics,
@@ -222,7 +222,7 @@ app.put("/lets-play/:id", async (req, res) => {
 		"deletionDate" = $4
 		WHERE id = $5
 		RETURNING *`,
-		[memoryLevel, actualScore, statistics, deletionDate, req.params.id],
+		[memoryLevel, actualScore, statistics, deletionDate, req.params.wordId],
 		true,
 	);
 
