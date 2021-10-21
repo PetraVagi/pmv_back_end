@@ -150,8 +150,8 @@ app.put("/my-words", async (req, res) => {
 		console.log(response);
 		res.status(409).json(response);
 	} else {
-		const savedWord = response.rows[0];
-		res.status(200).send(savedWord);
+		const updatedWord = response.rows[0];
+		res.status(200).send(updatedWord);
 	}
 });
 
@@ -163,8 +163,8 @@ app.delete("/my-words", async (req, res) => {
 		console.log(response);
 		res.status(409).json(response);
 	} else {
-		const savedWord = response.rows[0];
-		res.status(200).send(savedWord);
+		const deletedWord = response.rows[0];
+		res.status(200).send(deletedWord);
 	}
 });
 
