@@ -16,6 +16,13 @@ function calculateScoresToSave(word: WordWithScores, gameStatistics: GameStatist
 	return { actualScore, memoryLevel: round((actualScore / word.finalScore) * 100, 0) };
 }
 
+/* Statistics: object: 
+	{
+		english: number;
+		hungarian: number[]; --> numbers have the same indices as words in the 'hungarian' column
+	}
+We store your knowledge levels in this object, which is needed for the statistics of the words (which one is your weakest and strongest point).
+The sum of the object's values should be the ActualScore */
 function calculateStatisticsToSave(word: WordWithScores, gameStatistics: GameStatistics): WordStatistics {
 	const statisticsToSave = cloneDeep(word.statistics) || { english: 0, hungarian: word.hungarian.map(() => 0) };
 
