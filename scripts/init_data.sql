@@ -476,4 +476,195 @@ VALUES (
                 "example": "On Saturday we were going to play tennis but it was raining."
             }
 		]'
+	),
+	(
+		'Used to, Would',
+		'Valaha',
+		'',
+		null,
+		'["He used to play cards.", "He didn''t used to play cards.", "Did he used to play cards?"]',
+		'[
+            {
+                "description": "Olyan cselekvés kifejezésére, amelyet a múltban (valaha) rendszeresen végeztünk, de már felhagytunk vele. Az irodalmi nyelvben a Used to helyett, ilyen értelemben, gyakran használják a Would segédigét.",
+                "example": "I used to go running every morning. Every morning he would go to the sea."
+            }
+		]'
+	),
+	(
+		'To be to, To be about to, To be due to',
+		'Kell, kellene, azon van, hogy...',
+		'',
+		null,
+		'["The train is to arrive at 5.", "Is the train to arrive at 5?", "The train is not to arrive at 5."]',
+		'[
+            {
+                "description": "TO BE TO / NOT TO = kell, kellene, úgy van, hogy... / nem kell, nem kéne, nem szabad",
+                "example": "I am to get there by 8. You are not to use a cheat sheet."
+            },
+			{
+                "description": "TO BE ABOUT TO / NOT ABOUT TO = azon van, hogy... / épp csinálni akar valamit",
+                "example": " I was about to call you. I''m not about to do anything."
+            },
+			{
+                "description": "TO BE DUE TO / NOT DUE TO = kell, valaminek menetrendszerűien be kell következnie",
+                "example": "The train is due to leave at 7. The bus was not due to leave at 8."
+            }
+		]'
+	),
+	(
+		'CAN Modal verb',
+		'CAN módbeli segédige',
+		'',
+		'A „can” segédige más modális segédige után egyáltalán nem használható, míg a „to be able to” állhat más módbeli segédigék után is (kivéve a „can, could, could have” segédigéket). Módbeli segédigét minden olyan ige követhet, aminek van főnévi igeneves alakja. (Pl. He may be able to do it.)',
+		'[]',
+		'[
+            {
+                "description": "CAN = Képes valamire. Csak egyszerű jelen és egyszerű múlt időben (could) használható.",
+                "example": "I can do it. I could do it."
+            },
+			{
+                "description": "TO BE ABLE TO = Képes valamire Használhatjuk egyszerű jelen, egyszerű múlt, egyszerű jövő, befejezett jelen és befejezett múlt időben is.",
+                "example": " I am able to do it. I was able to do it. I will be able to do it."
+            },
+			{
+                "description": "Érzékelést kifejező igékkel és egyes mentális tevékenységet kifejező igékkel, jelen és múlt időben, mindig a CAN-t és múlt idejú alakját a COULD-ot használjuk.",
+                "example": "I can see it. I can hear it."
+            },
+			{
+                "description": "COULD = Általános képesség kifejezésére a múltban.",
+                "example": "I could swim well at the age of five."
+            },
+			{
+                "description": "WAS/WERE ABLE TO = Egy bizonyos helyzetben sikerült valamit megcsinálni. (managed to do)",
+                "example": "Nobody disturbed me so I was able to finish my work."
+            },
+			{
+                "description": "COULD = Képes lenne / meg tudna csinálni valamit. (Feltételes mód, lehetséges feltétel)",
+                "example": "I could sleep."
+            },
+			{
+                "description": "COULD = Valószínűség — Valami bekövetkezhet, megvan rá az esély.",
+                "example": "Jack could phone at any minute."
+            },
+			{
+                "description": "COULD HAVE /COULDN''T HAVE+IGE 3. ALAKJA = Képes lett volna / meg tudott volna csinálni valamit.",
+                "example": "I could have slept."
+            },
+			{
+                "description": "COULD HAVE /COULDN''T HAVE+IGE 3. ALAKJA = Valószínűség — Valami bekövetkezhetett, megvolt rá az esély, vagy nem következhetett be, mert a körülmények nem engedték.",
+                "example": "Jack couldn''t have been there, because he was with me at that time."
+            }
+		]'
+	),
+	(
+		'MUST Modal verb',
+		'MUST módbeli segédige',
+		'',
+		'A valószínűség kifejezésére használt MUST és MUST HAVE segédigék tagadó alakja a CAN''T és CAN''T HAVE. CAN''T = Biztos, hogy nem következik be valami. Biztos, hogy ma nem jön haza.	He can''t come home today. CANT HAVE + IGE 3. ALAKJA = Biztos, hogy nem következett be valami. Biztos, hogy nem ment oda. He can''t have gone there.',
+		'[]',
+		'[
+            {
+                "description": "MUST = MUST = Biztos, hogy... - Minden bizonnyal bekövetkezik valami.",
+                "example": "He must arrive in the next ten minutes."
+            },
+			{
+                "description": "MUST HAVE + IGE 3. ALAKJA = Biztos, hogy...  - Minden bizonnyal bekövetkezett valami.",
+                "example": "He must have arrived home."
+            }
+		]'
+	),
+	(
+		'Had better, Would rather, It''s time, It''s high time',
+		'',
+		'',
+		null,
+		'[]',
+		'[
+            {
+                "description": "HAD BETTER DO / NOT DO = a) Jobb lenne, ha... valaki  csinálna/ nem csinálna valamit.  b) Jobban tenné, ha... / ha nem...",
+                "example": "You''d better take a taxi. I''d better not go there."
+            },
+			{
+                "description": "I WOULD RATHER DO / NOT DO = Inkább...",
+                "example": "I''d rather go home now. I''d rather not go to work tomorrow."
+            },
+			{
+                "description": "I WOULD RATHER DO ... THAN ... DO = Inkább..., mint...",
+                "example": "I''d rather go out than stay at home. "
+            },
+			{
+                "description": "I WOULD RATHER sy DID / DIDN''T DID sth = Azt szeretném, ha valaki inkább...",
+                "example": "I''d rather you stayed at home. I''d rather everybody left now."
+            },
+			{
+                "description": "IT''S TIME (FOR SY) TO DO = Itt az ideje, hogy...",
+                "example": "It''s time (for us) to go home now."
+            },
+			{
+                "description": "IT''S TIME sy DID sth = Itt az ideje, hogy... (Általában akkor használjuk ezt a változatot, ha valamit már meg kellett volna csinálni, vagy legalább neki kellett volna látni. Panaszt, kritikát fejezhetünk ki vele.",
+                "example": "It''s time we washed the car. It''s very dirty."
+            },
+			{
+                "description": " IT''S ABOUT TIME ... / IT''S HIGH TIME sy DID sth = Legfőbb ideje, hogy... (Erós kritika kifejezésére.)",
+                "example": "It''s high time you gave up smoking. It''s about time you gave up smoking."
+            }
+		]'
+	),
+	(
+		'Conditional clauses (if)',
+		'Feltételes mód',
+		'',
+		'A feltételes mondatok kötőszavai: if = ha; unless = hacsak nem (Az angol mondatban nem kell még egyszer tagadni.); provided  = feltéve, ha ; as long as/so long as = amennyiben, feltéve ha; as if = mintha; suppose/supposing = tegyük fel, hogy...; Ezekre ugyanaz a szabály vonatkozik, mint az if-re (utánuk Simple Present, Simple Past vagy Past Perfect használható)',
+		'[]',
+		'[
+            {
+                "description": "A feltételes mód első típusába azok a mondatok tartoznak, amelyek lehetséges feltételt fejeznek ki és általában a jövőre vonatkoznak. A főmondatban WILL segédigét, a mellékmondatban SIMPLE PRESENT TENSE-t/EGYSZERŰ JELEN IDŐT használunk. Mellékmondatnak mindig az if-fel kezdődő mondat minősül. A főmondat és a mellékmondat sorrendje felcserélhető. Ha az if-es mellékmondat az első helyen áll, akkor vesszővel választjuk el a főmondattól. Ha az if-es mellékmondat a főmondatot követi, akkor nem használunk vesszőt.",
+                "example": "I will do it if you do it too. If you do it, I will do it too."
+            },
+			{
+                "description": "A feltételes mód második típusa kevésbé valószínű, de még megvalósítható feltételt fejez ki. A főmondatban WOULD segédigét, az if-es mellékmondatban SIMPLE PAST TENSE-t / EGYSZERŰ MÚLT IDŐT használunk. A „to be” múlt idejeként korábban minden személyben a WERE-t használták; ma már azonban a WAS használata is helyes. Kivétel ez alól az ''lf I were you..'' (Ha a helyedben lennék...) szerkezet. Ezt mindig ebben a formában használjuk. A mellékmondat és főmondat sorrendje továbbra is felcserélhető, és a vessző használatára ugyanaz a szabály vonatkozik, mint a feltételes mód első típusa esetén.",
+                "example": "I would do it if you did it too. If you did it, I would do it too."
+            },
+			{
+                "description": "A feltételes mód harmadik típusa lehetetlen, már nem megvalósítható feltételt fejez ki. A főmondatban a WOULD HAVE + IGE 3. alakját, az if-es mellékmondatban a PAST PERFECT TENSE-t / BEFEJEZETT MÚLT IDŐT használjuk. A tagmondatok sorrendjére és a vessző használatára ugyanazok a szabályok érvényesek, mint a feltételes mód első és második típusa esetén.",
+                "example": "I would have done it if you had done it too. If you had done it, I would have done it too."
+            },
+			{
+                "description": "A vegyes feltételes mód azt jelenti, hogy különböző típusú feltételes módot használunk egy mondaton belül. Például a főmondatot 2. feltételes, a mellékmondatot 3. feltételes módba tesszük.",
+                "example": "Megcsinálnám, ha korábban te is megcsináltad volna. I would do it if you had also done it earlier."
+            },
+			{
+                "description": "IT''S TIME (FOR SY) TO DO = Itt az ideje, hogy...",
+                "example": "It''s time (for us) to go home now."
+            },
+			{
+                "description": "IT''S TIME sy DID sth = Itt az ideje, hogy... (Általában akkor használjuk ezt a változatot, ha valamit már meg kellett volna csinálni, vagy legalább neki kellett volna látni. Panaszt, kritikát fejezhetünk ki vele.",
+                "example": "It''s time we washed the car. It''s very dirty."
+            },
+			{
+                "description": " IT''S ABOUT TIME ... / IT''S HIGH TIME sy DID sth = Legfőbb ideje, hogy... (Erós kritika kifejezésére.)",
+                "example": "It''s high time you gave up smoking. It''s about time you gave up smoking."
+            }
+		]'
+	),
+	(
+		'I wish..., If only...',
+		'Bárcsak...',
+		'Kívánság, óhaj kifejezésére a WISH igét és az IF ONLY szerkezetet használhatjuk.',
+		null,
+		'[]',
+		'[
+            {
+                "description": "WISH / IF ONLY+ ALANY + SIMPLE PAST vagy PAST CONTINUOUS = Ezt a szerkezetet akkor használjuk, ha a jelen helyzettel nem vagyunk megelégedve, de változtatni sajnos nem tudunk rajta. A ''to be'' és a ''to have'', illetve egyéb állapotot kifejező igékkel mindig ezt a szerkezetet használjuk.",
+                "example": "I wish the weather was nice. If only I didn''t have to work so much.  I wish / If only he was coming with us now."
+            },
+			{
+                "description": "I WISH / IF ONLY + ALANY + WOULD = Ezt a szerkezetet a fentihez hasonlóan akkor használjuk, ha a beszélő elégedetlen a jelen helyzettel és azt szeretné, hogy valami bekövetkezzék, vagy valaki megtegyen valamit. Illetve, ha olyan kívánságról van szó, amely a későbbiek során még akár be is következhet, és ezért maga a beszélő is tehet valamit. Csak cselekvő igékkel, illetve változást kifejező igékkel használhatjuk.",
+                "example": "I wish / If only he would do me this favour. I wish / If only somebody would buy me a flat."
+            },
+			{
+                "description": "I WISH / IF ONLY + ALANY + PAST PERFECT = Ezt a szerkezetet akkor használjuk, ha a múltban valami olyan dolog következett be, aminek a megtörténtjét sajnáljuk, de azon változtatni már nem lehet.",
+                "example": "I wish/lf only I had gone to the party.  I wish / If only I hadn''t sold my flat."
+            }
+		]'
 	);
