@@ -1,9 +1,3 @@
-export interface User {
-	name: string;
-	gender: "male" | "female";
-	id: number;
-}
-
 export type WordType = "word" | "expression";
 export type LanguageType = "english" | "hungarian";
 
@@ -27,23 +21,6 @@ export interface WordWithScores extends Word {
 	actualScore: number;
 	finalScore: number;
 	statistics: WordStatistics;
-}
-export interface Points {
-	[ownerId: number]: number;
-}
-
-export interface Usage {
-	description: string;
-	example: string;
-}
-export interface GrammaticalStructure {
-	id: number;
-	title: string;
-	subtitle: string;
-	forming: string;
-	notes: string | null;
-	basicSentences: string[];
-	realLifeUsages: Usage[];
 }
 
 /* Used in Game feature */
