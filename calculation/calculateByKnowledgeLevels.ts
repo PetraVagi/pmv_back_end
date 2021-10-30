@@ -3,7 +3,7 @@ import get from "lodash/get";
 import sortBy from "lodash/sortBy";
 
 // Interfaces
-import { Word, KnowledgeLevel, LanguageType, TagColor, ProgressColorType } from "../interfaces";
+import { Word, KnowledgeLevel, LanguageType, TagColor, ProgressColorType } from "sharedInterfaces";
 
 function calculateKnowledgeLevels(word: Word) {
 	const knowledgeLevels: KnowledgeLevel[] = [];

@@ -14,7 +14,7 @@ import { calculateWordToAsk, getColorsByKnowledge } from "./calculation/calculat
 import { calculateDataToSave } from "./calculation/calculateFinalResult";
 
 // Interfaces
-import { GameStatistics, WordWithScores } from "./interfaces";
+import { GameStatistics, WordWithScores } from "sharedInterfaces";
 
 const app = express();
 const port = 9000;

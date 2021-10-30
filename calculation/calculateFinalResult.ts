@@ -5,7 +5,7 @@ import round from "lodash/round";
 import cloneDeep from "lodash/cloneDeep";
 
 // Interfaces
-import { WordWithScores, GameStatistics, WordStatistics } from "../interfaces";
+import { WordWithScores, GameStatistics, WordStatistics } from "sharedInterfaces";
 
 function calculateScoresToSave(word: WordWithScores, gameStatistics: GameStatistics): { actualScore: number; memoryLevel: number } {
 	const englishScore = gameStatistics.english ? 1 : 0;
