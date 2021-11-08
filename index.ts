@@ -40,8 +40,17 @@ app.get("/my-words/:id", async (req, res) => {
 		'SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NOT NULL ORDER BY english ASC LIMIT $2',
 		[userID, numberOfDisplayedRows],
 	);
-	/* Attila TODO: Error handling is missing */
-	res.status(200).send({ activeWords, deletedWords });
+
+	if (activeWords.error) {
+		console.log(activeWords);
+		res.status(409).json(activeWords);
+	}
+	if (deletedWords.error) {
+		console.log(activeWords);
+		res.status(409).json(deletedWords);
+	} else {
+		res.status(200).send({ activeWords, deletedWords });
+	}
 });
 
 app.post("/my-words", async (req, res) => {
