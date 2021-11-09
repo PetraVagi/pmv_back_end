@@ -12,6 +12,7 @@ import { executeQueryOnDB } from "./dataTransfer";
 // Calculations
 import { calculateWordToAsk, getColorsByKnowledge } from "./calculation/calculateByKnowledgeLevels";
 import { calculateDataToSave } from "./calculation/calculateFinalResult";
+import { calculateKnowLedgeLevels } from "./calculation/calculateKowledgeLevels";
 
 // Interfaces
 import { GameStatistics, WordWithScores } from "sharedInterfaces";
@@ -106,20 +107,8 @@ app.post("/my-words", async (req, res) => {
 });
 
 app.put("/my-words", async (req, res) => {
-	const {
-		ownerId,
-		english,
-		hungarian,
-		exampleSentences,
-		notes,
-		type,
-		favourite,
-		deletionDate,
-		memoryLevel,
-		actualScore,
-		finalScore,
-		id,
-	}: WordWithScores = req.body;
+	const { ownerId, english, hungarian, exampleSentences, notes, type, favourite, deletionDate, id }: WordWithScores = req.body;
+	const { memoryLevel, actualScore, finalScore } = calculateKnowLedgeLevels(req.body);
 
 	const response = await executeQueryOnDB(
 		`UPDATE words
@@ -135,7 +124,7 @@ app.put("/my-words", async (req, res) => {
 		"memoryLevel" = $9, 
 		"actualScore" = $10, 
 		"finalScore" = $11
-		WHERE id = $13
+		WHERE id = $12
 		RETURNING *`,
 		[
 			ownerId,

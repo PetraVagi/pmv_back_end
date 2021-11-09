@@ -6,6 +6,7 @@ import cloneDeep from "lodash/cloneDeep";
 
 // Interfaces
 import { WordWithScores, GameStatistics, MeaningWithPoint } from "sharedInterfaces";
+import { calculateMemoryLevel } from "./calculateKowledgeLevels";
 
 function calculateStatisticsForMeanings(
 	meanings: MeaningWithPoint,
@@ -38,7 +39,7 @@ function calculateScoresToSave(word: WordWithScores, gameStatistics: GameStatist
 	const scoreNow = englishScore + hungarianScore;
 	const actualScore = word.actualScore + scoreNow;
 
-	return { actualScore, memoryLevel: round((actualScore / word.finalScore) * 100, 0) };
+	return { actualScore, memoryLevel: calculateMemoryLevel(actualScore, word.finalScore) };
 }
 
 function calculateDeletionDateToSave(word: WordWithScores, actualScore: number): Date | null {
