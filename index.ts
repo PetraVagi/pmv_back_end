@@ -12,6 +12,7 @@ import { executeQueryOnDB } from "./dataTransfer";
 // Calculations
 import { calculateWordToAsk, getColorsByKnowledge } from "./calculation/calculateByKnowledgeLevels";
 import { calculateDataToSave } from "./calculation/calculateFinalResult";
+import { calculateInitialScores } from "./calculation/calculateInitialScores";
 
 // Interfaces
 import { GameStatistics, WordWithScores } from "sharedInterfaces";
@@ -54,20 +55,8 @@ app.get("/my-words/:id", async (req, res) => {
 });
 
 app.post("/my-words", async (req, res) => {
-	const {
-		ownerId,
-		english,
-		hungarian,
-		exampleSentences,
-		notes,
-		type,
-		favourite,
-		deletionDate,
-		memoryLevel,
-		actualScore,
-		finalScore,
-		statistics,
-	}: WordWithScores = req.body;
+	const { ownerId, english, hungarian, exampleSentences, notes, type, favourite, deletionDate, statistics }: WordWithScores = req.body;
+	const { memoryLevel, actualScore, finalScore } = calculateInitialScores(req.body);
 
 	const response = await executeQueryOnDB(
 		`INSERT INTO words(
@@ -109,21 +98,8 @@ app.post("/my-words", async (req, res) => {
 });
 
 app.put("/my-words", async (req, res) => {
-	const {
-		ownerId,
-		english,
-		hungarian,
-		exampleSentences,
-		notes,
-		type,
-		favourite,
-		deletionDate,
-		memoryLevel,
-		actualScore,
-		finalScore,
-		statistics,
-		id,
-	}: WordWithScores = req.body;
+	const { ownerId, english, hungarian, exampleSentences, notes, type, favourite, deletionDate, statistics, id }: WordWithScores = req.body;
+	const { memoryLevel, actualScore, finalScore } = calculateInitialScores(req.body);
 
 	const response = await executeQueryOnDB(
 		`UPDATE words

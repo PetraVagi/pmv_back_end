@@ -1,11 +1,13 @@
 // Utils
 import get from "lodash/get";
 import set from "lodash/set";
-import round from "lodash/round";
 import cloneDeep from "lodash/cloneDeep";
 
 // Interfaces
 import { WordWithScores, GameStatistics, WordStatistics } from "sharedInterfaces";
+
+// Helper functions
+import { calculateMemoryLevel } from "./calculateInitialScores";
 
 function calculateScoresToSave(word: WordWithScores, gameStatistics: GameStatistics): { actualScore: number; memoryLevel: number } {
 	const englishScore = gameStatistics.english ? 1 : 0;
@@ -13,7 +15,7 @@ function calculateScoresToSave(word: WordWithScores, gameStatistics: GameStatist
 	const scoreNow = englishScore + hungarianScore;
 	const actualScore = word.actualScore + scoreNow;
 
-	return { actualScore, memoryLevel: round((actualScore / word.finalScore) * 100, 0) };
+	return { actualScore, memoryLevel: calculateMemoryLevel(actualScore, word.finalScore) };
 }
 
 /* Statistics: object: 
