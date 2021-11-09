@@ -6,12 +6,11 @@ CREATE TABLE IF NOT EXISTS public.users (
     PRIMARY KEY (id)
 );
 ALTER TABLE public.users OWNER to pmv_admin;
-
 /* WORDS */
 CREATE TABLE IF NOT EXISTS public.words (
     id serial NOT NULL,
     "ownerId" integer NOT NULL,
-    english character varying(250) NOT NULL,
+    english jsonb NOT NULL,
     hungarian jsonb NOT NULL,
     "exampleSentences" jsonb NOT NULL,
     notes text,
@@ -21,12 +20,10 @@ CREATE TABLE IF NOT EXISTS public.words (
     "memoryLevel" smallint NOT NULL,
     "actualScore" smallint NOT NULL,
     "finalScore" smallint NOT NULL,
-    statistics jsonb NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT fk_owner FOREIGN KEY ("ownerId") REFERENCES public.users (id) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 ALTER TABLE public.words OWNER to pmv_admin;
-
 /* GRAMMATICIAL STRUCTURES */
 CREATE TABLE IF NOT EXISTS public.grammatical_structures (
     id serial NOT NULL,
@@ -39,7 +36,6 @@ CREATE TABLE IF NOT EXISTS public.grammatical_structures (
     PRIMARY KEY (id)
 );
 ALTER TABLE public.grammatical_structures OWNER to pmv_admin;
-
 /*  USERS AND GRAMMATICAL STRUCTURES*/
 CREATE TABLE IF NOT EXISTS public.users_and_grammatical_structures (
     id serial NOT NULL,

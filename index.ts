@@ -66,7 +66,6 @@ app.post("/my-words", async (req, res) => {
 		memoryLevel,
 		actualScore,
 		finalScore,
-		statistics,
 	}: WordWithScores = req.body;
 
 	const response = await executeQueryOnDB(
@@ -81,9 +80,8 @@ app.post("/my-words", async (req, res) => {
 		"deletionDate", 
 		"memoryLevel", 
 		"actualScore", 
-		"finalScore", 
-        statistics)
-		VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *`,
+		"finalScore")
+		VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *`,
 		[
 			ownerId,
 			english,
@@ -96,7 +94,6 @@ app.post("/my-words", async (req, res) => {
 			memoryLevel,
 			actualScore,
 			finalScore,
-			statistics,
 		],
 		true,
 	);
@@ -121,7 +118,6 @@ app.put("/my-words", async (req, res) => {
 		memoryLevel,
 		actualScore,
 		finalScore,
-		statistics,
 		id,
 	}: WordWithScores = req.body;
 
@@ -138,8 +134,7 @@ app.put("/my-words", async (req, res) => {
 		"deletionDate" = $8, 
 		"memoryLevel" = $9, 
 		"actualScore" = $10, 
-		"finalScore" = $11,
-        statistics = $12
+		"finalScore" = $11
 		WHERE id = $13
 		RETURNING *`,
 		[
@@ -154,7 +149,6 @@ app.put("/my-words", async (req, res) => {
 			memoryLevel,
 			actualScore,
 			finalScore,
-			statistics,
 			id,
 		],
 		true,
@@ -222,17 +216,18 @@ app.put("/lets-play/:wordId", async (req, res) => {
 	}: { word: WordWithScores; gameStatistics: GameStatistics; grammaticalStructure: { id: number; known: boolean } } = req.body;
 
 	// Update word scores
-	const { actualScore, memoryLevel, statistics, deletionDate } = calculateDataToSave(word, gameStatistics);
+	const { english, hungarian, actualScore, memoryLevel, deletionDate } = calculateDataToSave(word, gameStatistics);
 	const wordsResponse = await executeQueryOnDB(
 		`UPDATE words
 		SET 
-		"memoryLevel" = $1, 
-		"actualScore" = $2, 
-		"statistics" = $3,
-		"deletionDate" = $4
-		WHERE id = $5
+		"english" = $1, 
+		"hungarian" = $2,
+		"memoryLevel" = $3, 
+		"actualScore" = $4, 
+		"deletionDate" = $5
+		WHERE id = $6
 		RETURNING *`,
-		[memoryLevel, actualScore, statistics, deletionDate, req.params.wordId],
+		[english, hungarian, memoryLevel, actualScore, deletionDate, req.params.wordId],
 		true,
 	);
 

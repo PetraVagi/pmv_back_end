@@ -14,13 +14,12 @@ INSERT INTO public.words(
 		"deletionDate",
 		"memoryLevel",
 		"actualScore",
-		"finalScore",
-		statistics
+		"finalScore"
 	)
 VALUES (
 		1,
-		'ditch',
-		'["árok", "csatorna", "körülárkol"]',
+		'{"ditch": 8}',
+		'{"árok": 8, "csatorna": 1, "körülárkol": 3}',
 		'["Why do you have a ditch in front of your house?"]',
 		'A narrow channel dug in the ground, typically used for drainage alongside a road or the edge of a field.',
 		'word',
@@ -28,16 +27,12 @@ VALUES (
 		null,
 		50,
 		20,
-		40,
-		'{
-			"english": 8,
-			"hungarian": [8, 1, 3]
-		}'
+		40
 	),
 	(
 		2,
-		'candid',
-		'["őszinte", "nyílt", "pártatlan"]',
+		'{"candid": 0}',
+		'{"őszinte": 0, "nyílt": 0, "pártatlan": 0}',
 		'["His responses were remarkably candid.", "Candid is my new favourite word."]',
 		null,
 		'word',
@@ -45,16 +40,12 @@ VALUES (
 		null,
 		0,
 		0,
-		40,
-		'{
-			"english": 0,
-			"hungarian": [0, 0, 0]
-		}'
+		40
 	),
 	(
 		1,
-		'correct',
-		'["helyes", "korrekt", "helytálló", "kijavít", "helyesbít", "korrigál", "javít"]',
+		'{"correct": 10}',
+		'{"helyes": 12, "korrekt": 8, "helytálló": 6, "kijavít": 9, "helyesbít": 5, "korrigál": 10, "javít": 12}',
 		'["Make sure you have been given the correct information"]',
 		'Free from error.',
 		'word',
@@ -62,16 +53,12 @@ VALUES (
 		null,
 		90,
 		72,
-		80,
-		'{
-			"english": 10,
-			"hungarian": [12, 8, 6, 9, 5, 10, 12]
-		}'
+		80
 	),
 	(
 		2,
-		'achieve',
-		'["elér", "megvalósít"]',
+		'{"achieve": 2}',
+		'{"elér": 5, "megvalósít": 1}',
 		'["He achieved his ambition to become a journalist"]',
 		null,
 		'word',
@@ -79,11 +66,7 @@ VALUES (
 		null,
 		27,
 		8,
-		30,
-		'{
-			"english": 2,
-			"hungarian": [5, 1]
-		}'
+		30
 	);
 /* grammatical structures */
 INSERT INTO public.grammatical_structures(

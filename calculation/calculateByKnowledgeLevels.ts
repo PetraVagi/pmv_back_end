@@ -1,16 +1,16 @@
 // Utils
+import min from "lodash/min";
 import get from "lodash/get";
 import sortBy from "lodash/sortBy";
 
 // Interfaces
 import { Word, KnowledgeLevel, LanguageType, TagColor, ProgressColorType } from "sharedInterfaces";
 
-function calculateKnowledgeLevels(word: Word) {
+function calculateHungarianKnowledgeLevels(word: Word) {
 	const knowledgeLevels: KnowledgeLevel[] = [];
 
-	knowledgeLevels.push({ language: "english", point: get(word, "statistics.english", 0) });
-	get(word, "statistics.hungarian", []).forEach((hunLevel: number, index: number) => {
-		knowledgeLevels.push({ language: "hungarian", point: hunLevel, index });
+	Object.keys(word.hungarian).forEach((meaning: string) => {
+		knowledgeLevels.push({ meaning, point: get(word.hungarian, meaning, 0) });
 	});
 
 	return knowledgeLevels;
@@ -26,14 +26,15 @@ B) If one of the Hungarian meanings have your weakest knowledge point, the 'word
 Of course you can get 1 more point for the other Hungarian meanings and 1 more for a correct example sentence with the chosen grammatical structure
  */
 export function calculateWordToAsk(word: Word): { wordToAsk: string; wordToAnswer: string; mainWordType: LanguageType } {
-	const sortedLevels = sortBy(calculateKnowledgeLevels(word), "point");
+	const weakestHungarianPoint = min(Object.values(word.hungarian));
+	const weakestHungarianMeaning = Object.keys(word.hungarian).find((key) => word.hungarian[key] === weakestHungarianPoint);
+	const englishPoint = Object.values(word.english)[0];
+	const englishMeaning = Object.keys(word.english)[0];
 
-	if (sortedLevels[0]?.language === "english") {
-		const weakestHunIndex = get(sortedLevels, [1, "index"], 0);
-		return { wordToAsk: get(word, ["hungarian", weakestHunIndex], ""), wordToAnswer: word.english, mainWordType: "english" };
+	if (englishPoint <= weakestHungarianPoint) {
+		return { wordToAsk: weakestHungarianMeaning, wordToAnswer: englishMeaning, mainWordType: "english" };
 	} else {
-		const weakestHunIndex = get(sortedLevels, [0, "index"], 0);
-		return { wordToAsk: word.english, wordToAnswer: get(word, ["hungarian", weakestHunIndex], ""), mainWordType: "hungarian" };
+		return { wordToAsk: englishMeaning, wordToAnswer: weakestHungarianMeaning, mainWordType: "hungarian" };
 	}
 }
 
@@ -44,7 +45,7 @@ export function calculateWordToAsk(word: Word): { wordToAsk: string; wordToAnswe
 4) If the weakest or strongest level contains more meanings, all of them will recieve that specific color
 */
 export function getColorsByKnowledge(word: Word): TagColor[] {
-	const knowledgeLevels = calculateKnowledgeLevels(word);
+	const knowledgeLevels = calculateHungarianKnowledgeLevels(word);
 
 	if (word.memoryLevel === 0) {
 		return knowledgeLevels.map((level: KnowledgeLevel) => {
