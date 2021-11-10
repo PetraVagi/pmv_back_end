@@ -29,8 +29,8 @@ export function calculateWordToAsk(word: Word): { wordToAsk: string; wordToAnswe
 	const sortedLevels = sortBy(calculateKnowledgeLevels(word), "point");
 
 	if (sortedLevels[0]?.language === "english") {
-		const weakestHunIndex = get(sortedLevels, [1, "index"], 0);
-		return { wordToAsk: get(word, ["hungarian", weakestHunIndex], ""), wordToAnswer: word.english, mainWordType: "english" };
+		const strongestHunIndex = get(sortedLevels, [sortedLevels.length - 1, "index"], 0);
+		return { wordToAsk: get(word, ["hungarian", strongestHunIndex], ""), wordToAnswer: word.english, mainWordType: "english" };
 	} else {
 		const weakestHunIndex = get(sortedLevels, [0, "index"], 0);
 		return { wordToAsk: word.english, wordToAnswer: get(word, ["hungarian", weakestHunIndex], ""), mainWordType: "hungarian" };
