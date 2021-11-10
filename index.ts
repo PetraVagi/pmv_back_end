@@ -265,6 +265,16 @@ app.put("/lets-play/:wordId", async (req, res) => {
 	res.status(200).send(wordsResponse);
 });
 
+/* PRACTICE GRAMMATICAL STRUCTURES APIs */
+
+app.get("/practice/grammatical-structures", async (req, res) => {
+	const numberOfStructures = 5;
+
+	const grammaticalStructures = await executeQueryOnDB("SELECT * FROM grammatical_structures ORDER BY random() LIMIT $1", [numberOfStructures * 2]);
+
+	res.status(200).send({ grammaticalStructures });
+});
+
 app.listen(port, () => {
 	console.log(`App running on port ${port}.`);
 });
