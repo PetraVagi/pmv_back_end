@@ -285,7 +285,7 @@ VALUES (
             },
             {
                 "description": "Ha az iránt érdeklődnek, hogy a cselekvés végbe ment-e. (EVER). FONTOS: A helyhatározó kifejezésére ilyenkor nem az „in” hanem a „to” prepozíciót használjuk!",
-                "example": "Hape you ever been to London?"
+                "example": "Have you ever been to London?"
             },
             {
                 "description":
