@@ -430,7 +430,7 @@ VALUES (
                 "example": "You will pass the exam if you learn hard."
             },
 			{
-                "description": " A „will” E.sz./l. és T.sz./l. személyű alakja a „shall”. Ezt azonban ma már többnyire csak akkor használjuk, amikor tanácsot kérünk valakitól, illetve kikérjük mások véleményét arra vonatkozóan, hogy mit tegyünk.",
+                "description": "A „will” E.sz./l. és T.sz./l. személyű alakja a „shall”. Ezt azonban ma már többnyire csak akkor használjuk, amikor tanácsot kérünk valakitól, illetve kikérjük mások véleményét arra vonatkozóan, hogy mit tegyünk.",
                 "example": "Shall I close the door? What shall we do tonight? Where shall we meet?"
             }
 		]'
@@ -503,7 +503,7 @@ VALUES (
             },
 			{
                 "description": "TO BE ABOUT TO / NOT ABOUT TO = azon van, hogy... / épp csinálni akar valamit",
-                "example": " I was about to call you. I''m not about to do anything."
+                "example": "I was about to call you. I''m not about to do anything."
             },
 			{
                 "description": "TO BE DUE TO / NOT DUE TO = kell, valaminek menetrendszerűien be kell következnie",
@@ -524,7 +524,7 @@ VALUES (
             },
 			{
                 "description": "TO BE ABLE TO = Képes valamire Használhatjuk egyszerű jelen, egyszerű múlt, egyszerű jövő, befejezett jelen és befejezett múlt időben is.",
-                "example": " I am able to do it. I was able to do it. I will be able to do it."
+                "example": "I am able to do it. I was able to do it. I will be able to do it."
             },
 			{
                 "description": "Érzékelést kifejező igékkel és egyes mentális tevékenységet kifejező igékkel, jelen és múlt időben, mindig a CAN-t és múlt idejú alakját a COULD-ot használjuk.",
@@ -605,7 +605,7 @@ VALUES (
                 "example": "It''s time we washed the car. It''s very dirty."
             },
 			{
-                "description": " IT''S ABOUT TIME ... / IT''S HIGH TIME sy DID sth = Legfőbb ideje, hogy... (Erós kritika kifejezésére.)",
+                "description": "IT''S ABOUT TIME ... / IT''S HIGH TIME sy DID sth = Legfőbb ideje, hogy... (Erós kritika kifejezésére.)",
                 "example": "It''s high time you gave up smoking. It''s about time you gave up smoking."
             }
 		]'
@@ -632,18 +632,6 @@ VALUES (
 			{
                 "description": "A vegyes feltételes mód azt jelenti, hogy különböző típusú feltételes módot használunk egy mondaton belül. Például a főmondatot 2. feltételes, a mellékmondatot 3. feltételes módba tesszük.",
                 "example": "Megcsinálnám, ha korábban te is megcsináltad volna. I would do it if you had also done it earlier."
-            },
-			{
-                "description": "IT''S TIME (FOR SY) TO DO = Itt az ideje, hogy...",
-                "example": "It''s time (for us) to go home now."
-            },
-			{
-                "description": "IT''S TIME sy DID sth = Itt az ideje, hogy... (Általában akkor használjuk ezt a változatot, ha valamit már meg kellett volna csinálni, vagy legalább neki kellett volna látni. Panaszt, kritikát fejezhetünk ki vele.",
-                "example": "It''s time we washed the car. It''s very dirty."
-            },
-			{
-                "description": " IT''S ABOUT TIME ... / IT''S HIGH TIME sy DID sth = Legfőbb ideje, hogy... (Erós kritika kifejezésére.)",
-                "example": "It''s high time you gave up smoking. It''s about time you gave up smoking."
             }
 		]'
 	),
@@ -665,6 +653,265 @@ VALUES (
 			{
                 "description": "I WISH / IF ONLY + ALANY + PAST PERFECT = Ezt a szerkezetet akkor használjuk, ha a múltban valami olyan dolog következett be, aminek a megtörténtjét sajnáljuk, de azon változtatni már nem lehet.",
                 "example": "I wish/lf only I had gone to the party.  I wish / If only I hadn''t sold my flat."
+            }
+		]'
+	),
+	(
+		'Passive voice',
+		'Szenvedő szerkezet',
+		'A passzív szerkezet állítmánya: TO BE + IGE 3. ALAKJA. A passzív mondatban tehát mindig a TO BE kerül a megfelelő alakba, és azt egyeztetjük számban és személyben a passzív mondat alanyával. Az ige változatlanul harmadik alakban áll.',
+		'A szenvedő szerkezet legfontosabb ismérve, hogy a cselekvés alanya a beszélő mondanivalója szempontjából lényegtelen. Az a fontos, ami a cselekvést elszenvedi, vagyis a mondat tárgya. A szenvedő szerkezetű mondatban a tárgy az alany helyére kerül, az alany pedig, amennyiben meg akarjuk nevezni, egy „BY” prepozíziót követően a mondat végére.',
+		'["This company builds factories ---> Factories are built (by this company)"]',
+		'[
+            {
+                "description": "Simple present",
+                "example": "They build a house. --> A house is built."
+            },
+			{
+                "description": "Present continuous",
+                "example": "They are building a house. --> A house is being built."
+            },
+			{
+                "description": "Past simple",
+                "example": "They built a house. --> A house was built."
+            },
+			{
+                "description": "Past continuous",
+                "example": "They were building a house. --> A house was being built."
+            },
+			{
+                "description": "Present perfect",
+                "example": "They have built a house. --> A house has been built."
+            },
+			{
+                "description": "Past perfect",
+                "example": "They had built a house. --> A house had been built."
+            },
+			{
+                "description": "Simple future",
+                "example": "They will build a house. --> A house will be built."
+            },
+			{
+                "description": "Future continuous",
+                "example": "They will be building a house. --> A house will be being built."
+            },
+			{
+                "description": "To be going to",
+                "example": "They are going to build a house. --> A house is going to be built."
+            },
+			{
+                "description": "To have to / To be to",
+                "example": "They have to build a house. --> A house has to be built."
+            },
+			{
+                "description": "Must / Can / Should etc.",
+                "example": "They must build a house. --> A house must be built."
+            },
+			{
+                "description": "Must have / Can have / Should have etc.",
+                "example": "They must have built a house. --> A house must have been built."
+            }
+		]'
+	),
+	(
+		'Passive voice 2.0',
+		'Szenvedő szerkezet 2.0',
+		'Egyéb fontos tudnivalók a szenvedő szerkezetről',
+		null,
+		'[]',
+		'[
+            {
+                "description": "Részeshatározóval álló igék szenvedő szerkezetben: A részeshatározót kétféleképpen fejezheti ki az angol nyelv: prepozíciós szerkezettel (to, for) vagy úgynevezett indirekt tárggyal. Mivel az angol nyelvben a részeshatározó is a cselekvés egyik elszenvedője, elfoglalhatja a tárgy helyét, ez alkalommal azonban már prepozíció nélkül. Így, mivel a mondat egyik tárgyaként funkcionál, a szenvedő szerkezet képzési szabályai szerint a passzív mondat alanya lehet, tehát a mondat élére kerülhet. A leggyakoribb kettős tárgyesettel járó igék: offer, pay, show, teach, tell, lend, give, send, write, get, buy, order.",
+                "example": "I gave a book to you. --> A book was given to you. I gave you a book. --> You were given a book."
+            },
+			{
+                "description": "It is said that... / It was said that = Azt mondják... / Azt mondták...",
+                "example": "a) People say that Tom is very clever. --> b) It is said that Tom is very clever. --> c) Tom is said to be very clever."
+            },
+			{
+                "description": "További példák (jelen és múlt időben is használható): It is thought that...; It is expected that...; It is believed that...; It is known that... etc.",
+                "example": "Ezeket a szerkezetet akkor használjuk, amikor nem az a fontos, hogy kik állítanak valamit, hanem az, hogy mit állítanak. Ha a mellékmondat alanyát szeretnénk kiemelni, akkor a „that” kötőszót elhagyjuk, és a mellékmondatot főnévi igeneves szerkezettel kötjük a főmondathoz (c) mondat). További példák: it is understood. It is alleged. It is considered, It is reported."
+            },
+			{
+                "description": "Be supposed to... = Azt mondják, hogy... / kellene, kellett volna",
+                "example": "This play is supposed to be very good. I am supposed to be there at five. The bus was supposed to arrive at six."
+            },
+			{
+                "description": "Be not supposed to... = nem szabad, nem kellene",
+                "example": "You are not supposed to behave like this. You are not supposed to hurt her."
+            },
+			{
+                "description": "to be done = to get done: A passzív szerkezetben a ''to be'' létigét felválthatja a ''to get''.",
+                "example": "Yesterday my bicycle was stolen. --> Yesterday my bicycle got stolen."
+            },
+			{
+                "description": "need to be done = need doing / want to be done = want doing = valamit meg kell csinálni: Ha a ''need'' segédigét vagy a ''want'' igét passzív szerkezet követi, akkor azt az ige ''ing''-es alakja helyettesítheti. Beszélt nyelvben ez a változat a gyakoribb.",
+                "example": "The room nneds to be cleaned. --> The room needs cleaning."
+            },
+			{
+                "description": "BY és WITH passzív mondat végén: Ha valamit eszközként használtunk a cselekvés akkor WITH áll a passzív mondat végén. Ha a történésnek valki vagy valami a közvetlen okozója, akkor BY áll a passzív mondat végén.",
+                "example": "He was hit with a stone. He was killed by a falling stone."
+            },
+			{
+                "description": "Prepozíciós igék: Prepozíciós ige esetén a prepozíció a passzív igealak után áll.",
+                "example": "This problem has to be dealt with."
+            }
+		]'
+	),
+	(
+		'Causative',
+		'Műveltetés',
+		'A műveltetés lényege, hogy valamilyen cselekvést mással végeztetünk. A következő öt szerkezet a leggyakrabban használt változata (1—7). Ezen kívül léteznek még hasonló szerkezetek, de azok jelentése nem műveltetés (8—9).',
+		null,
+		'[]',
+		'[
+			{
+                "description": "TO HAVE STH DONE (BY SY) = a) Megcsináltatni valamit (valakivel), általában szolgáltatásoknál használjuk. A „to have” igét kell a megfelelő igeidőbe tenni. b) Valamilyen sajnálatos esemény kifejezésére. (Általában a szenvedő szerkezet helyettesítésére. Ld. a 9. pontban!)",
+                "example": "Next week I''ll have my car washed by the mechanic. Last week I had my car washed by the mechanic. I have just had my car washed by the mechanic."
+            },
+			{
+                "description": "TO GET STH DONE (BY SY) = Ugyanazt jelenti, mint a „to have sth done”, de élőbeszédben ez a gyakrabban használt változat. A „get” is ragozható.",
+                "example": "Next week I''ll get the roof repaired. Last week I got the roof repaired. I have just got the roof repaired."
+            },
+			{
+                "description": "TO MAKE SY DO STH = a) kényszeríteni valakit valamire (Ebben az értelemben a to force sy to do sth szinonímája.) b) késztet valakit valamire (Ebben az értelemben a to cause sy to do sth szinonímája.) c) tesz valakit valamilyenné.",
+                "example": "They made him eat it. = They forced him to eat it. What made him drink? = What caused him to drink?"
+            },
+			{
+                "description": "DE! To MAKE ONESELF UNDERSTOOD/HEARD... = megérteti magát, hallatja magát...",
+                "example": "Although I don''t speak German well, I could make myself understood."
+            },
+			{
+                "description": "TO BE MADE TO = A „to make sy do sth” passzív alakja. Aktív alakban bír, nincs mint „to”, az aktív passzívalak. alakban azonban már van. Ugyanazal a jelentéssel bír, mint az aktív alak.",
+                "example": "He was made to eat it. She was made to feel happy."
+            },
+			{
+                "description": "TO GET sy TO DO STH = rávenni valakit valamire",
+                "example": "I got my husband to do the washing up."
+            },
+			{
+                "description": "TO HAVE/GET sy DO STH = valakivel megcsináltat valamit",
+                "example": "Have the secretary translate the letter. = Fordíttasd le a titkárnővel a levelet!"
+            },
+			{
+                "description": "Műveltetéshez hasonló szerkezet: TO HAVE SY DOING = a) Eléri, hogy valaki valamit képes legyen megcsinálni. b) A „you''ll have sy doing” azt jelenti, hogy valami meg fog történni, az lesz a vége, hogy... (Csak E.sz. / 2. sz.-ben használjuk ilyen értelemben.) c) Az „I won''t have sy doing” azt jelenti, hogy valamit nem engedek meg. (Általában E. sz. / 1. sz.-ben használjuk ilyen értelemben.)",
+                "example": "Nemsokára megtanítunk járni. = We''ll have you walking soon. Ha éjjel zajongtok, a szomszédok panaszkodni fognak. = If you make noise at night, you''ll have your  neighbours complaining. Nem engedem meg, hogy bent dohányozzon. = I won''t have him smoking in here."
+            },
+			{
+                "description": "Műveltetéshez hasonló szerkezet: GOT/HAD STH DONE = Egy megtörtént eset elbeszélésére, valamilyen sajnálatos esemény kifejezésére. (A szenvedő szerkezetet helyettesítjük vele.)",
+                "example": "I had my purse stolen. I got my nose broken."
+            }
+		]'
+	),
+	(
+		'Reported / Indirect speech I.',
+		'Függő beszéd I. - Állítás',
+		'Függő  beszédben a beszélő egy bevezető főmondat után közli mindazt, amit valaki mondott vagy kérdezett. A főmondat igeidejétől függően változhat a mellékmondat igeideje is. Ha a főmondat  jelen időben van, akkor a mellékmondat  igeideje ugyanaz marad, mint ami eredetileg volt. Ha a főmondat múlt időben van, akkor a mellékmondat igeideje is változik, jellemzően egy „igeidővel visszacsúszik”. Minden igeidőnek megvan a függő beszédben használt megfelelője.',
+		'A főmondatban természetesen nem csak a „to say” ige állhat, hanem számos más ige is, attól függően, hogy a mellékmondat milyen célból hangzott el. Pl. to complain = panaszkodik, to boast = dicsekszik, to wonder = kíváncsi valamire, to promise = megmígér stb.',
+		'[]',
+		'[
+			{
+                "description": "SIMPLE PRESENT --> SIMPLE PAST",
+                "example": "Jack eats a lot of chocolate. --> She said that Jack ate a lot of chocolate."
+            },
+			{
+                "description": "PRESENT CONTINUOUS --> PAST CONTINUOUS",
+                "example": "Jack is eating chocolate. --> She said that Jack was eating chocolate."
+            },
+			{
+                "description": "SIMPLE PAST --> PAST PERFECT",
+                "example": "Jack ate some chocolate. --> She said that Jack had eaten some chocolate."
+            },
+			{
+                "description": "PAST CONTINUOUS --> PAST PERFECT CONTINUOUS",
+                "example": "Jack was eating chocolate. --> She said that Jack had been eating chocolate."
+            },
+			{
+                "description": "PAST CONTINUOUS / SIMPLE PAST --> PAST CONTINUOUS / SIMPLE PAST",
+                "example": "Jack was eating chocolate when I entered. --> She said that Jack was eating chocolate when she entered."
+            },
+			{
+                "description": "PRESENT PERFECT --> PAST PERFECT",
+                "example": "Jack has eaten some chocolate. --> She said that Jack had eaten some chocolate."
+            },
+			{
+                "description": "PRESENT PERFECT CONTINUOUS --> PAST PERFECT CONTINUOUS",
+                "example": "Jack has been eating chocolate. --> She said that Jack had been eating chocolate."
+            },
+			{
+                "description": "PAST PERFECT --> PAST PERFECT",
+                "example": "Jack had eaten some chocolate. --> She said that Jack had eaten some chocolate."
+            },
+			{
+                "description": "PAST PERFECT CONTINUOUS --> PAST PERFECT CONTINUOUS",
+                "example": "Jack had been eating chocolate. --> She said that Jack had been eating chocolate."
+            },
+			{
+                "description": "SIMPLE FUTURE --> WOULD",
+                "example": "Jack will eat some chocolate. --> She said that Jack would eat some chocolate."
+            },
+			{
+                "description": "FUTURE CONTINUOUS --> WOULD BE -ING",
+                "example": "Jack will be eating chocolate. --> She said that Jack would be eating chocolate."
+            },
+			{
+                "description": "FUTURE PERFECT --> WOULD HAVE + 3. alak",
+                "example": "Jack will have eaten some chocolate. --> She said that Jack would have eaten some chocolate."
+            },
+			{
+                "description": "FUTURE PERFECT CONTINUOUS --> WOULD HAVE BEEN -ING",
+                "example": "Jack will have been eating chocolate. --> She said that Jack would have been eating chocolate."
+            },
+			{
+                "description": "IS / ARE GOING TO --> WAS / WERE GOING TO",
+                "example": "Jack is going to eat chocolate. --> She said that Jack was going to eat chocolate."
+            }
+		]'
+	),
+	(
+		'Reported / Indirect speech II. - Reported questions',
+		'Függő beszéd II. - Kérdés',
+		'Függő kérdésben a mellékmondat szórendje egyenes. A függő kérdés nem kérdő mondat! Kétféle függő kérdést különböztetünk meg, attól függően, hogy eldöntendő kérdést, vagy kiegészítendő (kérdőszavas) kérdést teszünk-e függő beszédbe.',
+		null,
+		'[]',
+		'[
+			{
+                "description": "Eldöntendő kérdés függő beszédben: Az eldöntendő kérdést első lépésben egyenes szórendbe, majd a megfelelő igeidőbe tesszük és az IF vagy WHETHER kötőszavakkal kötjük a főmondathoz. Az „if/whether” = „-e” szócska.",
+                "example": "Is she married? --> He asks if/whether she is married. OR He asked if/whether she was married."
+            },
+			{
+                "description": "Kiegészítendő kérdés függő beszédben: A kiegészítendő kérdést függő beszédben szintén egyenes szórendbe és a megfelelő igeidőbe tesszük. Ezt a kérdést az eredeti kérdőszóval kötjük a főmondathoz.",
+                "example": "Why is he angry? --> She asks why he is angry. OR She asked why he was angry."
+            }
+		]'
+	),
+	(
+		'Reported / Indirect speech III. - Reported command, request, advice',
+		'Függő beszéd III. - Felszólítás',
+		'Felszólítás és tiltás, valamint kérés és tanács idézésekor függő beszédben, az igeidőtől függetlenül, a főmondat után „to” infinitive áll, a megfelelő személyes névmás tárgyesetét követően. Tagadás esetén "not + to infinitive"-et használunk. A bevezető főmondatban általában a következő igék állhatnak a mondat értelmének megfelelően: to ask — megkér, to tell — elmond, mond, to order — parancsol, to request — igényel, kér, to warn — figyelmeztet, to advise — tanácsol, to encourage — ösztönöz, to forbid — megtilt, to beg — könyörög, to recommend — ajánl, javasol, to remind — emlékeztet, to urge — sürget. A „to say” igét itt nem használhatjuk.',
+		null,
+		'[]',
+		'[
+			{
+                "description": "Felszólítás.",
+                "example": "Will you pass my the salt? --> He asked me to pass him the salt."
+            },
+			{
+                "description": "Tagadás",
+                "example": "Don''t drive fast. --> He asked me not to drive fast."
+            }
+		]'
+	),
+	(
+		'Reported / Indirect speech IV.',
+		'Függő beszéd IV. - Egyéb tudnivalók',
+		'',
+		null,
+		'[]',
+		'[
+			{
+                "description": "A „Shall I...”, „Shall we...” kezdetű mondatok „I/he should...”, „We/they should...” szerkezetté vagy „to” főnévi igenévvé alakulnak át. Ilyenkor a „whether” kötőszót használjuk.",
+                "example": "Shall I eat it or not? --> She hesitated whether she should eat it or not. OR She hesitated whether to eat it or not."
             }
 		]'
 	);
