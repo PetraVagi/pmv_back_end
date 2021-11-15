@@ -99,7 +99,7 @@ VALUES (
 		'Egyszerű jelen',
 		'Egyes szám harmadik személyben az ige -s ragot kap. Segédige: do, does.',
 		null,
-		'["I work.", "I don''t work", "Do you work?", "Where do you work?", "Wo works here?", "Wo doesn''t work here?"]',
+		'["I work.", "I don''t work", "Do you work?", "Where do you work?", "Who works here?", "Who doesn''t work here?"]',
 		'[{
 				"description":
 					"Ismétlődő cselekvéseknél. Határozószók: always, usually, never, often, sometimes, rarely, seldom, every day, every week, twice a month stb.",
@@ -130,10 +130,16 @@ VALUES (
 		'Present continuous',
 		'Folyamatos jelen',
 		'to be + ige + -ing',
+
 		'Leggyakrabban használt, változást kifejező igék: decline - csökken, hanyatlik; fall - esik, csökken; rise - nő, emelkedik; decrease - csökken;
         increase - nő, improve - javul, fejlődik (fejleszt); get better - javul, egyre jobb; get worse - romlik, egyre rosszab; get late/dark - későre jár, sötétedik; 
-        get + melléknév - válik valamilyenné; grow - nő (termeszt); grow + melléknév - válik valamilyenné (grow cold, grow old)',
-		' ["I am working.", "I''m not working", "Are you working?", "Where are you working?", "Wo is working here?"]',
+        get + melléknév - válik valamilyenné; grow - nő (termeszt); grow + melléknév - válik valamilyenné (grow cold, grow old)
+		
+		Vannak bizonyos igék, amiket tipikusan nem használunk folyamatos igeidőben. Ezek a következőek: hate - utál; like - szeret; love - szeret; prefer - jobban szeret, inkább; want - akar;
+		wish - kíván; feel - érez; hear - hall; see - lát; smell - vmilyen szaga van, szagol; sound - hangzik vmilyennek (It sounds good.); taste - vmilyen íze van; agree - egyetért; deny - tagad; 
+		disagree - nem ért egyet; mean - jelent vagy úgy érti, hogy (I mean.... - Úgy értem, hogy...);  promise - ígért; satisfy -  kielégít vmit (igényeket pl.); surprise - meglep;
+		believe - hisz; imagine - képzel; know - tud; remember - emlékszik; understand - ért; need - szüksége van vmire;',
+		' ["I am working.", "I''m not working", "Are you working?", "Where are you working?", "Who is working here?"]',
 		'[
             {
                 "description":
@@ -182,7 +188,7 @@ VALUES (
             {
                 "description":
                     "SEE `Can` segédigével = látni. (érzékelést kifejező igéket a `can` segédigével használjuk jelen időben). Pres. Cont. = találkozni valakivel.",
-                "example": "I can see a man the the picture. I''m seeing my manager on Monday."
+                "example": "I can see a man in the picture. I''m seeing my manager on Monday."
             },
             {
                 "description":
@@ -301,7 +307,7 @@ VALUES (
                 "example": "This is the second time that I''ve seen this film."
             },
             {
-                "description": "Ha valami még soha nem következett be az életiinkben. (NEVER)",
+                "description": "Ha valami még soha nem következett be az életünkben, de még megtörténhet. (NEVER)",
                 "example": "I have never seen a snake."
             },
             {
@@ -309,16 +315,22 @@ VALUES (
                 "example": "We have had three meetings this month."
             },
             {
-                "description":
-                    "Ha a következó kifejezések szerepelnek a mondatban: SO FAR — eddig, RECENTLY — mostanában, LATELY az utóbbi időben, STILL ... NOT - még mindig nem, IN THE LAST FEW MONTHS / YEARS - az elmúlt pár hétben / hónapban / évben, UP TO NOW — mostanáig.",
+                "description": "Ha a következő kifejezések szerepelnek a mondatban: SO FAR — eddig, RECENTLY — mostanában, LATELY az utóbbi időben, STILL ... NOT - még mindig nem, IN THE LAST FEW MONTHS / YEARS - az elmúlt pár hétben / hónapban / évben, UP TO NOW — mostanáig.",
                 "example": "I have understood everything so far."
             },
             {
                 "description": "A WHERE kérdőszóval, ha arra kérdezünk rá, hogy valaki merre járt a kérdés elhangzása előtt.",
                 "example": "Where have you been? I have been at the doctor''s."
             }, {
-				"description": "Ha valami korábban elkezdódött és a jelenben is tart. (Ezzel kapcsolatban ld. a Present Continuous-t!) (FOR, SINCE - HOW LONG?, SINCE WHEN?) (A „for”-ral és a „how long”? gal kapcsolatban ld. a Simple Past és Present Perfect összehasonlítását!)", 
+				"description": "Ha valami korábban elkezdődött és a jelenben is tart és benne van, hogy mióta. (Ezzel kapcsolatban ld. a Present Continuous-t!) (FOR, SINCE - HOW LONG?, SINCE WHEN?) (A „for”-ral és a „how long”? gal kapcsolatban ld. a Simple Past és Present Perfect összehasonlítását!)", 
 				"example": "He has known his girlfriend for six years."
+			}, {
+				"description": "Egy olyan múlt idejű cselekvés, amihez nem tartozik múlt idejű időhatározó.", 
+				"example": "I have broken my leg."
+			}
+			}, {
+				"description": "Ha bármilyen újdonságot közölsz, ha bármit elmondasz, hogy megtörtént --> present perfect. A cselekvés részletei --> past simple (egyszerű múlt)", 
+				"example": "The President has visited a hospital. He gave presents to the children and kissed one of the nurses."
 			}
         ]'
 	),
@@ -357,8 +369,14 @@ VALUES (
                 "description": "Olyan esetben, ha a cselekvés hosszan tart, (elkezdtük, de még mindig nem fejeztük be) és ezt hangsúlyozni is szeretnénk. Jellemző időhatározók: ALL THIS WEEK, ALL DAY LONG, ALL NIGHT LONG, ALL THIS YEAR",
                 "example": "I have been trying to reach him all this week. I have been seeing the doctor all this year. It has been raining all day long."
             }, {
-				"description": "Olyan cselekvés kifejezésére, amely a beszéd pillanatáig folyamatosan zajlott, és a jelenben szemmel látható eredménye vagy következménye van.", 
+				"description": "Olyan cselekvés kifejezésére, amely a beszéd pillanatáig folyamatosan zajlott, és a jelenben szemmel látható eredménye, következménye, esetleg mellékhatása van.", 
 				"example": "Why are your hands dirty? I have been working in the garden."
+			}, {
+				"description": "Ha a cselekvés a múltban kezdődött, és még a jelenben is tart, vagy éppen véget ér a beszéd pillanatában, DE RÖVID időtartamú esemény. Rövid időtartamokra csak a Present Perfect Continuous jó!", 
+				"example": "I have been sitting here for 10 minutes."
+			}, {
+				"description": "Ha cselekvés a múltban kezdődött, és a jelenben is tart, vagy éppen véget ért, ÉS RÖVID időtartamú, ami nincsen időhatározóval kiegészítve", 
+				"example": "I have been sitting here."
 			}
 		]'
 	),
@@ -453,6 +471,10 @@ VALUES (
 			{
                 "description": "Olyan cselekvés kifejezésére, amely a jövőben hosszan tartani fog, és ezt hangsúlyozni is szeretnénk. Gyakori határozók: all day tomorrow — holnap egész nap, all next week — jövő héten végig, all next year — jövőre egész évben.",
                 "example": "I will be working hard all next month."
+            }, 
+			{
+                "description": "Udvarias kérést is ki tudsz fejezni vele, ami a magyarban úgy kezdődik, hogy: ''Véletlenül nem...''.",
+                "example": "Will you be going to Budapest today? Will you be using your notebook tonight?"
             }
 		]'
 	),
