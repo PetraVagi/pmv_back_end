@@ -504,12 +504,28 @@ VALUES (
 		'Valaha',
 		'',
 		null,
-		'["He used to play cards.", "He didn''t used to play cards.", "Did he used to play cards?"]',
+		'["He used to play cards.", "He didn''t use to play cards.", "Did he use to play cards?"]',
 		'[
             {
                 "description": "Olyan cselekvés kifejezésére, amelyet a múltban (valaha) rendszeresen végeztünk, de már felhagytunk vele. Az irodalmi nyelvben a Used to helyett, ilyen értelemben, gyakran használják a Would segédigét.",
                 "example": "I used to go running every morning. Every morning he would go to the sea."
-            }
+            },
+			{
+				"description": "A USED TO DO SG szerkezettel rendszeresen történt, múlt idejű cselekvéseket tudsz kifejezni. A used to azt jelenti: régen, régebben.",
+				"example": "She used to be fat. They used to live here."
+			},
+			{
+				"description": "A BE USED TO DOING SG szerkezettel olyan cselekvéseket fejezzünk, amihez az alany hozzá van szokva",
+				"example": "I work in a bakery so I''m used to getting up early. I''m not used to driving in big cities."
+			},
+			{
+				"description": "A BE USED TO DOING SG szerkezetet lehet használni létige nélkül is.",
+				"example": "I''m used to this weather."
+			},
+			{
+				"description": "Érdemes megjegyezni a GET USED TO DOING szerkezetet, amely azt jelenti: hozzászokik valamihez.",
+				"example": "You have to get used to this."
+			}
 		]'
 	),
 	(
@@ -522,6 +538,10 @@ VALUES (
             {
                 "description": "TO BE TO / NOT TO = kell, kellene, úgy van, hogy... / nem kell, nem kéne, nem szabad",
                 "example": "I am to get there by 8. You are not to use a cheat sheet."
+            },
+            {
+                "description": "TO BE TO / NOT TO szerkezetet a múltidőben két féleképpen használhatjuk. Mindkettő ugyanazt jelenti, hogy: ''Úgy volt, hogy eladják a házukat.''",
+                "example": "They were to sell their house. They were to have sold their house."
             },
 			{
                 "description": "TO BE ABOUT TO / NOT ABOUT TO = azon van, hogy... / épp csinálni akar valamit",
@@ -545,7 +565,7 @@ VALUES (
                 "example": "I can do it. I could do it."
             },
 			{
-                "description": "TO BE ABLE TO = Képes valamire Használhatjuk egyszerű jelen, egyszerű múlt, egyszerű jövő, befejezett jelen és befejezett múlt időben is.",
+                "description": "TO BE ABLE TO = Képes valamire Használhatjuk egyszerű jelenben, egyszerű múltban, egyszerű jövőben, befejezett jelenben és befejezett múltidőben is.",
                 "example": "I am able to do it. I was able to do it. I will be able to do it."
             },
 			{
@@ -603,8 +623,12 @@ VALUES (
 		'[]',
 		'[
             {
-                "description": "HAD BETTER DO / NOT DO = a) Jobb lenne, ha... valaki  csinálna/ nem csinálna valamit.  b) Jobban tenné, ha... / ha nem...",
+                "description": "HAD BETTER DO / NOT DO = a) Jobb lenne, ha... valaki  csinálna/ nem csinálna valamit.  b) Jobban tenné, ha... / ha nem... A had better kicsit erősebb, mint a should, benne van az, hogy valami negatív következménye lesz a dolognak, ha nem teszed meg.",
                 "example": "You''d better take a taxi. I''d better not go there."
+            },
+            {
+                "description": "A HAD BETTER-t általános tanácsok megfogalmazására nem használhatod, mindig csak konkrét élethelyzetekre használhatod, ott viszont igen gyakori! Emiatt nem találsz pl. had better-t egy használati útmutatóban sem, hiszen ott is általános tanácsokat fogalmaznak meg, nem konkrét élethelyzetekben adnak tanácsot.",
+                "example": "Nem mondasz olyat, hogy: People had better not watch so much TV. --> People shouldn''t watch so much TV."
             },
 			{
                 "description": "I WOULD RATHER DO / NOT DO = Inkább...",
@@ -640,16 +664,16 @@ VALUES (
 		'[]',
 		'[
             {
-                "description": "A feltételes mód első típusába azok a mondatok tartoznak, amelyek lehetséges feltételt fejeznek ki és általában a jövőre vonatkoznak. A főmondatban WILL segédigét, a mellékmondatban SIMPLE PRESENT TENSE-t/EGYSZERŰ JELEN IDŐT használunk. Mellékmondatnak mindig az if-fel kezdődő mondat minősül. A főmondat és a mellékmondat sorrendje felcserélhető. Ha az if-es mellékmondat az első helyen áll, akkor vesszővel választjuk el a főmondattól. Ha az if-es mellékmondat a főmondatot követi, akkor nem használunk vesszőt.",
+                "description": "A feltételes mód első típusába azok a mondatok tartoznak, amelyek lehetséges feltételt fejeznek ki és általában a jövőre vonatkoznak. A főmondatban WILL segédigét, a mellékmondatban SIMPLE PRESENT TENSE-t/EGYSZERŰ JELEN IDŐT használunk. Mellékmondatnak mindig az if-fel kezdődő mondat minősül. A főmondat és a mellékmondat sorrendje felcserélhető. Ha az if-es mellékmondat az első helyen áll, akkor vesszővel választjuk el a főmondattól. Ha az if-es mellékmondat a főmondatot követi, akkor nem használunk vesszőt. Kérdésekben a tagmondatok sorrendje felcserélődik, de az előbbi szabály marad!",
                 "example": "I will do it if you do it too. If you do it, I will do it too."
             },
 			{
-                "description": "A feltételes mód második típusa kevésbé valószínű, de még megvalósítható feltételt fejez ki. A főmondatban WOULD segédigét, az if-es mellékmondatban SIMPLE PAST TENSE-t / EGYSZERŰ MÚLT IDŐT használunk. A „to be” múlt idejeként korábban minden személyben a WERE-t használták; ma már azonban a WAS használata is helyes. Kivétel ez alól az ''lf I were you..'' (Ha a helyedben lennék...) szerkezet. Ezt mindig ebben a formában használjuk. A mellékmondat és főmondat sorrendje továbbra is felcserélhető, és a vessző használatára ugyanaz a szabály vonatkozik, mint a feltételes mód első típusa esetén.",
+                "description": "A feltételes mód második típusa kevésbé valószínű, de még megvalósítható feltételt fejez ki. A főmondatban WOULD segédigét, az if-es mellékmondatban SIMPLE PAST TENSE-t / EGYSZERŰ MÚLT IDŐT használunk. A „to be” múlt idejeként korábban minden személyben a WERE-t használták; ma már azonban a WAS használata is helyes. Kivétel ez alól az ''If I were you..'' (Ha a helyedben lennék...) szerkezet. Ezt mindig ebben a formában használjuk. A mellékmondat és főmondat sorrendje továbbra is felcserélhető, és a vessző használatára ugyanaz a szabály vonatkozik, mint a feltételes mód első típusa esetén.",
                 "example": "I would do it if you did it too. If you did it, I would do it too."
             },
 			{
-                "description": "A feltételes mód harmadik típusa lehetetlen, már nem megvalósítható feltételt fejez ki. A főmondatban a WOULD HAVE + IGE 3. alakját, az if-es mellékmondatban a PAST PERFECT TENSE-t / BEFEJEZETT MÚLT IDŐT használjuk. A tagmondatok sorrendjére és a vessző használatára ugyanazok a szabályok érvényesek, mint a feltételes mód első és második típusa esetén.",
-                "example": "I would have done it if you had done it too. If you had done it, I would have done it too."
+                "description": "A feltételes mód harmadik típusa lehetetlen, már nem megvalósítható feltételt fejez ki. A főmondatban a WOULD HAVE / COULD HAVE + IGE 3. alakját, az if-es mellékmondatban a PAST PERFECT TENSE-t / BEFEJEZETT MÚLT IDŐT használjuk. A tagmondatok sorrendjére és a vessző használatára ugyanazok a szabályok érvényesek, mint a feltételes mód első és második típusa esetén. Kérdésekben természetesen megcserélődnek a tagmondatok és a would / could kezdi a mondatot.",
+                "example": "I would have done it if you had done it too. If you had done it, I would have done it too. Would you have helped me if I had asked you to?"
             },
 			{
                 "description": "A vegyes feltételes mód azt jelenti, hogy különböző típusú feltételes módot használunk egy mondaton belül. Például a főmondatot 2. feltételes, a mellékmondatot 3. feltételes módba tesszük.",
