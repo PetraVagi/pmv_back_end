@@ -747,6 +747,68 @@ VALUES (
 		]'
 	),
 	(
+		'DARE Modal verb',
+		'DARE módbeli segédige',
+		'',
+		null,
+		'[]',
+		'[
+			{
+                "description": "DARE (TO) DO / DON''T DARE (TO) DO = mer, merészel / nem mer. Egyszerű és befejezett jelen valamint egyszerű és befejezett múlt időben, továbbá egyszerű jövő időben használjuk. Ebben az értelemben a mai angol nyelvben inkább a „have the courage to do sth” vagy a „to be afraid to do sth” kifejezést használják.",
+                "example": "Nem merem megtenni. = I don''t dare to do it. I don''t have the courage to do it. I''m afraid to do it."
+            },
+			{
+                "description": "DARE(D) DO / DARE(D) NOT DO = a) mer, merészel / nem mer. Csak egyszerű jelen és egyszerű  múlt időben használhatjuk.",
+                "example": "Nem merem megtenni. = I daren''t do it."
+            },
+			{
+                "description": "DARE(D) DO / DARE(D) NOT DO = b) méltatlankodás, felháborodás kifejezésére.",
+                "example": "Hogy mnered ezt mondani? = How dare you say it?"
+            },
+			{
+                "description": "YOU DARE/ DON''T YOU DARE = Csak azt merészeld! Ne merészeld!",
+                "example": "Ne merészeld megpróbálni! = Don''t you dare try it!"
+            },
+			{
+                "description": "I DARE SAY = a) Valószínűnek, elképzelhetőnek tartom. (Nem pedig „Ki merem jelenteni, merem állítani, hogy...”) b) Elhiszem, hogy úgy van, de ez a helyzeten nem változtat.",
+                "example": "Valószínű, hogy ő csak egy csaló. = I dare say that he is only a swindler. Elhiszem, de meg kell mutatnia a személyi igazolványát! = I dare say, but you have to show me your ID."
+            },
+			{
+                "description": "DARE SY TO DO STH = Bíztat, felbuzdít valakit valami olyasmire, ami meghaladja a képességeit.",
+                "example": "Hadd lássam, mersz-e egy keréken motorozni? = I dare you to ride your motorbike on one wheel."
+            }
+		]'
+	),
+	(
+		'Modal verbs - CAN, COULD, WOULD, WILL',
+		'Kérés, óhaj, felajánlás, engedélykérés kifejezése módbeli segédigékkel',
+		'',
+		null,
+		'[]',
+		'[
+			{
+                "description": "Valakit megkérünk valamire. (Mind a 4 címben szereplő segédigét hazsnálhatjuk):",
+                "example": "Can you hold the line, please? Would you be so kind as to close the window?"
+            },
+			{
+                "description": "Valakitől kérünk valamit:",
+                "example": "Can I have a kilo of apples, please? Could I have a glass of water please?"
+            },
+			{
+                "description": "Valakitől engedélyt kérünk, vagy valamit megengedünk:",
+                "example": "Could I use the photocopier? May I borrow your pen for a minute?"
+            },
+			{
+                "description": "Valakinek felajánlunk valamit:",
+                "example": "What can I do for you? Can i help you? I will help you."
+            },
+			{
+                "description": "Valakit valamivel megkínálunk:",
+                "example": "Would you like semothing to drink?"
+            }
+		]'
+	),
+	(
 		'Had better, Would rather, It''s time, It''s high time',
 		'',
 		'',
@@ -806,6 +868,19 @@ VALUES (
                 "description": "A vegyes feltételes mód azt jelenti, hogy különböző típusú feltételes módot használunk egy mondaton belül. Például a főmondatot 2. feltételes, a mellékmondatot 3. feltételes módba tesszük.",
                 "example": "Megcsinálnám, ha korábban te is megcsináltad volna. I would do it if you had also done it earlier."
             }
+		]'
+	),
+	(
+		'Conditional clauses (if) 2.0',
+		'Feltételes mód 2.0',
+		'Egyéb fontos tudnivalók a feltételes módról',
+		null,
+		'[]',
+		'[
+			{
+                "description": "ez még nincs kész",
+                "example": ""
+            },
 		]'
 	),
 	(
