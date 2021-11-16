@@ -823,8 +823,12 @@ VALUES (
                 "example": "What can I do for you? Can i help you? I will help you."
             },
 			{
+                "description": "Valakinek felajánljuk valamit a would like segítségével:",
+                "example": "Would like me to set a new computer for you?."
+            },
+			{
                 "description": "Valakit valamivel megkínálunk:",
-                "example": "Would you like semothing to drink?"
+                "example": "Would you like something to drink?"
             }
 		]'
 	),
