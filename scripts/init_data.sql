@@ -130,7 +130,6 @@ VALUES (
 		'Present continuous',
 		'Folyamatos jelen',
 		'to be + ige + -ing',
-
 		'Leggyakrabban használt, változást kifejező igék: decline - csökken, hanyatlik; fall - esik, csökken; rise - nő, emelkedik; decrease - csökken;
         increase - nő, improve - javul, fejlődik (fejleszt); get better - javul, egyre jobb; get worse - romlik, egyre rosszab; get late/dark - későre jár, sötétedik; 
         get + melléknév - válik valamilyenné; grow - nő (termeszt); grow + melléknév - válik valamilyenné (grow cold, grow old)
@@ -454,6 +453,27 @@ VALUES (
 		]'
 	),
 	(
+		'If / when, after, before...',
+		'Jövő időre vonatkozó feltételes és időhatározói mellékmondatok',
+		'A következő esetekben nem használható az egyszerű jövő idő (I will):',
+		'WHEN vy IF: When = amikor: Akkor használjuk, ha olyan dologról beszélünk, ami biztos, hogy megtörténik. If = ha: Akkor használjuk, ha valami lehet, hogy bekövetkezik, de még egyáltalán nem biztos.',
+		'[]',
+		'[
+            {
+                "description": "Időhatározói mellékmondatokban, vagyis minden olyan mellékmondatban, ami a when - amikor, after - miután, before - mielőtt, by the time - amikorra, amire, while - amíg, as soon as - mihelyt, until - amíg nem, amíg stb. kötőszóval kezdődik. Jövő idejű értelemben ezekben a az egyszerű jelen (SIMPLE PRESENT) vagy a befejezett jelen idő (PRESENT PERFECT) használható. Általában while és before kötőszavaknál csak Simple Presentet használunk.",
+                "example": "Before I go to bed, I will finish my homework. As soon as I finish / have finished correcting the test-papers, I will call him."
+            },
+			{
+                "description": "When kötőszó használata és igeidők: A Present Perfect csak akkor használható a „when” kötőszóval, ha a cselekvések között előidejűség áll fenn. Ha két esemény egy időben következik be, csak a Simple Present használható.",
+                "example": "When I have done the homework, we can have dinner. When I write my homework, I will concentrate on it."
+            },
+			{
+                "description": "Jövő időre vonatkozó feltételes mellékmondatokban.",
+                "example": "She will be very happy if you give it to her."
+            }
+		]'
+	),
+	(
 		'Future Continuous',
 		'Folyamatos jövő',
 		'will be + ige + ing',
@@ -496,6 +516,27 @@ VALUES (
 			{
                 "description": "Múlt idejű alakja a „was /were going to”. Jelentése: Úgy volt, hogy...",
                 "example": "On Saturday we were going to play tennis but it was raining."
+            }
+		]'
+	),
+	(
+		'Simple Present, Present Continuous (with future meaning) versus To be going to',
+		'Jövő idő kifejezése különböző igeidőkkel',
+		'',
+		null,
+		'[]',
+		'[
+            {
+                "description": "SIMPLE PRESENT - Egyszerű jelen: Ha valamilyen menetrendszerű dologról (vonat, repülő, busz indulása, érkezése), programról (pl. rádió-, TV-műsor, moziműsor), boltok, múzeumok nyitvatartásáról, egyéb programok kezdésének és befejezésének időpontjáról beszélünk, egyszerű jelen időt használunk.",
+                "example": "When does your bus leave? When does the film start? The show finishes at 8."
+            },
+			{
+                "description": "PRESENT CONTINUOUS - Folyamatos jelen: Olyan jövőbeli cselekvés kifejezésére használjuk, amit előre megszerveztünk és elrendeztünk.",
+                "example": "I''m not free tomorrow afternoon, because I''m playing tennis with Sue."
+            },
+			{
+                "description": "TO BE GOING TO: Olyan cselekvés kifejezésére használjuk, amit a jövőben szeretnénk véghez vinni (határozott szándékunk), de a körülményeket még nem rendeztük el. Nagyon hasonlít a Present Continuous jövő idejű használatához, de a lényeges különbség abban rejlik, hogy míg a „to be going to”-val csak szándékot fejezünk ki, a Present Continuous-szal már eggyel továbbléptünk, hiszen a körülményeket is úgy rendeztük, hogy az a cselekvés mindenképpen be is következhessen.",
+                "example": "Nov I''m fed up with everything. I''m going to see my boss and I''m going to talk to him. (Erről a főnök nem valószínű, hogy tud, csak én szeretnék már végre beszélni vele, akkor is, ha ő nem akarja, vagy nem ér rá. Meg fogom kísérelni.)  I''ve just fixed an appointment with my boss. I''m seeing him on Monday. (Itt egy előre megbeszélt találkozóról van szó. Előtt gondoskodtam arról, hogy ez a találkozó mindenképpen megvalósuljon. Tehát a főnökkel is előre egyeztettem. Ilyenkor általában már egy konkrét időpontot is megadtunk."
             }
 		]'
 	),
@@ -606,12 +647,184 @@ VALUES (
 		'[]',
 		'[
             {
-                "description": "MUST = MUST = Biztos, hogy... - Minden bizonnyal bekövetkezik valami.",
+                "description": "MUST = Biztos, hogy... - Minden bizonnyal bekövetkezik valami.",
                 "example": "He must arrive in the next ten minutes."
             },
 			{
                 "description": "MUST HAVE + IGE 3. ALAKJA = Biztos, hogy...  - Minden bizonnyal bekövetkezett valami.",
                 "example": "He must have arrived home."
+            },
+			{
+                "description": "MUST = kell, kötelesség kifejezésére (belső kényszer). Csak állító és jelen idejű alaja van. Tagadásra a „have to” megfelelő igeidejű, tagadó alakját használjuk.",
+                "example": "I must leave, because it''s getting dark and I''m afraid of the dark."
+            },
+			{
+                "description": "HAVE TO = kell, kötelesség kifejezésére (külső kényszer)",
+                "example": "I have to leave because my train leaves soon."
+            },
+			{
+                "description": "MUSTN''T = tilos, nem szabad",
+                "example": "You mustn''t smoke here."
+            },
+			{
+                "description": "NEED TO DO / DON''T NEEDN''T DO = szükséges, kell / nem szükséges, nem kell. Egyszerű és befejezett jelen, ill. múlt időben és jövő időben használható.",
+                "example": "I needed to go here. I didn''t need to go there."
+            },
+			{
+                "description": "NEED DO / NEEDN''T DO = szükséges, kell / nem szükséges, nem kell. Csak jelen időben használható.",
+                "example": "I need go there. I needn''t go there."
+            }
+		]'
+	),
+	(
+		'SHOULD Modal verb',
+		'SHOULD módbeli segédige',
+		'',
+		null,
+		'[]',
+		'[
+            {
+                "description": "SHOULD / SHOULDN''T = Kellene / nem kellene, nem lenne szabad csinálni valamit",
+                "example": "He should give up smoking."
+            },
+			{
+                "description": "SHOULD HAVE/ SHOULDN''T HAVE + ige 3. alakja = Kellett volna / nem kellett volna, nem lett szabad csinálni valamit",
+                "example": "He should have given up smoking."
+            },
+			{
+                "description": "OUGHT TO/ OUGHTN''T TO; OUGHT TO HAVE/ OUGHTN''T TO HAVE = Ugyanazt jelenti, mint a should, de gyakrabban fordul elő hivatalos szüvegekben (pl. törvényekben)",
+                "example": "We ought to reply to his letter."
+            },
+			{
+                "description": "NEEDN''T HAVE + ige 3. alakja = nem kellett volna, nem lett volna szükséges",
+                "example": "I needn''t have gone to school. = Nem kellett volna iskolába mennem (de elmentem, és ott vettem észre, hogy szünet van)."
+            },
+			{
+                "description": "SHOULD egyéb használata: a) bizonyos igék és főnevek után (kötőmód) --> suggest / suggestion, recommend / reccomendation, propose / proposal, insist, demand (Should nélkül is helyes, beszélt nyelvben szívesebben használják a to nélküli igenevet)",
+                "example": "Azt javasolta, hogy utazzak külföldre. = He suggested that I should travel abroad. Ragaszkodott hozzá, hogy te is gyere. = He insisted that you should come too. (He insisted that you come too.) "
+            },
+			{
+                "description": "SHOULD egyéb használata: b) bizonyos melléknevek után --> important, essential, vital, neccessary (Should nélkül is helyes, beszélt nyelvben szívesebben használják a to nélküli igenevet)",
+                "example": "Fontos, hogy ott legyél. = It is important that you should be there. (It is important that you be there.)"
+            },
+			{
+                "description": "SHOULD egyéb használata: c) bizonyos melléknevek után --> strange, funny, interesting, surprised, surprising, natural, typical",
+                "example": "Érdekes, hogy ezt mondod. = It'' strange that you should say that. Jellemző, hogy azt csinálja = It''s typical that he should do that."
+            },
+			{
+                "description": "SHOULD egyéb használata: d) If után, ha azt szeretnénk kifejezni, hogy valami esetleg bekövetkezhet.",
+                "example": "Ha esetleg előbb befejeznéd a munkát, menj haza. = If you should finish you work earlier, go home."
+            },
+			{
+                "description": "SHOULD egyéb használata: e) Azt is kifejezi, hogy mit tennék a másik helyében.",
+                "example": "You are going to regret it, I shouldn''t do that."
+            }
+		]'
+	),
+	(
+		'MAY and MIGHT Modal verbs',
+		'MAY és MIGHT módbeli segédige',
+		'',
+		null,
+		'[]',
+		'[
+			{
+                "description": "MAY / MAY NOT = Valószínű, hogy valami bekövetkezik / nem következik be.",
+                "example": "Valószínű, hogy nem találkozik vele. = He may (not) meet her."
+            },
+			{
+                "description": "MAY HAVE / MAY NOT HAVE + IGE 3. ALAKJA = Valószínű, hogy valami bekövetkezett / nem következett be.",
+                "example": "Valószínű, hogy nem találkozott vele. = He may (not) have met her."
+            },
+			{
+                "description": "MIGHT / MIGHT NOT = Lehet, hogy valami bekövetkezik / nem következik be.",
+                "example": "Lehet, hogy (nem) találkozik vele. = He might (not) meet him."
+            },
+			{
+                "description": "MIGHT HAVE / MIGHT NOT HAVE + IGE 3. ALAKJA = Lehet, hogy valami bekövetkezett / nem következett be.",
+                "example": "Lehet, hogy (nem) találkozott vele. = He might (not) have met him."
+            },
+			{
+                "description": "TO BE LIKELY TO DO = Valószínű, hogy... (may és might helyett használthatjuk)",
+                "example": "Valószínű, hogy otthon van. = He is likely to be at home."
+            },
+			{
+                "description": "MAY AS WELL / MIGHT AS WELL = Akár be is következhet valami.",
+                "example": "Akár meg is eheted. = You may / might as well eat it."
+            },
+			{
+                "description": "MAY / CAN = Engedélyt kérhetünk / adhatunk valamire. may - udvarias, formális, can - bizalmas, informális. A MAY-t ilyen értelemben csak jelen időben használhatjuk.",
+                "example": "Nem léphet be. = You may not enter."
+            },
+			{
+                "description": "TO BE ALLOWED TO = Engedélyt kérhetünk / adhatunk valamire. A MAY segédigével ellentétben egyszerű jelen, egyszerű múlt, egyszerű jövő, befejezett jelen és befejezett jövő időben is használható.",
+                "example": "Nem léphetnek be. = They are not allowed to enter. --> Többi igeidőben: Tey were not allowed to enter. They won''t be allowed to enter. They have not been allowed to enter for years. They had not been allowed to enter before they got permission."
+            },
+			{
+                "description": "LET SY DO STH = Hagyja, engedi, hogy valaki valamit csináljon (nem segédige, de hasonló a fentiek jelentéséhez)",
+                "example": "Nem engedtem meg, hogy begyere. = I didn''t let you come in."
+            }
+		]'
+	),
+	(
+		'DARE Modal verb',
+		'DARE módbeli segédige',
+		'',
+		null,
+		'[]',
+		'[
+			{
+                "description": "DARE (TO) DO / DON''T DARE (TO) DO = mer, merészel / nem mer. Egyszerű és befejezett jelen valamint egyszerű és befejezett múlt időben, továbbá egyszerű jövő időben használjuk. Ebben az értelemben a mai angol nyelvben inkább a „have the courage to do sth” vagy a „to be afraid to do sth” kifejezést használják.",
+                "example": "Nem merem megtenni. = I don''t dare to do it. I don''t have the courage to do it. I''m afraid to do it."
+            },
+			{
+                "description": "DARE(D) DO / DARE(D) NOT DO = a) mer, merészel / nem mer. Csak egyszerű jelen és egyszerű  múlt időben használhatjuk.",
+                "example": "Nem merem megtenni. = I daren''t do it."
+            },
+			{
+                "description": "DARE(D) DO / DARE(D) NOT DO = b) méltatlankodás, felháborodás kifejezésére.",
+                "example": "Hogy mnered ezt mondani? = How dare you say it?"
+            },
+			{
+                "description": "YOU DARE/ DON''T YOU DARE = Csak azt merészeld! Ne merészeld!",
+                "example": "Ne merészeld megpróbálni! = Don''t you dare try it!"
+            },
+			{
+                "description": "I DARE SAY = a) Valószínűnek, elképzelhetőnek tartom. (Nem pedig „Ki merem jelenteni, merem állítani, hogy...”) b) Elhiszem, hogy úgy van, de ez a helyzeten nem változtat.",
+                "example": "Valószínű, hogy ő csak egy csaló. = I dare say that he is only a swindler. Elhiszem, de meg kell mutatnia a személyi igazolványát! = I dare say, but you have to show me your ID."
+            },
+			{
+                "description": "DARE SY TO DO STH = Bíztat, felbuzdít valakit valami olyasmire, ami meghaladja a képességeit.",
+                "example": "Hadd lássam, mersz-e egy keréken motorozni? = I dare you to ride your motorbike on one wheel."
+            }
+		]'
+	),
+	(
+		'Modal verbs - CAN, COULD, WOULD, WILL',
+		'Kérés, óhaj, felajánlás, engedélykérés kifejezése módbeli segédigékkel',
+		'',
+		null,
+		'[]',
+		'[
+			{
+                "description": "Valakit megkérünk valamire. (Mind a 4 címben szereplő segédigét hazsnálhatjuk):",
+                "example": "Can you hold the line, please? Would you be so kind as to close the window?"
+            },
+			{
+                "description": "Valakitől kérünk valamit:",
+                "example": "Can I have a kilo of apples, please? Could I have a glass of water please?"
+            },
+			{
+                "description": "Valakitől engedélyt kérünk, vagy valamit megengedünk:",
+                "example": "Could I use the photocopier? May I borrow your pen for a minute?"
+            },
+			{
+                "description": "Valakinek felajánlunk valamit:",
+                "example": "What can I do for you? Can i help you? I will help you."
+            },
+			{
+                "description": "Valakit valamivel megkínálunk:",
+                "example": "Would you like semothing to drink?"
             }
 		]'
 	),
@@ -679,6 +892,19 @@ VALUES (
                 "description": "A vegyes feltételes mód azt jelenti, hogy különböző típusú feltételes módot használunk egy mondaton belül. Például a főmondatot 2. feltételes, a mellékmondatot 3. feltételes módba tesszük.",
                 "example": "Megcsinálnám, ha korábban te is megcsináltad volna. I would do it if you had also done it earlier."
             }
+		]'
+	),
+	(
+		'Conditional clauses (if) 2.0',
+		'Feltételes mód 2.0',
+		'Egyéb fontos tudnivalók a feltételes módról',
+		null,
+		'[]',
+		'[
+			{
+                "description": "ez még nincs kész",
+                "example": ""
+            },
 		]'
 	),
 	(
@@ -958,6 +1184,34 @@ VALUES (
 			{
                 "description": "A „Shall I...”, „Shall we...” kezdetű mondatok „I/he should...”, „We/they should...” szerkezetté vagy „to” főnévi igenévvé alakulnak át. Ilyenkor a „whether” kötőszót használjuk.",
                 "example": "Shall I eat it or not? --> She hesitated whether she should eat it or not. OR She hesitated whether to eat it or not."
+            },
+			{
+                "description": "Modális segédigék függő beszédben: A modális segédigék többnyire nem változnak függő beszédben, viszont bizonyos esetekben a jelentés dönti el, hogy módosulnak-e vagy sem.",
+                "example": "may - might; may have - might have; might - might; must - ha ''kell'', akkor had to vagy must lesz belőle, ha ''bizonyára'', akkor must; mustn''t - mustn''t; can - could; can''t - ha a ''biztos, hogy nem'' jelentéssel használjuk, akkor can''t marad; could - could; should - should; ought to - ought to; needn''t - needn''t; don''t need to - didn''t need to; would - would; had better - had better; would rather - would rather"
+            },
+			{
+                "description": "Feltételes mód függő beszédben: A feltételes mód második és harmadik típusa egyáltalán nem változik függő beszédben, csak az első feltételesből lesz második feltételes.",
+                "example": "If you sell it, I will buy it. --> He said if I sold it, he would buy it. If you sold it, I would buy it. --> He said if I sold it, he would buy it. If you had sold it, I would have bought it. --> He said if I had sold it, he would have bought it."
+            },
+			{
+                "description": "Olyan közlések, amelyek általános vagy örökérvényű igazságot tartalmaznak, és azok még a közlés időpontjában is érvényben vannak, nem változnak.",
+                "example": "The Earth goes round the Sun. --> Our teacher said that the Earth goes round the Sun."
+            },
+			{
+                "description": "Időhatározói mellékmondatnál a Simple Past vagy Past Continuous igeidő megmarad, a főmondat állítmánya pedig átkerülhet Past Perfect-be, de nem feltétlenül kell átalakítani.",
+                "example": "When she was young she played the violin. --> She said when she was young she played / had played the violin."
+            },
+			{
+                "description": "Az „I wish, would rather, if only” után a múlt időben lévő igék nem változnak.",
+                "example": "I would rather you didn''t leave. --> He said he would rather I didn''t leave. I wish it was raining now. --> He wished it was raining then."
+            },
+			{
+                "description": "A határozók változása: now - then / at that time; ago - before / earlier; a few days ago - a few days before / a few days earlier; today - that day; tomorrow - the following day / the next day; yesterday - the day before / the previous day; this morning - that morning; the day after tommorrow - in two days time; the day before yesterday - two days before; next week - the following week / the week after; last week - the previous week / the week before;",
+                "example": "I''m eatung an apple now. --> He asked that he was eating an apple then."
+            },
+			{
+                "description": "Eyéb határozószó változások: „This”-ből akkor lesz „that”, ha időpont meghatározásról van szó. A mutatónévmásként használt „this”, „these”, „that”, „those” függő beszédben többnyire „the”-vé alakulnak át. Ha azonban a „this” és a „these” főnevet helyettesítenek, akkor „it” vagy „them” lesz belőlük.",
+                "example": "I''ll go home this week. --> She said she would go home that week. I like these shoes. --> He said he liked the shoes. I''ll put these on the wall. --> He said he would put them on the wall."
             }
 		]'
 	);
