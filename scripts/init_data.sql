@@ -655,7 +655,7 @@ VALUES (
                 "example": "He must have arrived home."
             },
 			{
-                "description": "MUST = kell, kötelesség kifejezésére (belső kényszer). Csak állító és jelen idejű alaja van. Tagadásra a „have to” megfelelő igeidejű, tagadó alakját használjuk.",
+                "description": "MUST = kell, kötelesség kifejezésére (belső kényszer, de ez már nem igaz a nyelvre napjainkban). Csak állító és jelen idejű alaja van. Tagadásra a „have to” megfelelő igeidejű, tagadó alakját használjuk.",
                 "example": "I must leave, because it''s getting dark and I''m afraid of the dark."
             },
 			{
@@ -693,7 +693,7 @@ VALUES (
             },
 			{
                 "description": "OUGHT TO/ OUGHTN''T TO; OUGHT TO HAVE/ OUGHTN''T TO HAVE = Ugyanazt jelenti, mint a should, de gyakrabban fordul elő hivatalos szüvegekben (pl. törvényekben)",
-                "example": "We ought to reply to his letter."
+                "example": "We ought to reply to his letter. Ought they not to have told you the news? Ought she to lose weight? She oughtn''t to lose weight."
             },
 			{
                 "description": "NEEDN''T HAVE + ige 3. alakja = nem kellett volna, nem lett volna szükséges",
