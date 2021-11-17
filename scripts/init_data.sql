@@ -902,9 +902,41 @@ VALUES (
 		'[]',
 		'[
 			{
-                "description": "ez még nincs kész",
-                "example": ""
+                "description": "Képesség kifejezése feltételes módban:",
+                "example": "If you can do it, I can do it too. If you could do it, I could also do it. If you had been able to do it, I could have done it too."
             },
+			{
+                "description": "If I were you = ha a helyedben lennék",
+                "example": "Ha a helyedben lennék, nem venném meg. = If I were you, I wouldn''t buy it."
+            },
+			{
+                "description": "Even if = még akkor is, ha / akkor sem, ha..",
+                "example": "Akkor sem adnám el nekik, ha egymillió dollárt kínálnának érte. = I wouldn''t sell it to them, even if they offered me one million dollars for it."
+            },
+			{
+                "description": "If it weren''t for... = Ha nem lenne..., If it hadn''t been for... = Ha nem lett volna...",
+                "example": "Ha nem lenne rossz idő, elmennénk kirándulni. = If it weren''t for the bad weather, we would go on a trip."
+            },
+			{
+                "description": "But for = Ha nem lenne... / Ha nem lett volna...",
+                "example": "Ha a szüleid lakása nem lenne, albérletben laknánk. = But for your parents'' flat, we would live in digs. Ha a szüleid lakása nem lett volna, albérletben laktunk volna. = But for your parents'' flat, we would have lived in digs."
+            },
+			{
+                "description": "In case versus if = Arra az esetre, ha..., Abban az esetben, ha... Az in case után csak Simple Present, Simple Past vagy should állhat.",
+                "example": "If the weather is bad, I will also take a pullover with me. I will take a pullover with me, in case the weather is bad. Az első esetben csak akkor viszem el a pulóvert, ha rossz idő lesz, ha süt a nap nem viszem magammal. A második esetben akkor is elviszem, ha épp süt a nap, mert később még rosszra fordulhat az idő."
+            },
+			{
+                "description": "If + should = Ha netán..., Ha esetleg...",
+                "example": "Ha netán találkoznál vele, add át üdvözletem. = If you should meet him, give him my regards."
+            },
+			{
+                "description": "If + will/would = Ha hajlandó lesz... / Ha hajlandó lenne...",
+                "example": "Ha hajlandó lesz megcsinálni, nagyon boldog leszek. = If he will do it, I will be very happy."
+            },
+			{
+                "description": "„If” elhagyása fordított szórenddel:",
+                "example": "If I were Jack, I wouldn''t go there. --> Were I Jack, I wouldn''t go there."
+            }
 		]'
 	),
 	(
