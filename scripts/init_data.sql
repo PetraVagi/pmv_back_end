@@ -1,90 +1,3 @@
-/* users */
-INSERT INTO public.users(name, gender)
-VALUES ('Petra', 'woman'),
-	('Attila', 'man');
-/* words */
-INSERT INTO public.words(
-		"ownerId",
-		english,
-		hungarian,
-		"exampleSentences",
-		notes,
-		type,
-		favourite,
-		"deletionDate",
-		"memoryLevel",
-		"actualScore",
-		"finalScore",
-		statistics
-	)
-VALUES (
-		1,
-		'ditch',
-		'["árok", "csatorna", "körülárkol"]',
-		'["Why do you have a ditch in front of your house?"]',
-		'A narrow channel dug in the ground, typically used for drainage alongside a road or the edge of a field.',
-		'word',
-		true,
-		null,
-		50,
-		20,
-		40,
-		'{
-			"english": 8,
-			"hungarian": [8, 1, 3]
-		}'
-	),
-	(
-		2,
-		'candid',
-		'["őszinte", "nyílt", "pártatlan"]',
-		'["His responses were remarkably candid.", "Candid is my new favourite word."]',
-		null,
-		'word',
-		true,
-		null,
-		0,
-		0,
-		40,
-		'{
-			"english": 0,
-			"hungarian": [0, 0, 0]
-		}'
-	),
-	(
-		1,
-		'correct',
-		'["helyes", "korrekt", "helytálló", "kijavít", "helyesbít", "korrigál", "javít"]',
-		'["Make sure you have been given the correct information"]',
-		'Free from error.',
-		'word',
-		true,
-		null,
-		90,
-		72,
-		80,
-		'{
-			"english": 10,
-			"hungarian": [12, 8, 6, 9, 5, 10, 12]
-		}'
-	),
-	(
-		2,
-		'achieve',
-		'["elér", "megvalósít"]',
-		'["He achieved his ambition to become a journalist"]',
-		null,
-		'word',
-		true,
-		null,
-		27,
-		8,
-		30,
-		'{
-			"english": 2,
-			"hungarian": [5, 1]
-		}'
-	);
 /* grammatical structures */
 INSERT INTO public.grammatical_structures(
 		title,
@@ -320,14 +233,16 @@ VALUES (
             {
                 "description": "A WHERE kérdőszóval, ha arra kérdezünk rá, hogy valaki merre járt a kérdés elhangzása előtt.",
                 "example": "Where have you been? I have been at the doctor''s."
-            }, {
+            }, 
+			{
 				"description": "Ha valami korábban elkezdődött és a jelenben is tart és benne van, hogy mióta. (Ezzel kapcsolatban ld. a Present Continuous-t!) (FOR, SINCE - HOW LONG?, SINCE WHEN?) (A „for”-ral és a „how long”? gal kapcsolatban ld. a Simple Past és Present Perfect összehasonlítását!)", 
 				"example": "He has known his girlfriend for six years."
-			}, {
+			}, 
+			{
 				"description": "Egy olyan múlt idejű cselekvés, amihez nem tartozik múlt idejű időhatározó.", 
 				"example": "I have broken my leg."
-			}
-			}, {
+			}, 
+			{
 				"description": "Ha bármilyen újdonságot közölsz, ha bármit elmondasz, hogy megtörtént --> present perfect. A cselekvés részletei --> past simple (egyszerű múlt)", 
 				"example": "The President has visited a hospital. He gave presents to the children and kissed one of the nurses."
 			}
@@ -456,7 +371,7 @@ VALUES (
 		'If / when, after, before...',
 		'Jövő időre vonatkozó feltételes és időhatározói mellékmondatok',
 		'A következő esetekben nem használható az egyszerű jövő idő (I will):',
-		'WHEN vy IF: When = amikor: Akkor használjuk, ha olyan dologról beszélünk, ami biztos, hogy megtörténik. If = ha: Akkor használjuk, ha valami lehet, hogy bekövetkezik, de még egyáltalán nem biztos.',
+		'WHEN vs IF: When = amikor: Akkor használjuk, ha olyan dologról beszélünk, ami biztos, hogy megtörténik. If = ha: Akkor használjuk, ha valami lehet, hogy bekövetkezik, de még egyáltalán nem biztos.',
 		'[]',
 		'[
             {
@@ -783,7 +698,7 @@ VALUES (
             },
 			{
                 "description": "DARE(D) DO / DARE(D) NOT DO = b) méltatlankodás, felháborodás kifejezésére.",
-                "example": "Hogy mnered ezt mondani? = How dare you say it?"
+                "example": "Hogy mered ezt mondani? = How dare you say it?"
             },
 			{
                 "description": "YOU DARE/ DON''T YOU DARE = Csak azt merészeld! Ne merészeld!",
@@ -1248,6 +1163,31 @@ VALUES (
 			{
                 "description": "Eyéb határozószó változások: „This”-ből akkor lesz „that”, ha időpont meghatározásról van szó. A mutatónévmásként használt „this”, „these”, „that”, „those” függő beszédben többnyire „the”-vé alakulnak át. Ha azonban a „this” és a „these” főnevet helyettesítenek, akkor „it” vagy „them” lesz belőlük.",
                 "example": "I''ll go home this week. --> She said she would go home that week. I like these shoes. --> He said he liked the shoes. I''ll put these on the wall. --> He said he would put them on the wall."
+            }
+		]'
+	),
+	(
+		'Relative clauses (who, which, that...)',
+		'Jelzői mellékmondatok',
+		'A jelzői mellékmondatok két fő típusa az úgynevezett defining clause (szűkítő mellékmondat) és a clause (bővítő mellékmondat).',
+		'Az angol nyelvben a vonatkozó névmásoknak jelentés-megkülönböztető szerepe lehet. A következő névmásokat használhatjuk kötőszóként: who - aki, akik, akit, akiket; whom - akit (Akkor használjuk, ha prepozíció előzi meg.); whose - akinek a..., akiknek a... , aminek a...; which - amely, amelyek, amelyet, ami, amit stb.; that - ami, amit, aki, akit; what -- az a dolog ami, azt a dolgot amit; where - ahol; when - amikor; why - amiért.',
+		'[]',
+		'[
+			{
+                "description": "SZŰKÍTÓ MELLÉKMONDAT (Defining clause): Ezek a mellékmondatok a mondat egészének megértéséhez nélkülözhetetlenek. Mivel szorosan kötődnek a főmondathoz, az angol nyelvben még vesszővel sem törjük meg ezt a szoros egységet.",
+                "example": "The boy who/that helped me lives next door. The book which/that is lying on the floor is not yours."
+            },
+			{
+                "description": "Szűkítő mellékmondat - Alanyi mellékmondat. Ha a kötőszó alanyi mellékmondatot vezet be, (aki, ami), akkor a kötőszót mindig ki kell tenni.",
+                "example": "The girl who/that is sitting next to you is very clever. The room which/that faces the street is very noisy."
+            },
+			{
+                "description": "Szűkítő mellékmondat - Tárgyi mellékmondat:  Ha a kötőszó tárgyi mellékmondatot vezet be (akit, amit), akkor akár el is hagyható. Ez akkor is van, ha a kötőszóhoz valamilyen prepozíció tartozik, hiszen a prepozíció is mindig tárgyesetet vonz. Ha a kötőszót elhagyjuk, akkor a prepozíció mindig a mellékmondat végére kerül.",
+                "example": "The book (which/that) I  lent you is Joe''s. The book you had been looking for was behind the wardrobe."
+            },
+			{
+                "description": "A mellékmondatban kötőszót nem hagyhatjuk el, ha azt a prepozíció megelőzi. Ebben az esetben azonban csak a „whom” és a „which” kötőszó használható. A „that” és a „who” nem! Összefoglalva tehát, ha prepozíció járul a kötőszóhoz, a következő variációk léteznek:",
+                "example": "This is the book about which I want to talk. This is the book which I want to talk about. This is the book that I want to talk about. This is the book I want to talk about. (Ez a leggyakoribb változat.)"
             }
 		]'
 	);
