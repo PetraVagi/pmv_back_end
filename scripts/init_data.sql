@@ -1,19 +1,19 @@
 /* grammatical structures */
 INSERT INTO public.grammatical_structures(
-		title,
-		subtitle,
-		forming,
-		notes,
-		"basicSentences",
-		"realLifeUsages"
-	)
+        title,
+        subtitle,
+        forming,
+        notes,
+        "basicSentences",
+        "realLifeUsages"
+    )
 VALUES (
-		'Simple present',
-		'Egyszerű jelen',
-		'Egyes szám harmadik személyben az ige -s ragot kap. Segédige: do, does.',
-		null,
-		'["I work.", "I don''t work", "Do you work?", "Where do you work?", "Who works here?", "Who doesn''t work here?"]',
-		'[{
+        'Simple present',
+        'Egyszerű jelen',
+        'Egyes szám harmadik személyben az ige -s ragot kap. Segédige: do, does.',
+        null,
+        '["I work.", "I don''t work", "Do you work?", "Where do you work?", "Who works here?", "Who doesn''t work here?"]',
+        '[{
 				"description":
 					"Ismétlődő cselekvéseknél. Határozószók: always, usually, never, often, sometimes, rarely, seldom, every day, every week, twice a month stb.",
 				"example": "I often go abroad in summer."
@@ -38,12 +38,12 @@ VALUES (
 				"description": "Here and there után, azonban a szórend megváltozik.",
 				"example": "Here comes Jack. DE személyes névmással egyenes szórend: Here he comes."
 			}]'
-	),
-	(
-		'Present continuous',
-		'Folyamatos jelen',
-		'to be + ige + -ing',
-		'Leggyakrabban használt, változást kifejező igék: decline - csökken, hanyatlik; fall - esik, csökken; rise - nő, emelkedik; decrease - csökken;
+    ),
+    (
+        'Present continuous',
+        'Folyamatos jelen',
+        'to be + ige + -ing',
+        'Leggyakrabban használt, változást kifejező igék: decline - csökken, hanyatlik; fall - esik, csökken; rise - nő, emelkedik; decrease - csökken;
         increase - nő, improve - javul, fejlődik (fejleszt); get better - javul, egyre jobb; get worse - romlik, egyre rosszab; get late/dark - későre jár, sötétedik; 
         get + melléknév - válik valamilyenné; grow - nő (termeszt); grow + melléknév - válik valamilyenné (grow cold, grow old)
 		
@@ -51,8 +51,8 @@ VALUES (
 		wish - kíván; feel - érez; hear - hall; see - lát; smell - vmilyen szaga van, szagol; sound - hangzik vmilyennek (It sounds good.); taste - vmilyen íze van; agree - egyetért; deny - tagad; 
 		disagree - nem ért egyet; mean - jelent vagy úgy érti, hogy (I mean.... - Úgy értem, hogy...);  promise - ígért; satisfy -  kielégít vmit (igényeket pl.); surprise - meglep;
 		believe - hisz; imagine - képzel; know - tud; remember - emlékszik; understand - ért; need - szüksége van vmire;',
-		' ["I am working.", "I''m not working", "Are you working?", "Where are you working?", "Who is working here?"]',
-		'[
+        ' ["I am working.", "I''m not working", "Are you working?", "Where are you working?", "Who is working here?"]',
+        '[
             {
                 "description":
                     "Ha a cselekvés a kijelentés időpontjában folyamatosan zajlik. Gyakori határozószók: now, at present, at the moment, just now.",
@@ -85,14 +85,14 @@ VALUES (
                 "example": "1. He is always asking stupid things. 2. My husband is fantastic, he is always making dinner."
             }
         ]'
-	),
-	(
-		'Simple present versus Present continuous',
-		'Igék, amelyeknek különböző igeidőkben más jelentése van',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Simple present versus Present continuous',
+        'Igék, amelyeknek különböző igeidőkben más jelentése van',
+        '',
+        null,
+        '[]',
+        '[
             {
                 "description": "THINK Simp. Pres. = vélni, gondolni valamit. Pres. Cont. = gondolkodni valamiről, gondolni valamire.",
                 "example": "I think you are right. I''m thinking of you."
@@ -124,14 +124,14 @@ VALUES (
                 "example": "I''m feeling well now. I feel well now."
             }
         ]'
-	),
-	(
-		'Simple past',
-		'Egyszerű múlt',
-		'ige + -ed, kivéve a rendhagyó igéket. Segédige: did.',
-		null,
-		'["He worked.", "He did not work.", "Did he work?", "When did he work?", "Who worked here?", "Who didn''t work here?"]',
-		'[
+    ),
+    (
+        'Simple past',
+        'Egyszerű múlt',
+        'ige + -ed, kivéve a rendhagyó igéket. Segédige: did.',
+        null,
+        '["He worked.", "He did not work.", "Did he work?", "When did he work?", "Who worked here?", "Who didn''t work here?"]',
+        '[
             {
                 "description": "Rendszeres múltbeli cselekvés kifejezésére.",
                 "example": "Last year I always drove to work."
@@ -154,14 +154,14 @@ VALUES (
                 "example": "Why did you go there? When were you in Italy?"
             }
         ]'
-	),
-	(
-		'Past continuous',
-		'Folyamatos múlt',
-		'was/were + ige + -ing',
-		null,
-		'["He was working.", "He was not (wasn''t) working.", "Was he working?"]',
-		'[
+    ),
+    (
+        'Past continuous',
+        'Folyamatos múlt',
+        'was/were + ige + -ing',
+        null,
+        '["He was working.", "He was not (wasn''t) working.", "Was he working?"]',
+        '[
             {
                 "description": "Olyan cselekvések kifejezésére, amely a múlt egy adott időpontjában folyamatban volt. Időhatározók: (at) this time last year, this time last month, at 5 0''clock",
                 "example": "(At) this time yesterday I was doing my homework."
@@ -184,15 +184,15 @@ VALUES (
                 "example": "I was working hard all last month. It was snowing all day yesterday."
             }
         ]'
-	),
-	(
-		'Present Perfect',
-		'Befejezett múlt',
-		'have/has + ige 3. alakja',
-		'SINCE... = ...óta (valamilyen időponttól kezdődően): since May, since last week, since they moved, since then, since they got married (!! Ha az időhatározót mellékmondattal fejezzük ki (pl. Nagyon boldogok, amióta összeházasodtak), akkor a mellékmondatban a „since” után Simple Past-ot, a főmondatban Present Perfect-et kell használni. !!)
+    ),
+    (
+        'Present Perfect',
+        'Befejezett múlt',
+        'have/has + ige 3. alakja',
+        'SINCE... = ...óta (valamilyen időponttól kezdődően): since May, since last week, since they moved, since then, since they got married (!! Ha az időhatározót mellékmondattal fejezzük ki (pl. Nagyon boldogok, amióta összeházasodtak), akkor a mellékmondatban a „since” után Simple Past-ot, a főmondatban Present Perfect-et kell használni. !!)
 		FOR... = ...-e, -ja (valemennyi ideje): for two weeks, for ten minutes, for four years, for three months, for ages',
-		'["He has done.", "He has not (hasn''t) done.", "Has he done?"]',
-		'[
+        '["He has done.", "He has not (hasn''t) done.", "Has he done?"]',
+        '[
             {
                 "description": "Olyan cselekvés kifejezésére, ahol a történésnél fontosabb a cselekvés eredménye, amely a jelenben is fennáll.",
                 "example": "Look! Somebody has broken the window."
@@ -247,14 +247,14 @@ VALUES (
 				"example": "The President has visited a hospital. He gave presents to the children and kissed one of the nurses."
 			}
         ]'
-	),
-	(
-		'Past Simple versus Present Perfect',
-		'Időhatározók, amelyeknek különböző igeidőkben más jelentése van',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Past Simple versus Present Perfect',
+        'Időhatározók, amelyeknek különböző igeidőkben más jelentése van',
+        '',
+        null,
+        '[]',
+        '[
             {
                 "description": "This morning, this afternoon, this summer, this spring, this winter, this autumn. Present Perfect: Olyan időszakban történt múltbeli esemény közlésére, amely időszak a közlés pillanatában még nem zárult le. Past Simple: Olyan időszakban történt múltbeli esemény közlésére, amely időszak a közlés pillanatában már lezárult.",
                 "example": "I have eaten an apple this morning. - Ma délelőtt már ettem egy almát (még délelőtt van). ; I ate an apple this morning. - Ma délelőtt ettem egy almát (a közlés pillanata már nem délelőtt van)."
@@ -267,14 +267,14 @@ VALUES (
 				"example": "I went home last night. I have worked a lot in the last few days."
 			}
 		]'
-	),
-	(
-		'Present Perfect Continuous',
-		'Befejezett folyamatos jelen',
-		'have/has + been + ige + -ing',
-		'A Present Perfect Continuous-nak formailag ugyan van tagadó alakja, de ezt ritkábban használják. Helyette gyakrabban fordul elő a Present Perfect tagadó alakja.',
-		'["He has been doing", "He has not (hasn''t) been doing", "Has he been doing?"]',
-		'[
+    ),
+    (
+        'Present Perfect Continuous',
+        'Befejezett folyamatos jelen',
+        'have/has + been + ige + -ing',
+        'A Present Perfect Continuous-nak formailag ugyan van tagadó alakja, de ezt ritkábban használják. Helyette gyakrabban fordul elő a Present Perfect tagadó alakja.',
+        '["He has been doing", "He has not (hasn''t) been doing", "Has he been doing?"]',
+        '[
             {
                 "description": "Olyan cselekvés kifejezésére, amely a múlt egy adott pillanatában elkezdódött, a jelenben is tart, sőt valószínűleg a jövőben is tartani fog. Jellemző időhatározók: SINCE..., FOR..., HOW LONG...? SINCE WHEN...? (ld. a Present Perfect-et)",
                 "example": "She has been going to that school for five years. They have been going out together since last week."
@@ -293,14 +293,14 @@ VALUES (
 				"example": "I have been sitting here."
 			}
 		]'
-	),
-	(
-		'Past Perfect',
-		'Befejezett múlt',
-		'had + ige 3. alakja',
-		null,
-		'["He had worked.", "He had not (hadn''t) worked.", "Had he worked?"]',
-		'[
+    ),
+    (
+        'Past Perfect',
+        'Befejezett múlt',
+        'had + ige 3. alakja',
+        null,
+        '["He had worked.", "He had not (hadn''t) worked.", "Had he worked?"]',
+        '[
             {
                 "description": "Olyan cselekvés kifejezésére, amely egy másik megadott múltbeli cselekvést megelőzően ment végbe. Jellemző kötőszók: before — mielőtt, after - miután, when — amikor, by the time — amire, amikorra",
                 "example": "Before he left for England, he had sold his house. By the time he understood it, everybody had left."
@@ -310,14 +310,14 @@ VALUES (
                 "example": "When their child was born, they had been married for two years."
             }
 		]'
-	),
-	(
-		'Past Perfect Continuous',
-		'Befejezett folyamatos múlt',
-		'had been + ige + ing',
-		'A Past Perfect Continuous tagadó alakja helyett gyakrabban használjuk a Past Perfect tagadó alakját.',
-		'["He had been working.", "He had not (hadn''t) been working.", "Had he been working?"]',
-		'[
+    ),
+    (
+        'Past Perfect Continuous',
+        'Befejezett folyamatos múlt',
+        'had been + ige + ing',
+        'A Past Perfect Continuous tagadó alakja helyett gyakrabban használjuk a Past Perfect tagadó alakját.',
+        '["He had been working.", "He had not (hadn''t) been working.", "Had he been working?"]',
+        '[
             {
                 "description": "Olyan cselekvés kifejezésére, amely egy megadott múltbeli cselekvést megelőző időpontban kezdődött, és folyamatosan tartott a megadott múltbeli cselekvésig, sőt még talán tovább is. Olyan igékkel, amelyeknek nincsen folyamatos alakjuk, Past Perfect-et használunk. Ld. a Past Perfect-et. Jellemző kötőszók: by the time, when.",
                 "example": "By the time the lecture finished, he had been sleeping for half an hour."
@@ -327,14 +327,14 @@ VALUES (
                 "example": "His hair was wet, because he had been walking in the rain."
             }
 		]'
-	),
-	(
-		'Future simple',
-		'Egyszerű jövő',
-		'will + ige',
-		null,
-		'["He will work.", "He will not (won''t) work.", "Will he work?"]',
-		'[
+    ),
+    (
+        'Future simple',
+        'Egyszerű jövő',
+        'will + ige',
+        null,
+        '["He will work.", "He will not (won''t) work.", "Will he work?"]',
+        '[
             {
                 "description": "Olyan esetben használjuk, ha a beszéd pillanatában döntjük el, hogy mit fogunk csinálni. Spontán elhatározásról van szó.",
                 "example": "I''ll go upstairs and get the keys."
@@ -366,14 +366,14 @@ VALUES (
                 "example": "Shall I close the door? What shall we do tonight? Where shall we meet?"
             }
 		]'
-	),
-	(
-		'If / when, after, before...',
-		'Jövő időre vonatkozó feltételes és időhatározói mellékmondatok',
-		'A következő esetekben nem használható az egyszerű jövő idő (I will):',
-		'WHEN vs IF: When = amikor: Akkor használjuk, ha olyan dologról beszélünk, ami biztos, hogy megtörténik. If = ha: Akkor használjuk, ha valami lehet, hogy bekövetkezik, de még egyáltalán nem biztos.',
-		'[]',
-		'[
+    ),
+    (
+        'If / when, after, before...',
+        'Jövő időre vonatkozó feltételes és időhatározói mellékmondatok',
+        'A következő esetekben nem használható az egyszerű jövő idő (I will):',
+        'WHEN vs IF: When = amikor: Akkor használjuk, ha olyan dologról beszélünk, ami biztos, hogy megtörténik. If = ha: Akkor használjuk, ha valami lehet, hogy bekövetkezik, de még egyáltalán nem biztos.',
+        '[]',
+        '[
             {
                 "description": "Időhatározói mellékmondatokban, vagyis minden olyan mellékmondatban, ami a when - amikor, after - miután, before - mielőtt, by the time - amikorra, amire, while - amíg, as soon as - mihelyt, until - amíg nem, amíg stb. kötőszóval kezdődik. Jövő idejű értelemben ezekben a az egyszerű jelen (SIMPLE PRESENT) vagy a befejezett jelen idő (PRESENT PERFECT) használható. Általában while és before kötőszavaknál csak Simple Presentet használunk.",
                 "example": "Before I go to bed, I will finish my homework. As soon as I finish / have finished correcting the test-papers, I will call him."
@@ -387,14 +387,14 @@ VALUES (
                 "example": "She will be very happy if you give it to her."
             }
 		]'
-	),
-	(
-		'Future Continuous',
-		'Folyamatos jövő',
-		'will be + ige + ing',
-		null,
-		'["He will be working.", "He will not (won''t) be working.", "Will he be working?"]',
-		'[
+    ),
+    (
+        'Future Continuous',
+        'Folyamatos jövő',
+        'will be + ige + ing',
+        null,
+        '["He will be working.", "He will not (won''t) be working.", "Will he be working?"]',
+        '[
             {
                 "description": "Olyan cselekvés kifejezésére, amely a jövő egy adott pillanatában folyamatban lesz. Jellemző időhatározók: at this time tomorrow, this time next year, this time next month, at 5 0''clock.",
                 "example": "(At) this time tomorrow I will be doing my homework."
@@ -412,14 +412,44 @@ VALUES (
                 "example": "Will you be going to Budapest today? Will you be using your notebook tonight?"
             }
 		]'
-	),
-	(
-		'To be going to do',
-		'Jövő idős szerkezetek',
-		'to be going to + ige',
-		null,
-		'["He is going to work.", "He is not (isn''t) going to work.", "Is he going to work?"]',
-		'[
+    ),
+    (
+        'Future Perfect',
+        'Befejezett jövő',
+        'will have + ige 3. alakja',
+        null,
+        '["He will have worked.", "He will not (won''t) have worked.", "Will he have worked?"]',
+        '[
+            {
+                "description": "Olyan cselekvés kifejezésére, amely a jövő egy adott pillanatára befejeződik, lezárul. Jellemző kötőszó: by the time. Jellemző határozók: by tomorrow, by this time next week, by this time next month, by this time next year stb.",
+                "example": "By the time you return I will have finished the report. By tomorrow I will have translated the letter."
+            },
+            {
+                "description": "Olyan cselekvés kifejezésére, amely korábban elkezdődött, a jövő egy adott pillanatában is folyamatosan zajlik, sőt még azután is folyamatban lesz. Ha az igének van folyamatos alakja, akkor a Future Perfect Continuous-t kell használni. Ld. Future Perfect Continuous.",
+                "example": "By this time next year they will have been married for two years."
+            }
+		]'
+    ),
+    (
+        'Future Perfect Continuous',
+        'Befejezett folyamatos jövő',
+        'will have been + ige + -ing',
+        null,
+        '["He will have been working.", "He will not (won''t) have been working.", "Will he have been working?"]',
+        '[
+            {
+                "description": "Olyan cselekvés kifejezésére, amely korábban elkezdődött, a jövő egy adott pillanatában is folyamatosan zajlik, sőt még azután is folyamatban lesz. Jellemző időhatározók: by this time tomorrow, by this time next week, by this time next month, by next year, by Friday stb. Ha az igének nem lehet folyamatos alakja, akkor a Future Perfect-et kell használni. Ld. Future Perfect.",
+                "example": "By this time next year they will have been married for two years."
+            }
+		]'
+    ),
+    (
+        'To be going to do',
+        'Jövő idős szerkezetek',
+        'to be going to + ige',
+        null,
+        '["He is going to work.", "He is not (isn''t) going to work.", "Is he going to work?"]',
+        '[
             {
                 "description": "Ezt a szerkezetet jövőbeli terv vagy erős szándék kifejezésére használjuk.",
                 "example": "I am going to travel abroad."
@@ -433,14 +463,14 @@ VALUES (
                 "example": "On Saturday we were going to play tennis but it was raining."
             }
 		]'
-	),
-	(
-		'Simple Present, Present Continuous (with future meaning) versus To be going to',
-		'Jövő idő kifejezése különböző igeidőkkel',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Simple Present, Present Continuous (with future meaning) versus To be going to',
+        'Jövő idő kifejezése különböző igeidőkkel',
+        '',
+        null,
+        '[]',
+        '[
             {
                 "description": "SIMPLE PRESENT - Egyszerű jelen: Ha valamilyen menetrendszerű dologról (vonat, repülő, busz indulása, érkezése), programról (pl. rádió-, TV-műsor, moziműsor), boltok, múzeumok nyitvatartásáról, egyéb programok kezdésének és befejezésének időpontjáról beszélünk, egyszerű jelen időt használunk.",
                 "example": "When does your bus leave? When does the film start? The show finishes at 8."
@@ -454,14 +484,14 @@ VALUES (
                 "example": "Nov I''m fed up with everything. I''m going to see my boss and I''m going to talk to him. (Erről a főnök nem valószínű, hogy tud, csak én szeretnék már végre beszélni vele, akkor is, ha ő nem akarja, vagy nem ér rá. Meg fogom kísérelni.)  I''ve just fixed an appointment with my boss. I''m seeing him on Monday. (Itt egy előre megbeszélt találkozóról van szó. Előtt gondoskodtam arról, hogy ez a találkozó mindenképpen megvalósuljon. Tehát a főnökkel is előre egyeztettem. Ilyenkor általában már egy konkrét időpontot is megadtunk."
             }
 		]'
-	),
-	(
-		'Used to, Would',
-		'Valaha',
-		'',
-		null,
-		'["He used to play cards.", "He didn''t use to play cards.", "Did he use to play cards?"]',
-		'[
+    ),
+    (
+        'Used to, Would',
+        'Valaha',
+        '',
+        null,
+        '["He used to play cards.", "He didn''t use to play cards.", "Did he use to play cards?"]',
+        '[
             {
                 "description": "Olyan cselekvés kifejezésére, amelyet a múltban (valaha) rendszeresen végeztünk, de már felhagytunk vele. Az irodalmi nyelvben a Used to helyett, ilyen értelemben, gyakran használják a Would segédigét.",
                 "example": "I used to go running every morning. Every morning he would go to the sea."
@@ -483,14 +513,14 @@ VALUES (
 				"example": "You have to get used to this."
 			}
 		]'
-	),
-	(
-		'To be to, To be about to, To be due to',
-		'Kell, kellene, azon van, hogy...',
-		'',
-		null,
-		'["The train is to arrive at 5.", "Is the train to arrive at 5?", "The train is not to arrive at 5."]',
-		'[
+    ),
+    (
+        'To be to, To be about to, To be due to',
+        'Kell, kellene, azon van, hogy...',
+        '',
+        null,
+        '["The train is to arrive at 5.", "Is the train to arrive at 5?", "The train is not to arrive at 5."]',
+        '[
             {
                 "description": "TO BE TO / NOT TO = kell, kellene, úgy van, hogy... / nem kell, nem kéne, nem szabad",
                 "example": "I am to get there by 8. You are not to use a cheat sheet."
@@ -508,14 +538,14 @@ VALUES (
                 "example": "The train is due to leave at 7. The bus was not due to leave at 8."
             }
 		]'
-	),
-	(
-		'CAN Modal verb',
-		'CAN módbeli segédige',
-		'',
-		'A „can” segédige más modális segédige után egyáltalán nem használható, míg a „to be able to” állhat más módbeli segédigék után is (kivéve a „can, could, could have” segédigéket). Módbeli segédigét minden olyan ige követhet, aminek van főnévi igeneves alakja. (Pl. He may be able to do it.)',
-		'[]',
-		'[
+    ),
+    (
+        'CAN Modal verb',
+        'CAN módbeli segédige',
+        '',
+        'A „can” segédige más modális segédige után egyáltalán nem használható, míg a „to be able to” állhat más módbeli segédigék után is (kivéve a „can, could, could have” segédigéket). Módbeli segédigét minden olyan ige követhet, aminek van főnévi igeneves alakja. (Pl. He may be able to do it.)',
+        '[]',
+        '[
             {
                 "description": "CAN = Képes valamire. Csak egyszerű jelen és egyszerű múlt időben (could) használható.",
                 "example": "I can do it. I could do it."
@@ -553,14 +583,14 @@ VALUES (
                 "example": "Jack couldn''t have been there, because he was with me at that time."
             }
 		]'
-	),
-	(
-		'MUST Modal verb',
-		'MUST módbeli segédige',
-		'',
-		'A valószínűség kifejezésére használt MUST és MUST HAVE segédigék tagadó alakja a CAN''T és CAN''T HAVE. CAN''T = Biztos, hogy nem következik be valami. Biztos, hogy ma nem jön haza.	He can''t come home today. CANT HAVE + IGE 3. ALAKJA = Biztos, hogy nem következett be valami. Biztos, hogy nem ment oda. He can''t have gone there.',
-		'[]',
-		'[
+    ),
+    (
+        'MUST Modal verb',
+        'MUST módbeli segédige',
+        '',
+        'A valószínűség kifejezésére használt MUST és MUST HAVE segédigék tagadó alakja a CAN''T és CAN''T HAVE. CAN''T = Biztos, hogy nem következik be valami. Biztos, hogy ma nem jön haza.	He can''t come home today. CANT HAVE + IGE 3. ALAKJA = Biztos, hogy nem következett be valami. Biztos, hogy nem ment oda. He can''t have gone there.',
+        '[]',
+        '[
             {
                 "description": "MUST = Biztos, hogy... - Minden bizonnyal bekövetkezik valami.",
                 "example": "He must arrive in the next ten minutes."
@@ -590,14 +620,14 @@ VALUES (
                 "example": "I need go there. I needn''t go there."
             }
 		]'
-	),
-	(
-		'SHOULD Modal verb',
-		'SHOULD módbeli segédige',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'SHOULD Modal verb',
+        'SHOULD módbeli segédige',
+        '',
+        null,
+        '[]',
+        '[
             {
                 "description": "SHOULD / SHOULDN''T = Kellene / nem kellene, nem lenne szabad csinálni valamit",
                 "example": "He should give up smoking."
@@ -635,14 +665,14 @@ VALUES (
                 "example": "You are going to regret it, I shouldn''t do that."
             }
 		]'
-	),
-	(
-		'MAY and MIGHT Modal verbs',
-		'MAY és MIGHT módbeli segédige',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'MAY and MIGHT Modal verbs',
+        'MAY és MIGHT módbeli segédige',
+        '',
+        null,
+        '[]',
+        '[
 			{
                 "description": "MAY / MAY NOT = Valószínű, hogy valami bekövetkezik / nem következik be.",
                 "example": "Valószínű, hogy nem találkozik vele. = He may (not) meet her."
@@ -680,14 +710,14 @@ VALUES (
                 "example": "Nem engedtem meg, hogy begyere. = I didn''t let you come in."
             }
 		]'
-	),
-	(
-		'DARE Modal verb',
-		'DARE módbeli segédige',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'DARE Modal verb',
+        'DARE módbeli segédige',
+        '',
+        null,
+        '[]',
+        '[
 			{
                 "description": "DARE (TO) DO / DON''T DARE (TO) DO = mer, merészel / nem mer. Egyszerű és befejezett jelen valamint egyszerű és befejezett múlt időben, továbbá egyszerű jövő időben használjuk. Ebben az értelemben a mai angol nyelvben inkább a „have the courage to do sth” vagy a „to be afraid to do sth” kifejezést használják.",
                 "example": "Nem merem megtenni. = I don''t dare to do it. I don''t have the courage to do it. I''m afraid to do it."
@@ -713,14 +743,14 @@ VALUES (
                 "example": "Hadd lássam, mersz-e egy keréken motorozni? = I dare you to ride your motorbike on one wheel."
             }
 		]'
-	),
-	(
-		'Modal verbs - CAN, COULD, WOULD, WILL',
-		'Kérés, óhaj, felajánlás, engedélykérés kifejezése módbeli segédigékkel',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Modal verbs - CAN, COULD, WOULD, WILL',
+        'Kérés, óhaj, felajánlás, engedélykérés kifejezése módbeli segédigékkel',
+        '',
+        null,
+        '[]',
+        '[
 			{
                 "description": "Valakit megkérünk valamire. (Mind a 4 címben szereplő segédigét hazsnálhatjuk):",
                 "example": "Can you hold the line, please? Would you be so kind as to close the window?"
@@ -746,14 +776,14 @@ VALUES (
                 "example": "Would you like something to drink?"
             }
 		]'
-	),
-	(
-		'Had better, Would rather, It''s time, It''s high time',
-		'',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Had better, Would rather, It''s time, It''s high time',
+        '',
+        '',
+        null,
+        '[]',
+        '[
             {
                 "description": "HAD BETTER DO / NOT DO = a) Jobb lenne, ha... valaki  csinálna/ nem csinálna valamit.  b) Jobban tenné, ha... / ha nem... A had better kicsit erősebb, mint a should, benne van az, hogy valami negatív következménye lesz a dolognak, ha nem teszed meg.",
                 "example": "You''d better take a taxi. I''d better not go there."
@@ -787,14 +817,14 @@ VALUES (
                 "example": "It''s high time you gave up smoking. It''s about time you gave up smoking."
             }
 		]'
-	),
-	(
-		'Conditional clauses (if)',
-		'Feltételes mód',
-		'',
-		'A feltételes mondatok kötőszavai: if = ha; unless = hacsak nem (Az angol mondatban nem kell még egyszer tagadni.); provided  = feltéve, ha ; as long as/so long as = amennyiben, feltéve ha; as if = mintha; suppose/supposing = tegyük fel, hogy...; Ezekre ugyanaz a szabály vonatkozik, mint az if-re (utánuk Simple Present, Simple Past vagy Past Perfect használható)',
-		'[]',
-		'[
+    ),
+    (
+        'Conditional clauses (if)',
+        'Feltételes mód',
+        '',
+        'A feltételes mondatok kötőszavai: if = ha; unless = hacsak nem (Az angol mondatban nem kell még egyszer tagadni.); provided  = feltéve, ha ; as long as/so long as = amennyiben, feltéve ha; as if = mintha; suppose/supposing = tegyük fel, hogy...; Ezekre ugyanaz a szabály vonatkozik, mint az if-re (utánuk Simple Present, Simple Past vagy Past Perfect használható)',
+        '[]',
+        '[
             {
                 "description": "A feltételes mód első típusába azok a mondatok tartoznak, amelyek lehetséges feltételt fejeznek ki és általában a jövőre vonatkoznak. A főmondatban WILL segédigét, a mellékmondatban SIMPLE PRESENT TENSE-t/EGYSZERŰ JELEN IDŐT használunk. Mellékmondatnak mindig az if-fel kezdődő mondat minősül. A főmondat és a mellékmondat sorrendje felcserélhető. Ha az if-es mellékmondat az első helyen áll, akkor vesszővel választjuk el a főmondattól. Ha az if-es mellékmondat a főmondatot követi, akkor nem használunk vesszőt. Kérdésekben a tagmondatok sorrendje felcserélődik, de az előbbi szabály marad!",
                 "example": "I will do it if you do it too. If you do it, I will do it too."
@@ -812,14 +842,14 @@ VALUES (
                 "example": "Megcsinálnám, ha korábban te is megcsináltad volna. I would do it if you had also done it earlier."
             }
 		]'
-	),
-	(
-		'Conditional clauses (if) 2.0',
-		'Feltételes mód 2.0',
-		'Egyéb fontos tudnivalók a feltételes módról',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Conditional clauses (if) 2.0',
+        'Feltételes mód 2.0',
+        'Egyéb fontos tudnivalók a feltételes módról',
+        null,
+        '[]',
+        '[
 			{
                 "description": "Képesség kifejezése feltételes módban:",
                 "example": "If you can do it, I can do it too. If you could do it, I could also do it. If you had been able to do it, I could have done it too."
@@ -857,14 +887,14 @@ VALUES (
                 "example": "If I were Jack, I wouldn''t go there. --> Were I Jack, I wouldn''t go there."
             }
 		]'
-	),
-	(
-		'I wish..., If only...',
-		'Bárcsak...',
-		'Kívánság, óhaj kifejezésére a WISH igét és az IF ONLY szerkezetet használhatjuk.',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'I wish..., If only...',
+        'Bárcsak...',
+        'Kívánság, óhaj kifejezésére a WISH igét és az IF ONLY szerkezetet használhatjuk.',
+        null,
+        '[]',
+        '[
             {
                 "description": "WISH / IF ONLY+ ALANY + SIMPLE PAST vagy PAST CONTINUOUS = Ezt a szerkezetet akkor használjuk, ha a jelen helyzettel nem vagyunk megelégedve, de változtatni sajnos nem tudunk rajta. A ''to be'' és a ''to have'', illetve egyéb állapotot kifejező igékkel mindig ezt a szerkezetet használjuk.",
                 "example": "I wish the weather was nice. If only I didn''t have to work so much.  I wish / If only he was coming with us now."
@@ -878,14 +908,14 @@ VALUES (
                 "example": "I wish/lf only I had gone to the party.  I wish / If only I hadn''t sold my flat."
             }
 		]'
-	),
-	(
-		'Passive voice',
-		'Szenvedő szerkezet',
-		'A passzív szerkezet állítmánya: TO BE + IGE 3. ALAKJA. A passzív mondatban tehát mindig a TO BE kerül a megfelelő alakba, és azt egyeztetjük számban és személyben a passzív mondat alanyával. Az ige változatlanul harmadik alakban áll.',
-		'A szenvedő szerkezet legfontosabb ismérve, hogy a cselekvés alanya a beszélő mondanivalója szempontjából lényegtelen. Az a fontos, ami a cselekvést elszenvedi, vagyis a mondat tárgya. A szenvedő szerkezetű mondatban a tárgy az alany helyére kerül, az alany pedig, amennyiben meg akarjuk nevezni, egy „BY” prepozíziót követően a mondat végére.',
-		'["This company builds factories ---> Factories are built (by this company)"]',
-		'[
+    ),
+    (
+        'Passive voice',
+        'Szenvedő szerkezet',
+        'A passzív szerkezet állítmánya: TO BE + IGE 3. ALAKJA. A passzív mondatban tehát mindig a TO BE kerül a megfelelő alakba, és azt egyeztetjük számban és személyben a passzív mondat alanyával. Az ige változatlanul harmadik alakban áll.',
+        'A szenvedő szerkezet legfontosabb ismérve, hogy a cselekvés alanya a beszélő mondanivalója szempontjából lényegtelen. Az a fontos, ami a cselekvést elszenvedi, vagyis a mondat tárgya. A szenvedő szerkezetű mondatban a tárgy az alany helyére kerül, az alany pedig, amennyiben meg akarjuk nevezni, egy „BY” prepozíziót követően a mondat végére.',
+        '["This company builds factories ---> Factories are built (by this company)"]',
+        '[
             {
                 "description": "Simple present",
                 "example": "They build a house. --> A house is built."
@@ -935,14 +965,14 @@ VALUES (
                 "example": "They must have built a house. --> A house must have been built."
             }
 		]'
-	),
-	(
-		'Passive voice 2.0',
-		'Szenvedő szerkezet 2.0',
-		'Egyéb fontos tudnivalók a szenvedő szerkezetről',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Passive voice 2.0',
+        'Szenvedő szerkezet 2.0',
+        'Egyéb fontos tudnivalók a szenvedő szerkezetről',
+        null,
+        '[]',
+        '[
             {
                 "description": "Részeshatározóval álló igék szenvedő szerkezetben: A részeshatározót kétféleképpen fejezheti ki az angol nyelv: prepozíciós szerkezettel (to, for) vagy úgynevezett indirekt tárggyal. Mivel az angol nyelvben a részeshatározó is a cselekvés egyik elszenvedője, elfoglalhatja a tárgy helyét, ez alkalommal azonban már prepozíció nélkül. Így, mivel a mondat egyik tárgyaként funkcionál, a szenvedő szerkezet képzési szabályai szerint a passzív mondat alanya lehet, tehát a mondat élére kerülhet. A leggyakoribb kettős tárgyesettel járó igék: offer, pay, show, teach, tell, lend, give, send, write, get, buy, order.",
                 "example": "I gave a book to you. --> A book was given to you. I gave you a book. --> You were given a book."
@@ -980,14 +1010,14 @@ VALUES (
                 "example": "This problem has to be dealt with."
             }
 		]'
-	),
-	(
-		'Causative',
-		'Műveltetés',
-		'A műveltetés lényege, hogy valamilyen cselekvést mással végeztetünk. A következő öt szerkezet a leggyakrabban használt változata (1—7). Ezen kívül léteznek még hasonló szerkezetek, de azok jelentése nem műveltetés (8—9).',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Causative',
+        'Műveltetés',
+        'A műveltetés lényege, hogy valamilyen cselekvést mással végeztetünk. A következő öt szerkezet a leggyakrabban használt változata (1—7). Ezen kívül léteznek még hasonló szerkezetek, de azok jelentése nem műveltetés (8—9).',
+        null,
+        '[]',
+        '[
 			{
                 "description": "TO HAVE STH DONE (BY SY) = a) Megcsináltatni valamit (valakivel), általában szolgáltatásoknál használjuk. A „to have” igét kell a megfelelő igeidőbe tenni. b) Valamilyen sajnálatos esemény kifejezésére. (Általában a szenvedő szerkezet helyettesítésére. Ld. a 9. pontban!)",
                 "example": "Next week I''ll have my car washed by the mechanic. Last week I had my car washed by the mechanic. I have just had my car washed by the mechanic."
@@ -1025,14 +1055,14 @@ VALUES (
                 "example": "I had my purse stolen. I got my nose broken."
             }
 		]'
-	),
-	(
-		'Reported / Indirect speech I.',
-		'Függő beszéd I. - Állítás',
-		'Függő  beszédben a beszélő egy bevezető főmondat után közli mindazt, amit valaki mondott vagy kérdezett. A főmondat igeidejétől függően változhat a mellékmondat igeideje is. Ha a főmondat  jelen időben van, akkor a mellékmondat  igeideje ugyanaz marad, mint ami eredetileg volt. Ha a főmondat múlt időben van, akkor a mellékmondat igeideje is változik, jellemzően egy „igeidővel visszacsúszik”. Minden igeidőnek megvan a függő beszédben használt megfelelője.',
-		'A főmondatban természetesen nem csak a „to say” ige állhat, hanem számos más ige is, attól függően, hogy a mellékmondat milyen célból hangzott el. Pl. to complain = panaszkodik, to boast = dicsekszik, to wonder = kíváncsi valamire, to promise = megmígér stb.',
-		'[]',
-		'[
+    ),
+    (
+        'Reported / Indirect speech I.',
+        'Függő beszéd I. - Állítás',
+        'Függő  beszédben a beszélő egy bevezető főmondat után közli mindazt, amit valaki mondott vagy kérdezett. A főmondat igeidejétől függően változhat a mellékmondat igeideje is. Ha a főmondat  jelen időben van, akkor a mellékmondat  igeideje ugyanaz marad, mint ami eredetileg volt. Ha a főmondat múlt időben van, akkor a mellékmondat igeideje is változik, jellemzően egy „igeidővel visszacsúszik”. Minden igeidőnek megvan a függő beszédben használt megfelelője.',
+        'A főmondatban természetesen nem csak a „to say” ige állhat, hanem számos más ige is, attól függően, hogy a mellékmondat milyen célból hangzott el. Pl. to complain = panaszkodik, to boast = dicsekszik, to wonder = kíváncsi valamire, to promise = megmígér stb.',
+        '[]',
+        '[
 			{
                 "description": "SIMPLE PRESENT --> SIMPLE PAST",
                 "example": "Jack eats a lot of chocolate. --> She said that Jack ate a lot of chocolate."
@@ -1090,14 +1120,14 @@ VALUES (
                 "example": "Jack is going to eat chocolate. --> She said that Jack was going to eat chocolate."
             }
 		]'
-	),
-	(
-		'Reported / Indirect speech II. - Reported questions',
-		'Függő beszéd II. - Kérdés',
-		'Függő kérdésben a mellékmondat szórendje egyenes. A függő kérdés nem kérdő mondat! Kétféle függő kérdést különböztetünk meg, attól függően, hogy eldöntendő kérdést, vagy kiegészítendő (kérdőszavas) kérdést teszünk-e függő beszédbe.',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Reported / Indirect speech II. - Reported questions',
+        'Függő beszéd II. - Kérdés',
+        'Függő kérdésben a mellékmondat szórendje egyenes. A függő kérdés nem kérdő mondat! Kétféle függő kérdést különböztetünk meg, attól függően, hogy eldöntendő kérdést, vagy kiegészítendő (kérdőszavas) kérdést teszünk-e függő beszédbe.',
+        null,
+        '[]',
+        '[
 			{
                 "description": "Eldöntendő kérdés függő beszédben: Az eldöntendő kérdést első lépésben egyenes szórendbe, majd a megfelelő igeidőbe tesszük és az IF vagy WHETHER kötőszavakkal kötjük a főmondathoz. Az „if/whether” = „-e” szócska.",
                 "example": "Is she married? --> He asks if/whether she is married. OR He asked if/whether she was married."
@@ -1107,14 +1137,14 @@ VALUES (
                 "example": "Why is he angry? --> She asks why he is angry. OR She asked why he was angry."
             }
 		]'
-	),
-	(
-		'Reported / Indirect speech III. - Reported command, request, advice',
-		'Függő beszéd III. - Felszólítás',
-		'Felszólítás és tiltás, valamint kérés és tanács idézésekor függő beszédben, az igeidőtől függetlenül, a főmondat után „to” infinitive áll, a megfelelő személyes névmás tárgyesetét követően. Tagadás esetén "not + to infinitive"-et használunk. A bevezető főmondatban általában a következő igék állhatnak a mondat értelmének megfelelően: to ask — megkér, to tell — elmond, mond, to order — parancsol, to request — igényel, kér, to warn — figyelmeztet, to advise — tanácsol, to encourage — ösztönöz, to forbid — megtilt, to beg — könyörög, to recommend — ajánl, javasol, to remind — emlékeztet, to urge — sürget. A „to say” igét itt nem használhatjuk.',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Reported / Indirect speech III. - Reported command, request, advice',
+        'Függő beszéd III. - Felszólítás',
+        'Felszólítás és tiltás, valamint kérés és tanács idézésekor függő beszédben, az igeidőtől függetlenül, a főmondat után „to” infinitive áll, a megfelelő személyes névmás tárgyesetét követően. Tagadás esetén "not + to infinitive"-et használunk. A bevezető főmondatban általában a következő igék állhatnak a mondat értelmének megfelelően: to ask — megkér, to tell — elmond, mond, to order — parancsol, to request — igényel, kér, to warn — figyelmeztet, to advise — tanácsol, to encourage — ösztönöz, to forbid — megtilt, to beg — könyörög, to recommend — ajánl, javasol, to remind — emlékeztet, to urge — sürget. A „to say” igét itt nem használhatjuk.',
+        null,
+        '[]',
+        '[
 			{
                 "description": "Felszólítás.",
                 "example": "Will you pass my the salt? --> He asked me to pass him the salt."
@@ -1124,14 +1154,14 @@ VALUES (
                 "example": "Don''t drive fast. --> He asked me not to drive fast."
             }
 		]'
-	),
-	(
-		'Reported / Indirect speech IV.',
-		'Függő beszéd IV. - Egyéb tudnivalók',
-		'',
-		null,
-		'[]',
-		'[
+    ),
+    (
+        'Reported / Indirect speech IV.',
+        'Függő beszéd IV. - Egyéb tudnivalók',
+        '',
+        null,
+        '[]',
+        '[
 			{
                 "description": "A „Shall I...”, „Shall we...” kezdetű mondatok „I/he should...”, „We/they should...” szerkezetté vagy „to” főnévi igenévvé alakulnak át. Ilyenkor a „whether” kötőszót használjuk.",
                 "example": "Shall I eat it or not? --> She hesitated whether she should eat it or not. OR She hesitated whether to eat it or not."
@@ -1165,16 +1195,16 @@ VALUES (
                 "example": "I''ll go home this week. --> She said she would go home that week. I like these shoes. --> He said he liked the shoes. I''ll put these on the wall. --> He said he would put them on the wall."
             }
 		]'
-	),
-	(
-		'Relative clauses (who, which, that...)',
-		'Jelzői mellékmondatok',
-		'A jelzői mellékmondatok két fő típusa az úgynevezett defining clause (szűkítő mellékmondat) és a clause (bővítő mellékmondat).',
-		'Az angol nyelvben a vonatkozó névmásoknak jelentés-megkülönböztető szerepe lehet. A következő névmásokat használhatjuk kötőszóként: who - aki, akik, akit, akiket; whom - akit (Akkor használjuk, ha prepozíció előzi meg.); whose - akinek a..., akiknek a... , aminek a...; which - amely, amelyek, amelyet, ami, amit stb.; that - ami, amit, aki, akit; what -- az a dolog ami, azt a dolgot amit; where - ahol; when - amikor; why - amiért.',
-		'[]',
-		'[
+    ),
+    (
+        'Relative clauses (who, which, that...)',
+        'Jelzői mellékmondatok',
+        'A jelzői mellékmondatok két fő típusa az úgynevezett defining clause (szűkítő mellékmondat) és a clause (bővítő mellékmondat).',
+        'Az angol nyelvben a vonatkozó névmásoknak jelentés-megkülönböztető szerepe lehet. A következő névmásokat használhatjuk kötőszóként: who - aki, akik, akit, akiket; whom - akit (Akkor használjuk, ha prepozíció előzi meg.); whose - akinek a..., akiknek a... , aminek a...; which - amely, amelyek, amelyet, ami, amit stb.; that - ami, amit, aki, akit; what -- az a dolog ami, azt a dolgot amit; where - ahol; when - amikor; why - amiért.',
+        '[]',
+        '[
 			{
-                "description": "SZŰKÍTÓ MELLÉKMONDAT (Defining clause): Ezek a mellékmondatok a mondat egészének megértéséhez nélkülözhetetlenek. Mivel szorosan kötődnek a főmondathoz, az angol nyelvben még vesszővel sem törjük meg ezt a szoros egységet.",
+                "description": "SZŰKÍTŐ MELLÉKMONDAT (Defining clause): Ezek a mellékmondatok a mondat egészének megértéséhez nélkülözhetetlenek. Mivel szorosan kötődnek a főmondathoz, az angol nyelvben még vesszővel sem törjük meg ezt a szoros egységet.",
                 "example": "The boy who/that helped me lives next door. The book which/that is lying on the floor is not yours."
             },
 			{
@@ -1182,12 +1212,171 @@ VALUES (
                 "example": "The girl who/that is sitting next to you is very clever. The room which/that faces the street is very noisy."
             },
 			{
-                "description": "Szűkítő mellékmondat - Tárgyi mellékmondat:  Ha a kötőszó tárgyi mellékmondatot vezet be (akit, amit), akkor akár el is hagyható. Ez akkor is van, ha a kötőszóhoz valamilyen prepozíció tartozik, hiszen a prepozíció is mindig tárgyesetet vonz. Ha a kötőszót elhagyjuk, akkor a prepozíció mindig a mellékmondat végére kerül.",
+                "description": "Szűkítő mellékmondat - Tárgyi mellékmondat: Ha a kötőszó tárgyi mellékmondatot vezet be (akit, amit), akkor akár el is hagyható. Ez akkor is van, ha a kötőszóhoz valamilyen prepozíció tartozik, hiszen a prepozíció is mindig tárgyesetet vonz. Ha a kötőszót elhagyjuk, akkor a prepozíció mindig a mellékmondat végére kerül.",
                 "example": "The book (which/that) I  lent you is Joe''s. The book you had been looking for was behind the wardrobe."
             },
 			{
                 "description": "A mellékmondatban kötőszót nem hagyhatjuk el, ha azt a prepozíció megelőzi. Ebben az esetben azonban csak a „whom” és a „which” kötőszó használható. A „that” és a „who” nem! Összefoglalva tehát, ha prepozíció járul a kötőszóhoz, a következő variációk léteznek:",
                 "example": "This is the book about which I want to talk. This is the book which I want to talk about. This is the book that I want to talk about. This is the book I want to talk about. (Ez a leggyakoribb változat.)"
+            },
+			{
+                "description": "BŐVÍTŐ MELLÉKMONDAT (Non-defining clause): Ez a mellékmondat, ahogy az angol megnevezés is mutatja, nem meghatározó a főmondat megértése szempontjából. Akár el is hagyható, hiszen akkor is teljesen világos, hogy a beszélő kire vagy gondol. Valójában csak kibővíti a főmondat értelmét. Mivel nem képez olyan szoros egységet a főmondat alanyával, mint a szűkítő mellékmondat, vesszővel tagoljuk őket.",
+                "example": "The doctor who wrote this book got a Nobel prize.  Dr Smith, who wrote this book, got a Nobel prize. Az első mondatban, ha csak az alanyt nézzük, nem derül ki, hogy konkrétan kiről van szó. Bármilyen orvosra gondolhatunk. A második mondat alanya azonban egy konkrét személy, a mellékmondat már csak adalék információval szolgál. Tehát ha elhagyjuk, akkor is tudjuk, hogy kiről van szó."
+            },
+			{
+                "description": "A that kötőszót nem hazsnálhatjuk bővítő mellékmondatban.",
+                "example": "My sister, who lives in Canada, got married. (Csak egy nővérem van, aki egyébként Kanadában él)."
+            },
+			{
+                "description": "A kötőszavakat akkor sem hagyhatjuk el, ha azok tárgyi mellékmondatot vezetnek be, illetve ha prepozícióval állnak.",
+                "example": "My sister, who you also like, got married."
             }
 		]'
-	);
+    ),
+    (
+        'Inversion',
+        'Fordított szórend',
+        'Bizonyos után fordított, azaz kérdő szórendet használunk. Ez csak abban az esetben van így, ha a határozószót vagy a határozót kiemeljük a mondat legelejére.',
+        null,
+        '["He went home only after the lesson --> Only after the lesson went he home", "I have never seen a whale --> Never have I seen a whale"]',
+        '[
+			{
+                "description": "Hardly ever / Scarcely ever — alig, ritkán",
+                "example": "Alig találkozom vele. = I hardly ever meet him / Hardly ever do I meet him."
+            },
+			{
+                "description": "Hardly ... when / Scarcely ... when / No sooner ... than - alighogy",
+                "example": "Alighogy beléptek a szobába, máris bekapcsoltåk a TV-t. = They had hardly entered the room when they switched on the TV. Hardly had they entered the room when they switched on the TV."
+            },
+            {
+                "description": "In / under no circumstances — semmiféle körülmények között; In no way — semmiképpen; On no condition — semmiféle feltétel mellett, semmiképpen; On no account — semmiképpen",
+                "example": "Semmiféle körülmények között sem fogok elköltözni. = I won''t move in any circumstances. / In no circumstances will I move."
+            },
+            {
+                "description": "Neither / nor... — sem; So — is",
+                "example": "Még nem voltam Ausztráliában. Én sem. = I haven''t been to Autralia. Neither have I. / Nor have I."
+            },
+            {
+                "description": "Not till / until... — addig nem, amíg nem",
+                "example": "Nem vette észre, hogy ellopták a pénztárcáját, amíg fizetni nem akart. = He didn''t realize that his purse was stolen until he wanted to pay. / Not till he wanted to pay, did he realize that his purse was stolen."
+            },
+            {
+                "description": "Never — soha",
+                "example": "Még sohasem jártam New Yorkban. = I have never been to New York. / Never have I been to New York."
+            },
+            {
+                "description": "Not only ... but also — nemcsak ...m hanem ... is",
+                "example": "Nemcsak kiabál vele, de meg is veri. = He doesn''t only shout with her, but he also beats her up. / Not only does he shout with her, but he also beats her up."
+            },
+            {
+                "description": "Nowhere — sehol",
+                "example": "Sehol sem találtam a pénztárcámat. = I didn''t find my purse anywhere. / Nowhere did I find my purse."
+            },
+            {
+                "description": "Only by — csak a ... által",
+                "example": "Csak az ablakot betörve tudott bejutni a házba. = He was able to get into the house only by breaking the window. / Only by breaking the window was he able to get into the house."
+            },
+            {
+                "description": "Only in this way — csak ily módon, csak így",
+                "example": "Csak így tudunk találkozni.= We can meet only in this way. / Only in this way can we meet."
+            },
+            {
+                "description": "Only then/when... / after... — csak aztán / amikor ... / azután, hogy ...",
+                "example": "Csak amikor újra találkoztunk, tudtuk meg, hogy mi történt. = We learnt what had happened only when we met again. / Only when we met again, did we learn what had happened."
+            },
+            {
+                "description": "KIVÉTEL: Only = egyedül: Ha az „only” azt jelenti, hogy „egyedül, nem pedig „csak”, akkor nem használhatunk fordított szórendet akkor sem, ha a mondat elején áll.",
+                "example": "Egyedül Péter látta hogy történt a baleset. = Only Peter saw how the accident happened."
+            },
+            {
+                "description": "Seldom / Rarely — ritkán",
+                "example": "Ritkán találkozhatunk ilyen öreg emberrel. = We can rarely / seldom meet such an old man. Seldom / rarely can we meet such an old man."
+            },
+            {
+                "description": "Little — kicsit, keveset, nem nagyon",
+                "example": "Nem nagyon értettem, hogy mi történt. = Little did I understand what had happened."
+            },
+            {
+                "description": "As — ahogy, akárcsak",
+                "example": "Én is angolt kezdtem tanulni, akárcsak a nővérem. = I started learning English as did my sister."
+            },
+            {
+                "description": "So + melléknév — ilyen, olyan (ha a be igével áll)",
+                "example": "Olyan lassú volt, hogy mindenki megelőzte. = He was so slow that everybody overtook him. So slow was he, that everybody overtook him."
+            },
+            {
+                "description": "Such: Csak akkor használhatunk fordított szórendet vele, ha a such a be igével önállóan áll. Jelentése: olyan nagy",
+                "example": "Olyan nagy volt a vihar, hogy a házak teteje megrongálódott. = Such was the storm that the roofs of the houses got destroyed."
+            },
+            {
+                "description": "If elhagyásakor",
+                "example": "Ha itt lennének, segítenének. = If they were here, they would help us. / Were they here, they would help us."
+            }
+		]'
+    ),
+    (
+        'Emphasis, cleft sentences',
+        'Nyomatékosítás, kiemelés',
+        'Az angolban, akárcsak a magyarban, bizonyos mondatrészeket hangsúlyosabbá tehetünk, A következő szerkezeteket használhatjuk hangsúlyozásra.',
+        null,
+        '[]',
+        '[
+			{
+                "description": "IT IS/WAS ... THAT/WHO  = az / volt az, aki / ami... Ahogy a példák mutatják, az „It is/was...” szerkezet után a személyes névmás alanyesetben áll, kivéve egyes szám első személyben (It was me who...). A mondat elején akkor is az „It is / was...” szerkezetet használjuk, ha az utána következő szó többes számot kívánna meg. Az „It is /was” szerkezet vagy a „who” vagy a „that” kötőszavakkal állhat, de bizonyos esetekben a „when” és „where” kötőszavakkal is előfordulhat.",
+                "example": "Alapmondat: Tim lost his documents yesterday. Hangsúlyos mondatok: It was Tim who lost his documents yesterday. It was he who lost his documents. It was yesterday that Tim lost his documents. It was his documents that Tim lost yesterday."
+            },
+            {
+                "description": "Bizonyos esetekben az „It is... who /that” szerkezet állhat módbeli segédigékkel is.",
+                "example": "A lánya lehet az, aki mellette ül. = It may be his daughter who is sitting next to him."
+            },
+            {
+                "description": "THIS IS/WAS... / THAT IS/WAS ... — - Ez/Az volt az, ami...",
+                "example": "Ez minden, amit tehetek. = That''s all I can do."
+            },
+            {
+                "description": "Ha a „this is”, „that is” szerkezetet nem követi valamilyen konkrét dolog, akkor a „what” kötőszót használjuk.",
+                "example": "Ez az, amit én nem értek. = This is what I don''t understand."
+            },
+            {
+                "description": "WHAT... — Az ami... / Ami...",
+                "example": "Ami most fontos, az az, hogy mindenki biztonságban van. = What is important now is that everybody is safe."
+            },
+            {
+                "description": "ALL... = Csak a... / Mindaz ami...",
+                "example": "Csak szerelemre van szükségem. = All I need is love."
+            },
+            {
+                "description": "Alanyemelés: A mondat tárgyát a mondat elejére helyezzük. Általában mellékneves szerkezetekkel fordul elő.",
+                "example": "A német nyelvet nehéz megtanulni. = German is difficult to learn."
+            },
+            {
+                "description": "Az állítmány nyomatékosítása: Általában egyszerű jelen és egyszerű múlt időben használunk nyomatékosítást a DO vagy a DID segédigékkel.",
+                "example": "Ha itt lennének, segítenének. = If they were here, they would help us. / Were they here, they would help us."
+            },
+            {
+                "description": "If elhagyásakor",
+                "example": "Tényleg tetszik a könyved. = I do like you book."
+            },
+            {
+                "description": "Very: mondatrészek kiemelésére: pontosan, éppen, maga a / az a",
+                "example": "A város kellős közepén = In the very centre of the town. Éppen ugyanabban a pillanatban = In the very same moment"
+            }
+		]'
+    ),
+    (
+        'Embedded questions',
+        'Beágyazott kérdések',
+        'A beágyazott kérdés két különálló kérdés ötvözete. Ezek az úgynevezett „Mit gondolsz...?” „Mit mondtál...?” típusú kérdések.',
+        null,
+        '["Mit gondolsz, hol dolgozik? = Where do you think he works?"]',
+        '[
+            {
+                "description": "A magyar nyelvben a két kérdőmondatot könnyen egy mondattá alakíthatjuk, hiszen csak egymás mellé kell tenni őket. Az angolban azonban a második mondat kérdőszava kerül előre, és a főmondatot követően a mellékmondat egyenes szórendben lesz. Ha a főmondat múlt idejű, akkor - akárcsak függó beszédben — a mellékmondat igeidejét is módosítani kell.",
+                "example": "Where did you say he worked?"
+            },
+            {
+                "description": "A mai angolban a „do you think” a mondat végére is kerülhet. Ilyenkor mindkét tagmondatban kérdő szórendet használunk.",
+                "example": "Mit gondolsz, ki a barátnője? = Who do you think girlfriend is?"
+            }
+		]'
+    );
