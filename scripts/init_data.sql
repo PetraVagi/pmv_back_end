@@ -1190,4 +1190,251 @@ VALUES (
                 "example": "This is the book about which I want to talk. This is the book which I want to talk about. This is the book that I want to talk about. This is the book I want to talk about. (Ez a leggyakoribb változat.)"
             }
 		]'
+	),
+	(
+		'Generic You / One',
+		'Általános alany',
+		'Ha egy mondatban nincsen alany és a szenvedő szerkezetet sem tudjuk alkalmazni, akkor jön be a képbe az általános alany. Az alany vagy a ''YOU'', vagy a ''ONE'' szó. A ''ONE'' szó esetén a ragozás E/3 szerint történik',
+		'Ha a ''YOU'' szó van használva alanyként, akkor a szövegkörnyezet szerint lehet eldönteni, hogy általános alanyról beszélünk vagy sem.',
+		'[]',
+		'[
+			{
+                "description": "A következő mondant jelentheti azt, hogy: ''Ezt nem lehet megcsinálni.'', vagy: ''Ezt Te nem tudod megcsinálni.''",
+                "example": "You can''t do that."
+            },
+			{
+                "description": "Példamondat a ''ONE'' használatával",
+                "example": "One never knows what the future holds."
+            }
+		]'
+	),
+	(
+		'Both / Either / Neither',
+		'Mindkettő / Bármelyik / Egyiksem',
+		'A both / either / neither szavaknál a legfontosabb szabály, hogy mindig csak akkor használhatod őket, ha 2 dologról beszélsz. Több dolog esetén nem működnek ezek a szavak.',
+		'',
+		'[]',
+		'[
+			{
+                "description": "Both...and... = ....is....is",
+                "example": "Both Hungary and Slovakia are small countries. / Magyarország is és Szlovákia is kis ország."
+            },
+			{
+                "description": "Either...or...=...vagy...vagy",
+                "example": "I''d like to go on holiday either to Italy or to Greece. / Vagy Olaszországba vagy Görögországba szeretnék menni nyaralni."
+            },
+			{
+                "description": "Neither...nor...=...sem...sem (tagadó értelmű: mellette már nem tagadhatsz)",
+                "example": "Neither Hungary nor Ukraine is a rich country. / Sem Magyarország, sem Ukrajna nem gazdag ország."
+            },
+			{
+                "description": "Az either...or... egy tagadómondatban pont ugyanazt jelenti, mint a neither..nor... önmagában.",
+                "example": "I don''t like either coffee or tea. = I like neither coffee nor tea. / Sem a kávét, sem a teát nem szeretem."
+            },
+			{
+                "description": "A ''BOTH OF'' mindkettő valamiből. Az ''OF'' a both esetében elhagyható.",
+                "example": "Both of my notebooks are upstairs. / Mindkét notebookom az emeleten van."
+            },
+			{
+                "description": "A ''EITHER OF'' valamelyik a kettő közül.",
+                "example": "Either of my notebooks is upstairs. / Valamelyik notebookom az emeleten van."
+            },
+			{
+                "description": "A ''NEITHER OF'' egyiksem a kettő közül.",
+                "example": ENeither of my notebooks are /is upstairs. = Egyik notebookom sincs az emeleten."
+            }
+		]'
+	),
+	(
+		'Even',
+		'Even és társai',
+		'Az even jelentése: még ....... is vagy tagadó mondatok esetén még ......... sem. A ........ részre a magyarban mindig fog még valami kerülni a mondatban. Az even a mondatban szinte bármelyik mondatrész elé kerülhet, attól függően, hogy melyiket akarod hangsúlyozni (lásd: 2. és 3. példamondat).',
+		'',
+		'["She bought a carpet and she even bought an expensive vase / Vett egy szőnyeget és még egy drága vázát is vett.", "She works even at night. / Még éjjel is dolgozik.", "Even Jack was there. / Még Jack is ott volt."]',
+		'[
+			{
+                "description": "Az ''EVEN IF'' jelentése ''még akkor is''. AZ ''EVEN WHEN''jelentése ''még akkor is, amikor (a magyarban sokszor itt is ha szerepel)''",
+                "example": "I will buy it even if it costs millions. / Még akkor is megveszem, ha milliókba kerül. , He was doing it even when I told him to stop. / Még akkor is csinálta, amikor rászóltam, hogy hagyja abba."
+            },
+			{
+                "description": "Az ''EVEN THOUGH'' nincs köze az even alapjelentéséhez, tulajdonképpen az although szinonímája, ami azt jelenti: ''HABÁR''",
+                "example": "Even though it''s expensive, it doesn''t meet my demands. / Habár drága, nem felel meg az igényeimnek."
+            }
+		]'
+	),
+	(
+		'The Infinitive of Purpose',
+		'Célhatározó szerkezetek',
+		'A célhatározó szerkezetek olyan mondatok a magyarban, amelyeket a ''hogy'' kötőszóval kötünk össze.',
+		'',
+		'[]',
+		'[
+			{
+                "description": "''TO'' kötöszó használatánál mindkét oldalon ugyanaz az alany (az egyik oldalon nincs kitéve)",
+                "example": "I went home to relax. / Hazamentem, hogy pihenjek."
+            },
+			{
+                "description": "''IN ORDER TO'' használatánál mindkét oldalon ugyanaz az alany (az egyik oldalon nincs kitéve)",
+                "example": "I went home in order to relax. / Hazamentem (annak érdekében), hogy pihenjek."
+            },
+			{
+                "description": "''IN ORDER FOR SY TO DO SG'' használatánál mindkét oldalon különböző az alany!",
+                "example": "Scientists work hard in order for people to have better medicine. / A tudósok keményen dolgoznak, hogy az embereknek jobb gyógyszerei legyenek!"
+            },
+			{
+                "description": "''SO AS TO'' / ''SO AS NOT TO'' használatánál mindkét oldalon ugyanaz az alany (az egyik oldalon nincs kitéve)",
+                "example": "I put on a coat so as not to catch a cold. / Felvettem egy kabátot, hogy ne fázzak meg."
+            },
+			{
+                "description": "''SO THAT SY WILL / CAN / WOULD / COULD DO SG'' használatánál mindkét oldalon van alany, ami lehet különböző is.",
+                "example": "I did sports every day so that I wouldn''t get fat. / Mindennap sportoltam azért, hogy ne legyek dagadt."
+            },
+			{
+                "description": "''LEST SY (SHOULD) DO SG'' használatánál mindkét oldalon van alany, ami lehet különböző is.",
+                "example": "I did sports lest I (should) get fat.  (igeidő egyeztetés NEM történik!) / Én sportoltam azért, hogy ne legyek kövér."
+            }
+		]'
+	),
+	(
+		'Every / All / Each',
+		'',
+		'A jelentésbeli különbség annyi köztük, mint a magyarban, azaz nagyon kicsi. Az each a leghangsúlyosab!. Általában túl nagyszámú dologra nem használják, inkább kevés dologra mondják. Ha két dologra mondod, akkor csak az each jöhet szóba! Ami nagyon fontos, hogy az each és az every egyes számot vonz, az all pedig többes számot (All the chairs are...)',
+		'',
+		'["Each chair in the room is black. / Minden egyes szék fekete a teremben.", "Every chair in the room is black. / Minden szék fekete a teremben.", "All the chairs in the room are black. / Az összes szék fekete a teremben."]',
+		'[
+			{
+                "description": "Mindegyik szót használhatod ''OF''-val együtt is. Ilyenkor mindenhol az ''OF'' után már többes számú főnév jön. Az ''EACH OF'' és az ''EVERY ON OF'' az kifejezetten hangsúlyos. Az ''ALL OF'' a leggyakoribb és legtermészetesebb.",
+                "example": "All of the boys wanted to win the game. / Mindegyik fiú meg akarta nyerni a játékot., Each of the boys wanted to win the game. / Mindenegyes fiú meg akarta nyerni a játékot., Every one of the boys wanted to win the game. / Mindegyik a fiúk közül meg akarta nyerni a játékot."
+            }
+		]'
+	),
+	(
+		'Prefer',
+		'Prefer szerkezetei',
+		'Prefer az angolban a következőket jelenti: jobban szeretem / inkább / jobb'' szeretnék...',
+		'',
+		'[]',
+		'[
+			{
+                "description": "''PREFER SG TO SG'' Jobban szeretek valamit, mint egy másik valamit.",
+                "example": "I prefer Coke to Pepsi. / Jobban szeretem a Cocát, mint a Pepsit., I prefer small villages to big cities. / Jobban szeretem a kis falvakat, mint a nagyvárosokat."
+            },
+			{
+                "description": "''PREFER DOING SG TO DOING SG ELSE'' Jobban szeretek csinálni valamit, mint csinálni egy másvalamit",
+                "example": "I prefer playing football to playing basketball. / Jobban szeretek focizni, mint kosarazni., Jack prefers working at night to sleeping. / Jack jobban szeret éjszaka dolgozni, mint aludni."
+            },
+			{
+                "description": "''PREFER TO DO SG RATHER THAN DO SG ELSE'' Szívesebben csinálok valamit inkább, minthogy másvalamit csináljak. Ugyanaz, mint az előző szerkezet, csak más szavakkal.",
+                "example": "I prefer to play football rather than play basketball. / Jobban szeretek focizni, mint kosarazni., Jack prefers to work at night rather than sleep. / Jack jobban szeret éjszaka dolgozni, mint aludni."
+            },
+			{
+                "description": "''WOULD PREFER TO DO SG'' A ''WOULD PREFER TO''-t konkrét helyzetekben tudod használni. Pontosan ugyanaz a jelentése itt, mint a would rather szerkezetnek. Jelentése, hogy szívesebben csinálnék valamit.",
+                "example": "Would you like to go out? / Szeretnél elmenni valahova?, No, I would prefer to watch TV. / Inkább itthon tévéznék."
+            }
+		]'
+	),
+	(
+		'No longer / Any longer / No more',
+		'',
+		'Mindegyik szó azt jelenti, hogy: ''már nem''.',
+		'',
+		'[]',
+		'[
+			{
+                "description": "Az ''ANY LONGER'' és az ''ANY MORE'' mindig tagadó mondatba kerül, tehát már előtte valamilyen tagadásnak kell lennie.",
+                "example": "I don''t live there any longer. / Már nem lakom ott., I don''t live there any more. / Már nem lakom ott."
+            },
+			{
+                "description": "Az ''ANY LONGER'' és az ''ANY MORE'' használható így is.",
+                "example": "Nobody lives there any longer. / Már nem lakik ott senki."
+            },
+			{
+                "description": "A ''NO LONGER'' önmaga adja a tagadást, tehát mellette már nem tagadhatsz. A no longer mindig az ige elé kerül!",
+                "example": "I no longer live there. = Már nem lakom ott."
+            }
+		]'
+	),
+	(
+		'Enough',
+		'Az ''elég'' használata',
+		'',
+		'',
+		'[]',
+		'[
+			{
+                "description": "Ha az ''ENOUGH'' mellett főnév van, akkor a főnév elé kerül az enough.",
+                "example": "I have enough wine, thank you. / Köszönöm, van elég borom., I don''t have enough money. / Nincs elég pénzem."
+            },
+			{
+                "description": "Az angolban a melléknév után van az ''ENOUGH''. A magyarban az ''elég'' a melléknév elé jön.",
+                "example": "It''s not cheap enough. / Ez nem elég olcsó."
+            }
+		]'
+	),
+	(
+		'Quite / Rather',
+		'Az ''eléggé'' vagyis ''elég'' használata',
+		'Mi a különbség a rather és a quite között? Elviekben a quite az a pozitívabb melléknevek mellé kerül, míg a rather a negatívabb melléknevek mellé (quite young, de rather old). De ezzel a beszélt nyelv nem törődik.
+		Szavak, amelyeknél a quite azt jelenti, hogy teljesen, s nem azt, hogy eléggé.
+		amazing = csodálatos, lélegzetelállító
+		certain = biztos (ugyanaz, mint a sure)
+		clear = tiszta, érthető
+		complete = kész
+		different = különböző
+		impossible = lehetetlen
+		incredible = hihetetlen
+		obvious = nyilvánvaló (It''s quite obvious that... Teljesen nyilvánvaló, hogy...)
+		right = igaza van (You''re quite right. Teljesen igazad van.)
+		safe = biztonságos
+		unbelievable = hihetetlen
+		unnecessary = szükségtelen',
+		'',
+		'[]',
+		'[
+			{
+                "description": "A ''QUITE''-ot egyszerűen beteheted egy melléknév elé",
+                "example": "This car is quite fast. / Elég gyors ez a kocsi., I''m quite tired. / Elég fáradt vagyok."
+            },
+			{
+                "description": "Amikor főnév is jön a melléknév után, akkor a névelő a ''QUITE'' után jön!",
+                "example": "This is quite a good car. / Ez egy elég jó kocsi., She is quite a tall girl. / Elég magas lány."
+            },
+			{
+                "description": "A ''RATHER''-t egyszerűen beteheted egy melléknév elé:",
+                "example": "That''s rather bad news. / Ez elég rossz hír., She''s rather old. / Ő elég idős már."
+            },
+			{
+                "description": "Amikor főnév is jön a melléknév után, akkor a névelő a ''RATHER'' elé és után jöhet!",
+                "example": "This is a rather bad car. / Elég béna ez a kocsi., This is rather a bad car. / Elég béna ez a kocsi."
+            },
+			{
+                "description": "A ''QUITE''-nak van egy olyan esete is, amikor simán egy főnév jön utána. Ilyenkor a quite egy nagyon pozitív jelző.",
+                "example": "Wow! It''s quite a car. / Apám, micsoda kocsi!, He''s dating quite a girl. / Nem semmi csajszival jár!"
+            },
+			{
+                "description": "A ''QUITE'' bizonyos melléknevek mellett nem azt jelenti, hogy eléggé, hanem azt, hogy teljesen.",
+                "example": "I''m quite ready. / Teljesen kész vagyok., Are you quite sure about this? / Teljesen biztos vagy ebben?"
+            }
+		]'
+	),
+	(
+		'In case',
+		'',
+		'Az ''IN CASE'' jelentése ''HÁTHA'' vagy ''ARRA AZ ESETRE, HA...''.',
+		'',
+		'[]',
+		'[
+			{
+                "description": "Példa arra, amikor az ''IN CASE'' azt jelenti, hogy hátha.",
+                "example": "Take an umbrella in case it rains. / Vigyél esernyőt, hátha esni fog."
+            },
+			{
+                "description": "Ha a mondat eleje múlt idejű, akkor az in case is csúszik múlt időbe!",
+                "example": "I took an umbrella in case it rained. / Vittem esernyőt, hátha esik majd."
+            },
+			{
+                "description": "A ''IN CASE OF'' jelentése valami esetén.",
+                "example": "In case of emergency / Vészhelyzet esetén."
+            }
+		]'
 	);
