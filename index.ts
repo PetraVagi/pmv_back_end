@@ -159,7 +159,7 @@ app.delete("/my-words", async (req, res) => {
 /* LET'S PLAY APIs */
 
 app.get("/lets-play", async (req, res) => {
-	const numberOfWords = 5;
+	const numberOfWords = get(req, "query.numberOfWords", []);
 
 	const playerIdStrings: string[] = get(req, "query.players", []);
 	const playerIds: number[] = playerIdStrings.map((playerId: string) => parseInt(playerId));
