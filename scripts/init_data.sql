@@ -1,4 +1,5 @@
 /* grammatical structures */
+ALTER SEQUENCE public.grammatical_structures_id_seq RESTART WITH 1;
 INSERT INTO public.grammatical_structures(
         title,
         subtitle,
@@ -260,8 +261,8 @@ VALUES (
                 "example": "I have eaten an apple this morning. - Ma délelőtt már ettem egy almát (még délelőtt van). ; I ate an apple this morning. - Ma délelőtt ettem egy almát (a közlés pillanata már nem délelőtt van)."
             }, 
 			{
-                "description": "For..., How long...? Present Perfect: Ha a „for...” és a „How long...?” olyan időszakra utal, amely még nem zárult le. (Ezeket  a mondatokat jelen időben fordítjuk magyarra. Past Simple: Ha a „for...” és a „How long?” olyan időszakra utal, amely már lezárult.",
-                "example": "They have been friends for seven years. - Hét éve barátok. ; They were friends for seven years. - Hét évig voltak barátok."
+                "description": "For..., How long...? Present Perfect: Ha a „for...” és a „How long...?” olyan időszakra utal, amely még nem zárult le. (Ezeket  a mondatokat jelen időben fordítjuk magyarra.) Past Simple: Ha a „for...” és a „How long?” olyan időszakra utal, amely már lezárult.",
+                "example": "They have been friends for seven years. - Hét éve barátok. They were friends for seven years. - Hét évig voltak barátok. ; How long have you stayed there: - Mióta vagy itt? How long did you stay here? - Mennyi ideig voltál itt?"
             }, {
 				"description": "A „last”-os (last night, last week, last month, last year etc.) időhatározókkal mindig Simple Past-ot használunk. DE az in the last five years, in the last few month for the last five years typusú időhatározókkal mindig Present Perfect-et használunk!", 
 				"example": "I went home last night. I have worked a lot in the last few days."
@@ -1379,14 +1380,14 @@ VALUES (
                 "example": "Mit gondolsz, ki a barátnője? = Who do you think girlfriend is?"
             }
 		]'
-	),
-	(
-		'Generic You / One',
-		'Általános alany',
-		'Ha egy mondatban nincsen alany és a szenvedő szerkezetet sem tudjuk alkalmazni, akkor jön be a képbe az általános alany. Az alany vagy a ''YOU'', vagy a ''ONE'' szó. A ''ONE'' szó esetén a ragozás E/3 szerint történik',
-		'Ha a ''YOU'' szó van használva alanyként, akkor a szövegkörnyezet szerint lehet eldönteni, hogy általános alanyról beszélünk vagy sem.',
-		'[]',
-		'[
+    ),
+    (
+        'Generic You / One',
+        'Általános alany',
+        'Ha egy mondatban nincsen alany és a szenvedő szerkezetet sem tudjuk alkalmazni, akkor jön be a képbe az általános alany. Az alany vagy a ''YOU'', vagy a ''ONE'' szó. A ''ONE'' szó esetén a ragozás E/3 szerint történik',
+        'Ha a ''YOU'' szó van használva alanyként, akkor a szövegkörnyezet szerint lehet eldönteni, hogy általános alanyról beszélünk vagy sem.',
+        '[]',
+        '[
 			{
                 "description": "A következő mondant jelentheti azt, hogy: ''Ezt nem lehet megcsinálni.'', vagy: ''Ezt Te nem tudod megcsinálni.''",
                 "example": "You can''t do that."
@@ -1396,14 +1397,14 @@ VALUES (
                 "example": "One never knows what the future holds."
             }
 		]'
-	),
-	(
-		'Both / Either / Neither',
-		'Mindkettő / Bármelyik / Egyiksem',
-		'A both / either / neither szavaknál a legfontosabb szabály, hogy mindig csak akkor használhatod őket, ha 2 dologról beszélsz. Több dolog esetén nem működnek ezek a szavak.',
-		'',
-		'[]',
-		'[
+    ),
+    (
+        'Both / Either / Neither',
+        'Mindkettő / Bármelyik / Egyiksem',
+        'A both / either / neither szavaknál a legfontosabb szabály, hogy mindig csak akkor használhatod őket, ha 2 dologról beszélsz. Több dolog esetén nem működnek ezek a szavak.',
+        '',
+        '[]',
+        '[
 			{
                 "description": "Both...and... = ....is....is",
                 "example": "Both Hungary and Slovakia are small countries. / Magyarország is és Szlovákia is kis ország."
@@ -1433,14 +1434,14 @@ VALUES (
                 "example": "Neither of my notebooks are /is upstairs. = Egyik notebookom sincs az emeleten."
             }
 		]'
-	),
-	(
-		'Even',
-		'Even és társai',
-		'Az even jelentése: még ....... is vagy tagadó mondatok esetén még ......... sem. A ........ részre a magyarban mindig fog még valami kerülni a mondatban. Az even a mondatban szinte bármelyik mondatrész elé kerülhet, attól függően, hogy melyiket akarod hangsúlyozni (lásd: 2. és 3. példamondat).',
-		'',
-		'["She bought a carpet and she even bought an expensive vase / Vett egy szőnyeget és még egy drága vázát is vett.", "She works even at night. / Még éjjel is dolgozik.", "Even Jack was there. / Még Jack is ott volt."]',
-		'[
+    ),
+    (
+        'Even',
+        'Even és társai',
+        'Az even jelentése: még ....... is vagy tagadó mondatok esetén még ......... sem. A ........ részre a magyarban mindig fog még valami kerülni a mondatban. Az even a mondatban szinte bármelyik mondatrész elé kerülhet, attól függően, hogy melyiket akarod hangsúlyozni (lásd: 2. és 3. példamondat).',
+        '',
+        '["She bought a carpet and she even bought an expensive vase / Vett egy szőnyeget és még egy drága vázát is vett.", "She works even at night. / Még éjjel is dolgozik.", "Even Jack was there. / Még Jack is ott volt."]',
+        '[
 			{
                 "description": "Az ''EVEN IF'' jelentése ''még akkor is''. AZ ''EVEN WHEN''jelentése ''még akkor is, amikor (a magyarban sokszor itt is ha szerepel)''",
                 "example": "I will buy it even if it costs millions. / Még akkor is megveszem, ha milliókba kerül. , He was doing it even when I told him to stop. / Még akkor is csinálta, amikor rászóltam, hogy hagyja abba."
@@ -1450,14 +1451,14 @@ VALUES (
                 "example": "Even though it''s expensive, it doesn''t meet my demands. / Habár drága, nem felel meg az igényeimnek."
             }
 		]'
-	),
-	(
-		'The Infinitive of Purpose',
-		'Célhatározó szerkezetek',
-		'A célhatározó szerkezetek olyan mondatok a magyarban, amelyeket a ''hogy'' kötőszóval kötünk össze.',
-		'',
-		'[]',
-		'[
+    ),
+    (
+        'The Infinitive of Purpose',
+        'Célhatározó szerkezetek',
+        'A célhatározó szerkezetek olyan mondatok a magyarban, amelyeket a ''hogy'' kötőszóval kötünk össze.',
+        '',
+        '[]',
+        '[
 			{
                 "description": "''TO'' kötöszó használatánál mindkét oldalon ugyanaz az alany (az egyik oldalon nincs kitéve)",
                 "example": "I went home to relax. / Hazamentem, hogy pihenjek."
@@ -1483,27 +1484,27 @@ VALUES (
                 "example": "I did sports lest I (should) get fat.  (igeidő egyeztetés NEM történik!) / Én sportoltam azért, hogy ne legyek kövér."
             }
 		]'
-	),
-	(
-		'Every / All / Each',
-		'',
-		'A jelentésbeli különbség annyi köztük, mint a magyarban, azaz nagyon kicsi. Az each a leghangsúlyosab!. Általában túl nagyszámú dologra nem használják, inkább kevés dologra mondják. Ha két dologra mondod, akkor csak az each jöhet szóba! Ami nagyon fontos, hogy az each és az every egyes számot vonz, az all pedig többes számot (All the chairs are...)',
-		'',
-		'["Each chair in the room is black. / Minden egyes szék fekete a teremben.", "Every chair in the room is black. / Minden szék fekete a teremben.", "All the chairs in the room are black. / Az összes szék fekete a teremben."]',
-		'[
+    ),
+    (
+        'Every / All / Each',
+        '',
+        'A jelentésbeli különbség annyi köztük, mint a magyarban, azaz nagyon kicsi. Az each a leghangsúlyosab!. Általában túl nagyszámú dologra nem használják, inkább kevés dologra mondják. Ha két dologra mondod, akkor csak az each jöhet szóba! Ami nagyon fontos, hogy az each és az every egyes számot vonz, az all pedig többes számot (All the chairs are...)',
+        '',
+        '["Each chair in the room is black. / Minden egyes szék fekete a teremben.", "Every chair in the room is black. / Minden szék fekete a teremben.", "All the chairs in the room are black. / Az összes szék fekete a teremben."]',
+        '[
 			{
                 "description": "Mindegyik szót használhatod ''OF''-val együtt is. Ilyenkor mindenhol az ''OF'' után már többes számú főnév jön. Az ''EACH OF'' és az ''EVERY ON OF'' az kifejezetten hangsúlyos. Az ''ALL OF'' a leggyakoribb és legtermészetesebb.",
                 "example": "All of the boys wanted to win the game. / Mindegyik fiú meg akarta nyerni a játékot., Each of the boys wanted to win the game. / Mindenegyes fiú meg akarta nyerni a játékot., Every one of the boys wanted to win the game. / Mindegyik a fiúk közül meg akarta nyerni a játékot."
             }
 		]'
-	),
-	(
-		'Prefer',
-		'Prefer szerkezetei',
-		'Prefer az angolban a következőket jelenti: jobban szeretem / inkább / jobb'' szeretnék...',
-		'',
-		'[]',
-		'[
+    ),
+    (
+        'Prefer',
+        'Prefer szerkezetei',
+        'Prefer az angolban a következőket jelenti: jobban szeretem / inkább / jobb'' szeretnék...',
+        '',
+        '[]',
+        '[
 			{
                 "description": "''PREFER SG TO SG'' Jobban szeretek valamit, mint egy másik valamit.",
                 "example": "I prefer Coke to Pepsi. / Jobban szeretem a Cocát, mint a Pepsit., I prefer small villages to big cities. / Jobban szeretem a kis falvakat, mint a nagyvárosokat."
@@ -1521,14 +1522,14 @@ VALUES (
                 "example": "Would you like to go out? / Szeretnél elmenni valahova?, No, I would prefer to watch TV. / Inkább itthon tévéznék."
             }
 		]'
-	),
-	(
-		'No longer / Any longer / No more',
-		'',
-		'Mindegyik szó azt jelenti, hogy: ''már nem''.',
-		'',
-		'[]',
-		'[
+    ),
+    (
+        'No longer / Any longer / No more',
+        '',
+        'Mindegyik szó azt jelenti, hogy: ''már nem''.',
+        '',
+        '[]',
+        '[
 			{
                 "description": "Az ''ANY LONGER'' és az ''ANY MORE'' mindig tagadó mondatba kerül, tehát már előtte valamilyen tagadásnak kell lennie.",
                 "example": "I don''t live there any longer. / Már nem lakom ott., I don''t live there any more. / Már nem lakom ott."
@@ -1542,14 +1543,14 @@ VALUES (
                 "example": "I no longer live there. = Már nem lakom ott."
             }
 		]'
-	),
-	(
-		'Enough',
-		'Az ''elég'' használata',
-		'',
-		'',
-		'[]',
-		'[
+    ),
+    (
+        'Enough',
+        'Az ''elég'' használata',
+        '',
+        '',
+        '[]',
+        '[
 			{
                 "description": "Ha az ''ENOUGH'' mellett főnév van, akkor a főnév elé kerül az enough.",
                 "example": "I have enough wine, thank you. / Köszönöm, van elég borom., I don''t have enough money. / Nincs elég pénzem."
@@ -1559,12 +1560,12 @@ VALUES (
                 "example": "It''s not cheap enough. / Ez nem elég olcsó."
             }
 		]'
-	),
-	(
-		'Quite / Rather',
-		'Az ''eléggé'' vagyis ''elég'' használata',
-		'Mi a különbség a rather és a quite között? Elviekben a quite az a pozitívabb melléknevek mellé kerül, míg a rather a negatívabb melléknevek mellé (quite young, de rather old). De ezzel a beszélt nyelv nem törődik.
-		Szavak, amelyeknél a quite azt jelenti, hogy teljesen, s nem azt, hogy eléggé.
+    ),
+    (
+        'Quite / Rather',
+        'Az ''eléggé'' vagyis ''elég'' használata',
+        'Mi a különbség a rather és a quite között? Elviekben a quite az a pozitívabb melléknevek mellé kerül, míg a rather a negatívabb melléknevek mellé (quite young, de rather old). De ezzel a beszélt nyelv nem törődik.
+		Szavak, amelyeknél a quite azt jelenti, hogy teljesen, s nem azt, hogy eléggé:
 		amazing = csodálatos, lélegzetelállító
 		certain = biztos (ugyanaz, mint a sure)
 		clear = tiszta, érthető
@@ -1577,9 +1578,9 @@ VALUES (
 		safe = biztonságos
 		unbelievable = hihetetlen
 		unnecessary = szükségtelen',
-		'',
-		'[]',
-		'[
+        '',
+        '[]',
+        '[
 			{
                 "description": "A ''QUITE''-ot egyszerűen beteheted egy melléknév elé",
                 "example": "This car is quite fast. / Elég gyors ez a kocsi., I''m quite tired. / Elég fáradt vagyok."
@@ -1605,14 +1606,14 @@ VALUES (
                 "example": "I''m quite ready. / Teljesen kész vagyok., Are you quite sure about this? / Teljesen biztos vagy ebben?"
             }
 		]'
-	),
-	(
-		'In case',
-		'',
-		'Az ''IN CASE'' jelentése ''HÁTHA'' vagy ''ARRA AZ ESETRE, HA...''.',
-		'',
-		'[]',
-		'[
+    ),
+    (
+        'In case',
+        '',
+        'Az ''IN CASE'' jelentése ''HÁTHA'' vagy ''ARRA AZ ESETRE, HA...''.',
+        '',
+        '[]',
+        '[
 			{
                 "description": "Példa arra, amikor az ''IN CASE'' azt jelenti, hogy hátha.",
                 "example": "Take an umbrella in case it rains. / Vigyél esernyőt, hátha esni fog."
@@ -1622,8 +1623,8 @@ VALUES (
                 "example": "I took an umbrella in case it rained. / Vittem esernyőt, hátha esik majd."
             },
 			{
-                "description": "A ''IN CASE OF'' jelentése valami esetén.",
-                "example": "In case of emergency / Vészhelyzet esetén."
+                "description": "A ''IN CASE OF'' jelentése valami esetén. Ha igével használjuk, akkor nincs szükség az OF szócskára, és feltételes módot használunk.",
+                "example": "In case of emergency / Vészhelyzet esetén. In case he came back. / Abban az esetben, ha visszajönne."
             }
 		]'
 	),
@@ -1632,7 +1633,7 @@ VALUES (
 		'Bár / Annak ellenére / Ellenére',
 		'''IN SPITE OF SG'' vagy ''DESPITE SG'' jelentése valami ellenére. A kifejezések után csak egy sima főnév jöhet.',
 		'',
-		'[In spite of the bad weather, we went on the trip. / A rossz idő ellenére, elmentünk kirándulni., Despite the bad weather, we went on the trip. / A rossz idő ellenére, elmentünk kirándulni.]',
+		'["In spite of the bad weather, we went on the trip. / A rossz idő ellenére, elmentünk kirándulni.", "Despite the bad weather, we went on the trip. / A rossz idő ellenére, elmentünk kirándulni."]',
 		'[
 			{
                 "description": "Ha komplett mondatot szeretnél betenni ''IN SPITE OF SG'' vagy ''DESPITE SG'' után, akkor kell egy főnév középre, amihez a mondat hozzákapcsolódhat. Ez lesz a: ''THE FACT THAT'' kifejezés.",
