@@ -17,6 +17,9 @@ import { calculateInitialScores } from "./calculation/calculateInitialScores";
 // Interfaces
 import { GameStatistics, WordWithScores } from "sharedInterfaces";
 
+// Utils
+import random from "lodash/random";
+
 const app = express();
 const port = 9000;
 
@@ -177,11 +180,29 @@ app.get("/lets-play", async (req, res) => {
 
 	// calculate the final words array, where the words are alternately in the list
 	const words = [];
+	const gameStarter = random(1);
 	for (let i = 0; i < firstPlayerWords.length; i++) {
 		const firstPlayerWord = firstPlayerWords[i];
 		const secondPlayerWord = secondPlayerWords[i];
-		words.push({ ...firstPlayerWord, ...calculateWordToAsk(firstPlayerWord), tagColors: getColorsByKnowledge(firstPlayerWord) });
-		words.push({ ...secondPlayerWord, ...calculateWordToAsk(secondPlayerWord), tagColors: getColorsByKnowledge(secondPlayerWord) });
+
+		const firstPlayerWordInGame = {
+			...firstPlayerWord,
+			...calculateWordToAsk(firstPlayerWord),
+			tagColors: getColorsByKnowledge(firstPlayerWord),
+		};
+		const secondPlayerWordInGame = {
+			...secondPlayerWord,
+			...calculateWordToAsk(secondPlayerWord),
+			tagColors: getColorsByKnowledge(secondPlayerWord),
+		};
+
+		if (gameStarter === 0) {
+			words.push(firstPlayerWordInGame);
+			words.push(secondPlayerWordInGame);
+		} else {
+			words.push(secondPlayerWordInGame);
+			words.push(firstPlayerWordInGame);
+		}
 	}
 
 	const grammaticalStructures = await executeQueryOnDB("SELECT * FROM grammatical_structures ORDER BY random() LIMIT $1", [numberOfWords * 2]);
