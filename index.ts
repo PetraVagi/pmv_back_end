@@ -169,7 +169,7 @@ app.get("/lets-play", async (req, res) => {
 
 	const owners = await executeQueryOnDB("SELECT id, name, gender FROM users WHERE id IN ($1, $2)", [...playerIds]);
 
-	const wordsSelectQuery = 'SELECT * FROM words WHERE favourite = true AND "ownerId" = $1 ORDER BY random() LIMIT $2';
+	const wordsSelectQuery = 'SELECT * FROM words WHERE "ownerId" = $1 ORDER BY random() LIMIT $2';
 	const firstPlayerWords = await executeQueryOnDB(wordsSelectQuery, [playerIds[0], numberOfWords]);
 	const secondPlayerWords = await executeQueryOnDB(wordsSelectQuery, [playerIds[1], numberOfWords]);
 
