@@ -289,9 +289,24 @@ app.put("/lets-play/:wordId", async (req, res) => {
 /* PRACTICE GRAMMATICAL STRUCTURES APIs */
 
 app.get("/practice/grammatical-structures", async (req, res) => {
+	const type = get(req, "query.type");
 	const numberOfStructures = 5;
 
-	const grammaticalStructures = await executeQueryOnDB("SELECT * FROM grammatical_structures ORDER BY random() LIMIT $1", [numberOfStructures * 2]);
+	let orderBy = "random()";
+	if (type === "my_weakest") {
+		orderBy = "known/asked ASC";
+	} else if (type === "rarely_asked") {
+		orderBy = "asked ASC";
+	}
+
+	const grammaticalStructures = await executeQueryOnDB(
+		`SELECT * FROM grammatical_structures 
+		JOIN users_and_grammatical_structures 
+		ON grammatical_structures.id = users_and_grammatical_structures."grammaticalStructureId" 
+		ORDER BY ${orderBy} 
+		LIMIT $1`,
+		[numberOfStructures],
+	);
 
 	res.status(200).send({ grammaticalStructures });
 });
