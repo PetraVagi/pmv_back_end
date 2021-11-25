@@ -278,3 +278,11 @@ app.get("/practice/grammatical-structures", async (req, res) => {
 app.listen(port, () => {
 	console.log(`App running on port ${port}.`);
 });
+
+/* PRACTICE WORD APIs */
+
+app.get("/practice/words", async (req, res) => {
+	console.log(req);
+
+	res.status(200).send({ this: "works" });
+});
