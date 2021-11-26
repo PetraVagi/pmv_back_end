@@ -601,7 +601,7 @@ VALUES (
                 "example": "He must have arrived home."
             },
 			{
-                "description": "MUST = kell, kötelesség kifejezésére (belső kényszer, de ez már nem igaz a nyelvre napjainkban). Csak állító és jelen idejű alaja van. Tagadásra a „have to” megfelelő igeidejű, tagadó alakját használjuk.",
+                "description": "MUST = kell, kötelesség kifejezésére (belső kényszer, de ez már nem igaz a nyelvre napjainkban). Csak állító és jelen idejű alakja van. Tagadásra a „have to” megfelelő igeidejű, tagadó alakját használjuk.",
                 "example": "I must leave, because it''s getting dark and I''m afraid of the dark."
             },
 			{
