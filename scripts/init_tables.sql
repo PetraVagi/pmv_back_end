@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS public.words (
     english character varying(250) NOT NULL,
     hungarian jsonb NOT NULL,
     "exampleSentences" jsonb NOT NULL,
+    definitions jsonb NOT NULL,
     notes text,
     type character varying(10),
     favourite boolean,
