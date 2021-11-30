@@ -2,6 +2,9 @@ import express from "express";
 
 // Utils
 import get from "lodash/get";
+import random from "lodash/random";
+import isEmpty from "lodash/isEmpty";
+import { wordPracticeBasicTypes } from "./utils";
 
 // Authentication
 import { authentication } from "./authentication";
@@ -15,7 +18,8 @@ import { calculateDataToSave } from "./calculation/calculateFinalResult";
 import { calculateInitialScores } from "./calculation/calculateInitialScores";
 
 // Interfaces
-import { GameStatistics, WordWithScores } from "sharedInterfaces";
+import { GameStatistics, Word, wordPracticeType, WordWithScores } from "sharedInterfaces";
+import { practiceSettings } from "interfaces";
 
 const app = express();
 const port = 9000;
@@ -281,8 +285,43 @@ app.listen(port, () => {
 
 /* PRACTICE WORD APIs */
 
-app.get("/practice/words", async (req, res) => {
-	console.log(req);
+app.get("/practice/words/:id", async (req, res) => {
+	const userID = req.params.id;
 
-	res.status(200).send({ this: "works" });
+	const words = await executeQueryOnDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL ORDER BY english ASC', [userID]);
+
+	if (isEmpty(words)) {
+		res.status(204).json({ error: "No available content" });
+		return;
+	}
+
+	const practiceSettings: practiceSettings = (() => {
+		const practiceTypes: wordPracticeType[] = [];
+		let practicesWithWrongAnswers: number = 0;
+		for (let i = 10; i > 0; i--) {
+			const practiceType = wordPracticeBasicTypes[random(2)];
+			if (practiceType !== "type the answer game") {
+				practicesWithWrongAnswers++;
+			}
+			practiceTypes.push(practiceType);
+		}
+		return { practiceTypes, practicesWithWrongAnswers };
+	})();
+
+	const { practiceTypes } = practiceSettings;
+
+	const wrongAnswers: string[] = (() => {
+		let requiredWrongAnswers: number = 10 * 3;
+		const result: string[] = [];
+		while (requiredWrongAnswers > 0) {
+			const randomWord: Word = words[random(words.length - 1)];
+			const randomMeaning: string = randomWord.hungarian[random(randomWord.hungarian.length - 1)];
+			if (result.includes(randomMeaning)) continue;
+			result.push(randomMeaning);
+			requiredWrongAnswers--;
+		}
+		return result;
+	})();
+
+	res.status(200).send({ words, practiceTypes, wrongAnswers });
 });
