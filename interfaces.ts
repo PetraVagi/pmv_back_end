@@ -1,5 +1,5 @@
-import { wordPracticeType } from "sharedInterfaces";
-export interface practiceSettings {
-	practiceTypes: wordPracticeType[];
+import { WordPracticeType } from "sharedInterfaces";
+export interface PracticeSettings {
+	practiceTypes: WordPracticeType[];
 	practicesWithWrongAnswers: number;
 }

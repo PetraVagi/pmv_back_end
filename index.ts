@@ -18,8 +18,8 @@ import { calculateDataToSave } from "./calculation/calculateFinalResult";
 import { calculateInitialScores } from "./calculation/calculateInitialScores";
 
 // Interfaces
-import { GameStatistics, Word, wordPracticeType, WordWithScores } from "sharedInterfaces";
-import { practiceSettings } from "interfaces";
+import { GameStatistics, Word, WordPracticeType, WordWithScores } from "sharedInterfaces";
+import { PracticeSettings } from "interfaces";
 
 const app = express();
 const port = 9000;
@@ -279,10 +279,6 @@ app.get("/practice/grammatical-structures", async (req, res) => {
 	res.status(200).send({ grammaticalStructures });
 });
 
-app.listen(port, () => {
-	console.log(`App running on port ${port}.`);
-});
-
 /* PRACTICE WORD APIs */
 
 app.get("/practice/words/:id", async (req, res) => {
@@ -291,12 +287,12 @@ app.get("/practice/words/:id", async (req, res) => {
 	const words = await executeQueryOnDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL ORDER BY english ASC', [userID]);
 
 	if (isEmpty(words)) {
-		res.status(204).json({ error: "No available content" });
+		res.status(204).send();
 		return;
 	}
 
-	const practiceSettings: practiceSettings = (() => {
-		const practiceTypes: wordPracticeType[] = [];
+	const practiceSettings: PracticeSettings = (() => {
+		const practiceTypes: WordPracticeType[] = [];
 		let practicesWithWrongAnswers: number = 0;
 		for (let i = 10; i > 0; i--) {
 			const practiceType = wordPracticeBasicTypes[random(2)];
@@ -324,4 +320,8 @@ app.get("/practice/words/:id", async (req, res) => {
 	})();
 
 	res.status(200).send({ words, practiceTypes, wrongAnswers });
+});
+
+app.listen(port, () => {
+	console.log(`App running on port ${port}.`);
 });
