@@ -168,10 +168,25 @@ app.get("/lets-play", async (req, res) => {
 	const playerIds: number[] = playerIdStrings.map((playerId: string) => parseInt(playerId));
 
 	const owners = await executeQueryOnDB("SELECT id, name, gender FROM users WHERE id IN ($1, $2)", [...playerIds]);
+	if (owners.error) {
+		console.log(owners);
+		res.status(409).json(owners);
+		return;
+	}
 
 	const wordsSelectQuery = 'SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL ORDER BY random() LIMIT $2';
 	const firstPlayerWords = await executeQueryOnDB(wordsSelectQuery, [playerIds[0], numberOfWords]);
+	if (firstPlayerWords.error) {
+		console.log(firstPlayerWords);
+		res.status(409).json(firstPlayerWords);
+		return;
+	}
 	const secondPlayerWords = await executeQueryOnDB(wordsSelectQuery, [playerIds[1], numberOfWords]);
+	if (secondPlayerWords.error) {
+		console.log(secondPlayerWords);
+		res.status(409).json(secondPlayerWords);
+		return;
+	}
 
 	if (firstPlayerWords.length < numberOfWords || secondPlayerWords.length < numberOfWords) {
 		res.status(409).json({ error: `Both players should have at least ${numberOfWords} words for the game!` });
@@ -206,6 +221,11 @@ app.get("/lets-play", async (req, res) => {
 	}
 
 	const grammaticalStructures = await executeQueryOnDB("SELECT * FROM grammatical_structures ORDER BY random() LIMIT $1", [numberOfWords * 2]);
+	if (grammaticalStructures.error) {
+		console.log(grammaticalStructures);
+		res.status(409).json(grammaticalStructures);
+		return;
+	}
 
 	const data = { owners, words, grammaticalStructures };
 	res.status(200).send(data);
@@ -307,6 +327,11 @@ app.get("/practice/grammatical-structures", async (req, res) => {
 		LIMIT $1`,
 		[numberOfStructures],
 	);
+	if (grammaticalStructures.error) {
+		console.log(grammaticalStructures);
+		res.status(409).json(grammaticalStructures);
+		return;
+	}
 
 	res.status(200).send({ grammaticalStructures });
 });
