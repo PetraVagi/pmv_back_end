@@ -284,7 +284,7 @@ app.get("/practice/grammatical-structures", async (req, res) => {
 app.get("/practice/words/:id", async (req, res) => {
 	const userID = req.params.id;
 
-	const words = await executeQueryOnDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL ORDER BY english ASC', [userID]);
+	const words = await executeQueryOnDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL ORDER BY random() LIMIT 10', [userID]);
 
 	if (isEmpty(words)) {
 		res.status(204).send();
