@@ -264,7 +264,7 @@ VALUES (
                 "description": "For..., How long...? Present Perfect: Ha a „for...” és a „How long...?” olyan időszakra utal, amely még nem zárult le. (Ezeket  a mondatokat jelen időben fordítjuk magyarra.) Past Simple: Ha a „for...” és a „How long?” olyan időszakra utal, amely már lezárult.",
                 "example": "They have been friends for seven years. - Hét éve barátok. They were friends for seven years. - Hét évig voltak barátok. ; How long have you stayed there: - Mióta vagy itt? How long did you stay here? - Mennyi ideig voltál itt?"
             }, {
-				"description": "A „last”-os (last night, last week, last month, last year etc.) időhatározókkal mindig Simple Past-ot használunk. DE az in the last five years, in the last few month for the last five years typusú időhatározókkal mindig Present Perfect-et használunk!", 
+				"description": "A „last”-os (last night, last week, last month, last year etc.) időhatározókkal mindig Simple Past-ot használunk. DE az in the last five years, in the last few month for the last five years típusú időhatározókkal mindig Present Perfect-et használunk!", 
 				"example": "I went home last night. I have worked a lot in the last few days."
 			}
 		]'
@@ -601,7 +601,7 @@ VALUES (
                 "example": "He must have arrived home."
             },
 			{
-                "description": "MUST = kell, kötelesség kifejezésére (belső kényszer, de ez már nem igaz a nyelvre napjainkban). Csak állító és jelen idejű alaja van. Tagadásra a „have to” megfelelő igeidejű, tagadó alakját használjuk.",
+                "description": "MUST = kell, kötelesség kifejezésére (belső kényszer, de ez már nem igaz a nyelvre napjainkban). Csak állító és jelen idejű alakja van. Tagadásra a „have to” megfelelő igeidejű, tagadó alakját használjuk.",
                 "example": "I must leave, because it''s getting dark and I''m afraid of the dark."
             },
 			{
@@ -753,7 +753,7 @@ VALUES (
         '[]',
         '[
 			{
-                "description": "Valakit megkérünk valamire. (Mind a 4 címben szereplő segédigét hazsnálhatjuk):",
+                "description": "Valakit megkérünk valamire. (Mind a 4 címben szereplő segédigét használhatjuk):",
                 "example": "Can you hold the line, please? Would you be so kind as to close the window?"
             },
 			{
@@ -1225,7 +1225,7 @@ VALUES (
                 "example": "The doctor who wrote this book got a Nobel prize.  Dr Smith, who wrote this book, got a Nobel prize. Az első mondatban, ha csak az alanyt nézzük, nem derül ki, hogy konkrétan kiről van szó. Bármilyen orvosra gondolhatunk. A második mondat alanya azonban egy konkrét személy, a mellékmondat már csak adalék információval szolgál. Tehát ha elhagyjuk, akkor is tudjuk, hogy kiről van szó."
             },
 			{
-                "description": "A that kötőszót nem hazsnálhatjuk bővítő mellékmondatban.",
+                "description": "A that kötőszót nem használhatjuk bővítő mellékmondatban.",
                 "example": "My sister, who lives in Canada, got married. (Csak egy nővérem van, aki egyébként Kanadában él)."
             },
 			{
