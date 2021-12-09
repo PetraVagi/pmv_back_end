@@ -21,9 +21,6 @@ import { calculateInitialScores } from "./calculation/calculateInitialScores";
 import { GameStatistics, Word, WordPracticeType, WordWithScores } from "sharedInterfaces";
 import { PracticeSettings } from "interfaces";
 
-// Utils
-import random from "lodash/random";
-
 const app = express();
 const port = 9000;
 
