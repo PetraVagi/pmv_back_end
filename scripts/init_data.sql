@@ -1627,4 +1627,46 @@ VALUES (
                 "example": "In case of emergency / Vészhelyzet esetén. In case he came back. / Abban az esetben, ha visszajönne."
             }
 		]'
-    );
+	),
+	(
+		'Although / Despite / In spite of',
+		'Bár / Annak ellenére / Ellenére',
+		'''IN SPITE OF SG'' vagy ''DESPITE SG'' jelentése valami ellenére. A kifejezések után csak egy sima főnév jöhet.',
+		'',
+		'["In spite of the bad weather, we went on the trip. / A rossz idő ellenére, elmentünk kirándulni.", "Despite the bad weather, we went on the trip. / A rossz idő ellenére, elmentünk kirándulni."]',
+		'[
+			{
+                "description": "Ha komplett mondatot szeretnél betenni ''IN SPITE OF SG'' vagy ''DESPITE SG'' után, akkor kell egy főnév középre, amihez a mondat hozzákapcsolódhat. Ez lesz a: ''THE FACT THAT'' kifejezés.",
+                "example": "In spite of the fact that I liked my car, I sold it, Despite the fact that I liked my car, I sold it. = Annak ellenére, hogy szerettem a kocsimat, eladtam."
+            },
+			{
+                "description": "Az ''ALTHOUGH'' is használható annak a kifejezésére, hogy valamit teszünk valami ellenére. Ezt legtöbbször habárnak fordítják, de ez is azt jelenti, hogy annak ellenére, hogy... ''ALTHOUGH'' után csak teljes mondat következhet.",
+                "example": "Although I liked my car, I sold it. / Annak ellenére, hogy szerettem a kocsimat, eladtam."
+            },
+			{
+                "description": "A ''DESPITE'' után jöhet egy sima ing-es alak is, csak akkor fontos, hogy az inges alak mellett nincs alany és a túloldali alany az aki logikailag idepasszol.",
+                "example": "Despite being a doctor, he didn''t help. = Annak ellenére, hogy orvos, nem segített."
+            }
+		]'
+	),
+	(
+		'Than / As...As.../ Like',
+		'Hasonlító szerkezetek',
+		'',
+		'',
+		'[]',
+		'[
+			{
+                "description": "A ''THAN'' -nel összekötött tagmondatok közül az első tartalmazza a fokozott melléknevet. A második pedig azt, amihez hasonlítjuk.",
+                "example": "I''m taller than you. / Magasabb vagyok, mint Te."
+            },
+			{
+                "description": "''AS... AS...'' szerekezet magyarul ''OLYAN...(MELLÉKNÉV), MINT...'' A melléknév mindig sima, nem fokozott!",
+                "example": "I''m as tall as you. / Olyan magas vagyok, mint Te."
+            },
+			{
+                "description": "''LIKE'' szerkezettel azt fejezzük ki, hogy valami pontosan / tisztára olyan, mint egy másik dolog.",
+                "example": "She is like Britney Spears. / Ő tiszta olyan, mint Britney Spears., Do it like me. / Úgy csináld, mint én."
+            }
+		]'
+	);

@@ -2,6 +2,9 @@ import express from "express";
 
 // Utils
 import get from "lodash/get";
+import random from "lodash/random";
+import isEmpty from "lodash/isEmpty";
+import { wordPracticeBasicTypes } from "./utils";
 
 // Authentication
 import { authentication } from "./authentication";
@@ -15,7 +18,8 @@ import { calculateDataToSave } from "./calculation/calculateFinalResult";
 import { calculateInitialScores } from "./calculation/calculateInitialScores";
 
 // Interfaces
-import { GameStatistics, WordWithScores } from "sharedInterfaces";
+import { GameStatistics, Word, WordPracticeType, WordWithScores } from "sharedInterfaces";
+import { PracticeSettings } from "interfaces";
 
 // Utils
 import random from "lodash/random";
@@ -58,7 +62,7 @@ app.get("/my-words/:id", async (req, res) => {
 });
 
 app.post("/my-words", async (req, res) => {
-	const { ownerId, english, hungarian, exampleSentences, notes, type, favourite, deletionDate, statistics }: WordWithScores = req.body;
+	const { ownerId, english, hungarian, exampleSentences, definitions, notes, type, favourite, deletionDate, statistics }: WordWithScores = req.body;
 	const { memoryLevel, actualScore, finalScore } = calculateInitialScores(req.body);
 
 	const response = await executeQueryOnDB(
@@ -67,6 +71,7 @@ app.post("/my-words", async (req, res) => {
 		english, 
 		hungarian, 
 		"exampleSentences", 
+		definitions,
 		notes, 
 		type, 
 		favourite, 
@@ -75,12 +80,13 @@ app.post("/my-words", async (req, res) => {
 		"actualScore", 
 		"finalScore", 
         statistics)
-		VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *`,
+		VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING *`,
 		[
 			ownerId,
 			english,
 			JSON.stringify(hungarian),
 			JSON.stringify(exampleSentences),
+			JSON.stringify(definitions),
 			notes,
 			type,
 			favourite,
@@ -101,7 +107,8 @@ app.post("/my-words", async (req, res) => {
 });
 
 app.put("/my-words", async (req, res) => {
-	const { ownerId, english, hungarian, exampleSentences, notes, type, favourite, deletionDate, statistics, id }: WordWithScores = req.body;
+	const { ownerId, english, hungarian, exampleSentences, definitions, notes, type, favourite, deletionDate, statistics, id }: WordWithScores =
+		req.body;
 	const { memoryLevel, actualScore, finalScore } = calculateInitialScores(req.body);
 
 	const response = await executeQueryOnDB(
@@ -111,21 +118,23 @@ app.put("/my-words", async (req, res) => {
 		english = $2, 
 		hungarian = $3, 
 		"exampleSentences" = $4, 
-		notes = $5, 
-		type = $6, 
-		favourite = $7, 
-		"deletionDate" = $8, 
-		"memoryLevel" = $9, 
-		"actualScore" = $10, 
-		"finalScore" = $11,
-        statistics = $12
-		WHERE id = $13
+		definitions = $5,
+		notes = $6, 
+		type = $7, 
+		favourite = $8, 
+		"deletionDate" = $9, 
+		"memoryLevel" = $10, 
+		"actualScore" = $11, 
+		"finalScore" = $12,
+        statistics = $13
+		WHERE id = $14
 		RETURNING *`,
 		[
 			ownerId,
 			english,
 			JSON.stringify(hungarian),
 			JSON.stringify(exampleSentences),
+			JSON.stringify(definitions),
 			notes,
 			type,
 			favourite,
@@ -334,6 +343,49 @@ app.get("/practice/grammatical-structures", async (req, res) => {
 	}
 
 	res.status(200).send({ grammaticalStructures });
+});
+
+/* PRACTICE WORD APIs */
+
+app.get("/practice/words/:id", async (req, res) => {
+	const userID = req.params.id;
+
+	const words = await executeQueryOnDB('SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL ORDER BY random() LIMIT 10', [userID]);
+
+	if (isEmpty(words)) {
+		res.status(204).send();
+		return;
+	}
+
+	const practiceSettings: PracticeSettings = (() => {
+		const practiceTypes: WordPracticeType[] = [];
+		let practicesWithWrongAnswers: number = 0;
+		for (let i = 10; i > 0; i--) {
+			const practiceType = wordPracticeBasicTypes[random(2)];
+			if (practiceType !== "type the answer game") {
+				practicesWithWrongAnswers++;
+			}
+			practiceTypes.push(practiceType);
+		}
+		return { practiceTypes, practicesWithWrongAnswers };
+	})();
+
+	const { practiceTypes } = practiceSettings;
+
+	const wrongAnswers: string[] = (() => {
+		let requiredWrongAnswers: number = 10 * 3;
+		const result: string[] = [];
+		while (requiredWrongAnswers > 0) {
+			const randomWord: Word = words[random(words.length - 1)];
+			const randomMeaning: string = randomWord.hungarian[random(randomWord.hungarian.length - 1)];
+			if (result.includes(randomMeaning)) continue;
+			result.push(randomMeaning);
+			requiredWrongAnswers--;
+		}
+		return result;
+	})();
+
+	res.status(200).send({ words, practiceTypes, wrongAnswers });
 });
 
 app.listen(port, () => {
