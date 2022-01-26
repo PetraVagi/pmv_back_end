@@ -168,16 +168,31 @@ app.delete("/my-words", async (req, res) => {
 /* LET'S PLAY APIs */
 
 app.get("/lets-play", async (req, res) => {
-	const numberOfWords = 5;
+	const numberOfWords = get(req, "query.numberOfWords", []);
 
 	const playerIdStrings: string[] = get(req, "query.players", []);
 	const playerIds: number[] = playerIdStrings.map((playerId: string) => parseInt(playerId));
 
 	const owners = await executeQueryOnDB("SELECT id, name, gender FROM users WHERE id IN ($1, $2)", [...playerIds]);
+	if (owners.error) {
+		console.log(owners);
+		res.status(409).json(owners);
+		return;
+	}
 
-	const wordsSelectQuery = 'SELECT * FROM words WHERE favourite = true AND "ownerId" = $1 ORDER BY random() LIMIT $2';
+	const wordsSelectQuery = 'SELECT * FROM words WHERE "ownerId" = $1 AND "deletionDate" IS NULL ORDER BY random() LIMIT $2';
 	const firstPlayerWords = await executeQueryOnDB(wordsSelectQuery, [playerIds[0], numberOfWords]);
+	if (firstPlayerWords.error) {
+		console.log(firstPlayerWords);
+		res.status(409).json(firstPlayerWords);
+		return;
+	}
 	const secondPlayerWords = await executeQueryOnDB(wordsSelectQuery, [playerIds[1], numberOfWords]);
+	if (secondPlayerWords.error) {
+		console.log(secondPlayerWords);
+		res.status(409).json(secondPlayerWords);
+		return;
+	}
 
 	if (firstPlayerWords.length < numberOfWords || secondPlayerWords.length < numberOfWords) {
 		res.status(409).json({ error: `Both players should have at least ${numberOfWords} words for the game!` });
@@ -186,14 +201,37 @@ app.get("/lets-play", async (req, res) => {
 
 	// calculate the final words array, where the words are alternately in the list
 	const words = [];
+	const gameStarter = random(1);
 	for (let i = 0; i < firstPlayerWords.length; i++) {
 		const firstPlayerWord = firstPlayerWords[i];
 		const secondPlayerWord = secondPlayerWords[i];
-		words.push({ ...firstPlayerWord, ...calculateWordToAsk(firstPlayerWord), tagColors: getColorsByKnowledge(firstPlayerWord) });
-		words.push({ ...secondPlayerWord, ...calculateWordToAsk(secondPlayerWord), tagColors: getColorsByKnowledge(secondPlayerWord) });
+
+		const firstPlayerWordInGame = {
+			...firstPlayerWord,
+			...calculateWordToAsk(firstPlayerWord),
+			tagColors: getColorsByKnowledge(firstPlayerWord),
+		};
+		const secondPlayerWordInGame = {
+			...secondPlayerWord,
+			...calculateWordToAsk(secondPlayerWord),
+			tagColors: getColorsByKnowledge(secondPlayerWord),
+		};
+
+		if (gameStarter === 0) {
+			words.push(firstPlayerWordInGame);
+			words.push(secondPlayerWordInGame);
+		} else {
+			words.push(secondPlayerWordInGame);
+			words.push(firstPlayerWordInGame);
+		}
 	}
 
 	const grammaticalStructures = await executeQueryOnDB("SELECT * FROM grammatical_structures ORDER BY random() LIMIT $1", [numberOfWords * 2]);
+	if (grammaticalStructures.error) {
+		console.log(grammaticalStructures);
+		res.status(409).json(grammaticalStructures);
+		return;
+	}
 
 	const data = { owners, words, grammaticalStructures };
 	res.status(200).send(data);
@@ -277,9 +315,29 @@ app.put("/lets-play/:wordId", async (req, res) => {
 /* PRACTICE GRAMMATICAL STRUCTURES APIs */
 
 app.get("/practice/grammatical-structures", async (req, res) => {
+	const type = get(req, "query.type");
 	const numberOfStructures = 5;
 
-	const grammaticalStructures = await executeQueryOnDB("SELECT * FROM grammatical_structures ORDER BY random() LIMIT $1", [numberOfStructures * 2]);
+	let orderBy = "random()";
+	if (type === "my_weakest") {
+		orderBy = "known/asked ASC";
+	} else if (type === "rarely_asked") {
+		orderBy = "asked ASC";
+	}
+
+	const grammaticalStructures = await executeQueryOnDB(
+		`SELECT * FROM grammatical_structures 
+		JOIN users_and_grammatical_structures 
+		ON grammatical_structures.id = users_and_grammatical_structures."grammaticalStructureId" 
+		ORDER BY ${orderBy} 
+		LIMIT $1`,
+		[numberOfStructures],
+	);
+	if (grammaticalStructures.error) {
+		console.log(grammaticalStructures);
+		res.status(409).json(grammaticalStructures);
+		return;
+	}
 
 	res.status(200).send({ grammaticalStructures });
 });

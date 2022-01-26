@@ -46,7 +46,7 @@ export function calculateWordToAsk(word: Word): { wordToAsk: string; wordToAnswe
 export function getColorsByKnowledge(word: Word): TagColor[] {
 	const knowledgeLevels = calculateKnowledgeLevels(word);
 
-	if (word.memoryLevel === 0) {
+	if (word.memoryLevel === 0 || word.hungarian.length === 1) {
 		return knowledgeLevels.map((level: KnowledgeLevel) => {
 			return { ...level, color: "progressBlue" };
 		});
