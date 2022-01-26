@@ -22,7 +22,7 @@ You need to install the **NODE JS with TypeScript** and set the IDEA to start th
 Front-end repo: [Click here for the repo](https://github.com/Crepkey/pmv_frond_end).
 Shared-repo: [Click here for the repo](https://github.com/Crepkey/pmv_shared).
 
-All the folders of repos have to be in the same folder so that the references can work properly.
+Repo folders have to be in the same folder so that the references can work properly.
 
 **You need to get the '.env' file which contains the necessary environment variables for the normal operation** This file is not uploaded to GitHub because of obvious security reasons.
 
