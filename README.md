@@ -14,7 +14,7 @@ Some of the missing parts(without further ado):
 
 ## Config & Install
 
-You need to install the **REACT JS with TypeScript** and set the IDEA to start the project with npm start command or type it manually at every app launch. To run the app in the development mode, please open [http://localhost:3000](http://localhost:3000).
+You need to install the **NODE JS with TypeScript** and set the IDEA to start the project with npm start command or type it manually at every app launch. To run the app in the development mode, please open [http://localhost:3000](http://localhost:3000).
 
 **IMPORTANT INFORMATION:**
 
