@@ -18,7 +18,7 @@ You need to install the **NODE JS with TypeScript** and set the IDEA to start th
 
 **IMPORTANT INFORMATION:**
 
-**You also need to download the back-end and the shared-repository of this application.**
+**You also need to download the front-end and the shared-repository of this application.**
 Front-end repo: [Click here for the repo](https://github.com/Crepkey/pmv_frond_end).
 Shared-repo: [Click here for the repo](https://github.com/Crepkey/pmv_shared).
 
